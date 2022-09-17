@@ -166,6 +166,8 @@ public class EnrollmentCrdAdapter extends RecyclerView.Adapter<EnrollmentCrdAdap
                     viewHolder.opd_cover.setText("Done");
                     viewHolder.opd_cover.setTextColor(R.color.green);
                     viewHolder.cover.setText("Enrolment Window Closed");
+                    viewHolder.cover.setVisibility(View.GONE);
+                    viewHolder.opd_cover.setVisibility(View.GONE);
                     viewHolder.cover.setBackgroundResource(R.drawable.btn_cancle);
                 }else {
                     viewHolder.opd_cover.setText("Pending");

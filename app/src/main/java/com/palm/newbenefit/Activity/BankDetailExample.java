@@ -189,6 +189,8 @@ public class BankDetailExample extends AppCompatActivity {
         requestMultiplePermissions();
 
         Log.d("data", "dfff");
+
+
         requestMultiplePermissions();
         con = new Constants();
        // AnalyticsApplication.getInstance().trackEvent("Bank Screen", "Showing Bank Detail", "Bank Detail");
@@ -231,7 +233,7 @@ public class BankDetailExample extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
 
         token = prefs.getString("api_token", null);
-
+        Log.d("token", "token");
 
         next_id.setOnClickListener(new View.OnClickListener() {
             @Override
