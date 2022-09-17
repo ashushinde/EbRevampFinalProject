@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300sp"
+    android:id="@+id/linear"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/card_back"
+    android:layout_marginEnd="5sp"
+    android:layout_marginTop="5sp"
+    android:layout_marginStart="5sp"
+    android:layout_marginBottom="5sp"
+    >
+
+    <LinearLayout
+        android:id="@+id/contactUsItemLinearLayout_tpa"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginEnd="5sp"
+        android:orientation="vertical"
+
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:padding="5sp"
+            android:background="@drawable/card_light_red"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:id="@+id/admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="Level"
+                android:layout_marginStart="10sp"
+                android:textColor="#160BAE"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/leval_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bold"
+                android:text="1"
+                android:layout_marginStart="10sp"
+                android:textColor="#160BAE"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tpa_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bold"
+            android:text="Name"
+            android:textColor="#aa671d" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/pop_reg"
+            android:text="Joker"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tpa_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bold"
+            android:text="Contact Number"
+            android:textColor="#aa671d" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/contactno"
+                android:layout_width="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/pop_reg"
+                android:text="9920765572"
+                android:textColor="#000" />
+
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tpa_email_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bold"
+            android:text="Email - Id"
+            android:textColor="#aa671d" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:id="@+id/emailid"
+                android:layout_width="wrap_content"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/pop_reg"
+                android:text="abcd@gmail.com"
+                android:textColor="#000" />
+
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tpa_add_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bold"
+            android:text="Address  "
+            android:textColor="#aa671d" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/pop_reg"
+            android:text="Tata Motors Insurance Broking Marol Maroshi Road,"
+            android:textColor="#000" />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

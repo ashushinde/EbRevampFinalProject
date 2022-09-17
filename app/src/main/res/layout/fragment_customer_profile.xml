@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="10sp"
+    android:background="#F0EFFC"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/nav_back"
+            android:gravity="end"
+            android:layout_height="150sp">
+
+
+        </LinearLayout>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="15sp"
+            android:layout_marginTop="100sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            android:layout_marginBottom="35sp"
+            app:cardElevation="22sp"
+
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="60sp"
+                    android:layout_height="60sp"
+
+                    android:contentDescription="@string/nav_header_desc"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:padding="5sp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/pop_reg"
+                        android:textSize="14sp"
+                        android:text="@string/nav_header_title"
+                        android:textColor="#0E0606"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/fullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#0F0E0E"
+                        android:fontFamily="@font/pop_reg"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:text="@string/nav_header_subtitle" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/arrorw"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="2.5"
+            android:fontFamily="@font/pop_reg"
+            android:text="Personal Details"
+            android:textColor="#120712"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_toLeftOf="@+id/drop_down_option_menu"
+            android:src="@drawable/right"
+            android:background="@drawable/circle_arrow"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/changePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/arrorw"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginTop="20sp"
+        android:paddingStart="12sp"
+        android:paddingEnd="12sp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="2.5"
+            android:fontFamily="@font/pop_reg"
+            android:text="Change Password"
+            android:textColor="#120712"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:layout_toLeftOf="@+id/drop_down_option_menu"
+            android:src="@drawable/right"
+            android:background="@drawable/circle_arrow"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

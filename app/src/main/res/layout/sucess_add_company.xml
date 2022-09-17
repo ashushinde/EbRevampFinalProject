@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp"
+    app:cardCornerRadius="10sp"
+    app:cardElevation="5sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+
+
+            <ImageView
+                android:id="@+id/ab"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginTop="3sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="3sp"
+                android:background="@drawable/box_shadow"
+                android:padding="5sp"
+                android:paddingStart="5sp"
+                android:paddingEnd="5sp"
+                android:src="@drawable/ic_close_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5sp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="120sp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginBottom="3sp"
+                android:background="@drawable/box_shadow"
+                android:padding="5sp"
+                android:paddingStart="5sp"
+                android:paddingEnd="5sp"
+                android:src="@drawable/success" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="Thank You"
+                    android:textColorHint="#0E0909"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="You have successfully booked the insurance policy."
+                    android:textColorHint="#0E0909"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45sp"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="10sp"
+                    android:background="@drawable/card_select_data"
+                    android:gravity="center"
+                    android:transitionGroup="false"
+
+                    android:layout_marginTop="15sp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="10sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:hint="Back to  quote"
+                        android:layout_marginEnd="5sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10sp"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5sp"
+                        android:layout_marginLeft="10sp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:src="@drawable/ic_arrow_forward_black_24d_rfq"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+

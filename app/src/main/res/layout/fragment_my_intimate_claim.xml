@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/info_text_GH"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10sp"
+        android:padding="5sp"
+        android:src="@drawable/no_image"
+        android:text="Cashless Form Revised"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:ignore="RtlCompat" />
+    <LinearLayout
+        android:layout_marginBottom="100sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hos_claim_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_down_to_up"
+            tools:listitem="@layout/my_hos_claim_list" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,3096 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="#F2F3FD"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrorw_rfq"
+            android:padding="3sp"
+            android:elevation="25sp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/info_text"
+                android:layout_width="150sp"
+                android:layout_height="50sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+
+                android:src="@drawable/hero_logo"
+                android:text="Cashless Form Revised"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp"
+            android:layout_marginTop="5sp"
+            android:padding="13sp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="3sp"
+                android:fontFamily="@font/pop_reg"
+                android:textStyle="bold"
+                android:hint="Tell us about your Team"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+
+                >
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8sp"
+
+            >
+            <LinearLayout
+              android:id="@+id/first_linear"
+                android:padding="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/edit_back_grey"
+                android:padding="5sp">
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5sp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3sp"
+                        android:fontFamily="@font/pop_reg"
+                        android:hint="Total number of Employees"
+                        android:textStyle="bold"
+
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="12sp" />
+
+
+
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/first_self_count"
+                    android:layout_width="100sp"
+                    android:layout_height="40sp"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginEnd="5sp"
+                    android:padding="5sp"
+                    android:inputType="number"
+                    android:ems="4"
+                    android:minEms="4"
+                    android:maxLength="4"
+
+                    android:textColor="#0E0A0A"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:background="#F0F8FB"/>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/edit_back_grey"
+                android:padding="5sp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5sp"
+
+                    android:orientation="vertical"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3sp"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="center"
+                        android:hint="Age Group"
+
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="5sp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/first_age_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+
+                        android:backgroundTint="#111010"
+                        android:fontFamily="@font/pop_reg" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/edit_back_grey"
+                android:padding="5sp">
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5sp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3sp"
+                        android:fontFamily="@font/pop_reg"
+                        android:hint="Sum Insured"
+                        android:textStyle="bold"
+
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="12sp" />
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginBottom="5sp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/first_sum_insured"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="42sp"
+
+                        android:backgroundTint="#111010"
+                        android:fontFamily="@font/pop_reg" />
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/edit_back_grey"
+                android:padding="5sp">
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5sp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3sp"
+                        android:fontFamily="@font/pop_reg"
+                        android:hint="No.of Employees"
+                        android:textStyle="bold"
+
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/black"
+                        android:textSize="12sp" />
+
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/first_btn_reduce"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/reduce"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/first_tv_count"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#000"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/first_btn_add"
+                        android:layout_width="25sp"
+                        android:layout_height="25sp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/plus_add"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5sp"
+                android:padding="5sp"
+
+
+                >
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/second_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+                    <ImageView
+                        android:id="@+id/second_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                       />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/second_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/second_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/second_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/second_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/second_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/third_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/third_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+                    <ImageView
+                        android:id="@+id/third_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/third_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/third_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/third_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/third_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/third_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fourth_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/fourth_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+                    <ImageView
+                        android:id="@+id/fourth_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/fourth_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/fourth_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/fourth_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/fourth_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/fourth_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fifth_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/fifth_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+
+                    <ImageView
+                        android:id="@+id/fifth_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/fifth_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/fifth_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/fifth_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/fifth_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/fifth_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/six_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/six_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+
+                    <ImageView
+                        android:id="@+id/six_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/six_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/six_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/six_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/six_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/six_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/seven_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/seven_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+                    <ImageView
+                        android:id="@+id/seven_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/seven_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/seven_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/seven_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/seven_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/seven_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/eight_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/eight_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+
+                    <ImageView
+                        android:id="@+id/eight_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/eight_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/eight_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/eight_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/eight_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/eight_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/nine_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/nine_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+
+                    <ImageView
+                        android:id="@+id/nine_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/nine_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/nine_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/nine_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/nine_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/nine_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ten_linear"
+                android:padding="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+
+                >
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Total number of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/ten_self_count"
+                        android:layout_width="100sp"
+                        android:layout_height="40sp"
+                        android:layout_marginStart="5sp"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:inputType="number"
+                        android:ems="4"
+                        android:minEms="4"
+                        android:maxLength="4"
+
+                        android:textColor="#0E0A0A"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        android:background="#F0F8FB"/>
+
+
+                    <ImageView
+                        android:id="@+id/ten_delete"
+                        android:layout_width="40sp"
+                        android:layout_height="40sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:src="@drawable/enroll_delete"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5sp"
+
+                        android:orientation="vertical"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="center"
+                            android:hint="Age Group"
+
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/ten_age_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="Sum Insured"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="5sp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Spinner
+                            android:id="@+id/ten_sum_insured"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="42sp"
+
+                            android:backgroundTint="#111010"
+                            android:fontFamily="@font/pop_reg" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:padding="5sp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5sp"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:padding="5sp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:fontFamily="@font/pop_reg"
+                            android:hint="No.of Employees"
+                            android:textStyle="bold"
+
+                            android:gravity="center"
+                            android:textColor="@android:color/black"
+                            android:textColorHint="@android:color/black"
+                            android:textSize="12sp" />
+
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ten_btn_reduce"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/reduce"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/ten_tv_count"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="#000"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/ten_btn_add"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/plus_add"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/add_age_group"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp"
+                android:layout_gravity="center"
+                android:background="@drawable/dash_shadow"
+                android:padding="5sp">
+
+
+
+                <ImageView
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    android:src="@drawable/plus"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5sp"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="5sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3sp"
+                        android:fontFamily="@font/pop_reg"
+                        android:hint="Add age group"
+                        android:textStyle="bold"
+
+                        android:gravity="center"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textColorHint="@android:color/holo_red_dark"
+                        android:textSize="12sp" />
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/go_back"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="Go Back"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5sp"
+                    android:textColor="#3BB385"
+                    android:textColorHint="#3BB385"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/next"
+
+                android:layout_width="100sp"
+
+                android:layout_height="45sp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10sp"
+
+                android:background="@drawable/btn_reg"
+                android:gravity="center"
+                android:transitionGroup="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="Next"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10sp"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:src="@drawable/ic_arrow_forward_black_24d_rfq"/>
+
+
+</LinearLayout>
+        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
+
+

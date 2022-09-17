@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:padding="5sp"
+
+
+
+    android:layout_height="match_parent">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group Mediclaim"
+            android:textColorHint="#150B08"
+            android:background="@drawable/normal_card"
+            android:textColor="#2068A1"
+            android:padding="5sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/regular"
+
+            android:textSize="15sp" />
+
+
+
+        <LinearLayout
+            android:id="@+id/dec_hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5sp"
+
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/edit_back"
+            >
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Features"
+                android:textColorHint="#120B0B"
+                android:textColor="#120B0B"
+                android:padding="5sp"
+
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="5sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/edit_back"
+            >
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product Features"
+                android:background="@drawable/dark_card_yellow"
+                android:textColorHint="#120B0B"
+                android:textColor="#120B0B"
+                android:padding="5sp"
+                android:fontFamily="@font/bold"
+
+
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ghi_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            tools:listitem="@layout/feature_list"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/info_text"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="10sp"
+                android:padding="5sp"
+                android:layout_gravity="center"
+                android:src="@drawable/no_image"
+                android:visibility="gone"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+</LinearLayout>
+</LinearLayout>

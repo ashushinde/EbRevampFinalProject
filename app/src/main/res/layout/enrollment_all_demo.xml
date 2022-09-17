@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:background="#F2F3FA"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+            android:orientation="horizontal">
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5sp"
+                android:scrollbars="none"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/employee"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:background="@drawable/click_on_tab"
+                        android:layout_marginEnd="8sp"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6sp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/add_empl"/>
+                            <TextView
+                                android:id="@+id/employee_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Basic Policy Details"
+                                android:layout_gravity="center"
+                                android:textColor="#6334E3"
+                                android:layout_marginStart="2sp"
+                                android:layout_marginEnd="2sp"
+                                android:textStyle="bold"
+                                android:padding="5sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/add_member"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:layout_marginEnd="8sp"
+                        android:background="@drawable/click_tab"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:layout_gravity="center"
+
+
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/add_dependent"/>
+                            <TextView
+                                android:id="@+id/add_dependent_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Add Member"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="2sp"
+                                android:layout_marginEnd="2sp"
+                                android:textColor="#6334E3"
+                                android:textStyle="bold"
+                                android:padding="2sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/member_enroll"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:layout_marginEnd="8sp"
+                        android:background="@drawable/click_tab"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5sp"
+                            android:layout_gravity="center"
+
+
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/mem_enroll"/>
+                            <TextView
+                                android:id="@+id/member_enroll_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Insured Member"
+                                android:layout_gravity="center"
+                                android:textColor="#6334E3"
+                                android:layout_marginStart="8sp"
+                                android:layout_marginEnd="8sp"
+                                android:textStyle="bold"
+                                android:padding="5sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/add_nominee"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:elevation="1sp"
+                        android:layout_marginEnd="8sp"
+                        android:background="@drawable/click_tab"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6sp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/add_nominee_data"/>
+                            <TextView
+                                android:id="@+id/add_nominee_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Add Nominee"
+                                android:layout_gravity="center"
+                                android:textColor="#6334E3"
+                                android:layout_marginStart="2sp"
+                                android:layout_marginEnd="2sp"
+                                android:textStyle="bold"
+                                android:padding="5sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/nominee_enroll"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:elevation="1sp"
+                        android:layout_marginEnd="8sp"
+                        android:background="@drawable/click_tab"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6sp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/nom_enroll"/>
+                            <TextView
+                                android:id="@+id/nominne_enroll_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Nominee Into Policy"
+                                android:layout_gravity="center"
+                                android:textColor="#6334E3"
+                                android:layout_marginStart="2sp"
+                                android:layout_marginEnd="2sp"
+                                android:textStyle="bold"
+                                android:padding="5sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/add_cover"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:elevation="1sp"
+                        android:layout_marginEnd="8sp"
+                        android:background="@drawable/click_tab"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6sp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/add_cover_dt"/>
+                            <TextView
+                                android:id="@+id/add_cover_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Top Up Policy"
+                                android:layout_gravity="center"
+                                android:textColor="#6334E3"
+                                android:layout_marginStart="2sp"
+                                android:layout_marginEnd="2sp"
+                                android:textStyle="bold"
+                                android:padding="5sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/show_all"
+                        android:layout_width="155dp"
+                        android:layout_height="130sp"
+                        android:elevation="1sp"
+                        android:layout_marginEnd="8sp"
+                        android:background="@drawable/click_tab"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="6sp"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="60sp"
+                                android:layout_height="60sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:background="@drawable/white_circle"
+                                android:src="@drawable/sub_claim"/>
+                            <TextView
+                                android:id="@+id/my_summary_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Enrolment Confirmation"
+                                android:layout_gravity="center"
+                                android:textColor="#6334E3"
+                                android:layout_marginStart="2sp"
+                                android:layout_marginEnd="2sp"
+                                android:textStyle="bold"
+                                android:padding="5sp"
+                                android:gravity="center"
+                                android:layout_marginBottom="5sp"
+                                android:textSize="12sp" />
+
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

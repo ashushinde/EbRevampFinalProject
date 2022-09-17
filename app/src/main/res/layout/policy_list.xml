@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10sp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:layout_margin="10sp"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/frogm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="Group Mediclaim"
+                        android:textColor="#0000FF"
+                        android:textStyle="bold"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/cover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:textColor="#FFFFFF"
+                        android:text="45"
+                        android:layout_marginStart="10sp"
+                        android:padding="5sp"
+                        android:background="@drawable/circle_blue"
+                        android:textStyle="bold"
+                        android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:textColor="#4CAF50"
+                        android:text="Active"
+                        android:paddingStart="10sp"
+                        android:paddingEnd="10sp"
+                        android:background="@drawable/background"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/s_logo"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sodexo_flex"/>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10sp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            android:padding="2sp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Company Name  : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+                                android:id="@+id/company_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="1500"
+                                android:textColor="#ff5d55"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Days Left  : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+                                android:id="@+id/days"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#ff5d55"
+                                android:text="1500"
+                                android:textStyle="bold"
+                                android:textSize="11sp" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Suminsured  : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+                            <ImageView
+
+                                android:layout_width="20sp"
+                                android:layout_height="10sp"
+
+                                android:layout_gravity="center"
+                                android:src="@drawable/rupee"/>
+                            <TextView
+                                android:id="@+id/m_cov"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#ff5d55"
+                                android:text="1500"
+                                android:textStyle="bold"
+                                android:textSize="11sp" />
+
+
+
+                        </LinearLayout>
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/opd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Premium  : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+                            <ImageView
+
+                                android:layout_width="20sp"
+                                android:layout_height="10sp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/rupee"/>
+                            <TextView
+                                android:id="@+id/opd_cover"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#ff5d55"
+                                android:text="1500"
+                                android:textStyle="bold"
+                                android:textSize="11sp" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Start Date  : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+                            <ImageView
+
+                                android:layout_width="20sp"
+                                android:layout_height="10sp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/rupee"/>
+
+                            <TextView
+                                android:id="@+id/premium_data"
+                                android:layout_width="wrap_content"
+                                android:layout_height="24dp"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="1500"
+                                android:textColor="#ff5d55"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="End Date  : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+                            <ImageView
+
+                                android:layout_width="20sp"
+                                android:layout_height="10sp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/rupee"/>
+                            <TextView
+                                android:id="@+id/premium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#ff5d55"
+                                android:text="1500"
+                                android:textStyle="bold"
+                                android:textSize="11sp" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/doc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+
+
+                            <ImageView
+                                android:layout_width="50sp"
+                                android:layout_height="50sp"
+                                android:layout_gravity="center"
+                                android:padding="10sp"
+                                android:background="@drawable/circle_normal"
+                                android:src="@drawable/doc"/>
+
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#F5F5F5"
+                android:elevation="20sp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:textColor="#0C0B0B"
+                    android:padding="5sp"
+                    android:text="See Details"
+                    android:elevation="20sp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+

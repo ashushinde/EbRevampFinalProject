@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+
+    android:layout_marginStart="10sp"
+    android:layout_marginEnd="10sp"
+    android:layout_marginTop="10sp"
+    android:background="@drawable/edit_back"
+
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Plan Features"
+            android:layout_weight="10"
+            android:textSize="15sp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="0dp"
+            android:fontFamily="@font/pop_reg"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:id="@+id/ab"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:background="@drawable/circle_green"
+            android:layout_height="match_parent"
+            tools:ignore="VectorDrawableCompat" />
+    </LinearLayout>
+
+    <View
+        android:background="#000"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="3sp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00EEEEEE"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00EEEEEE"
+                android:orientation="horizontal"
+                android:padding="2dp">
+                <TextView
+                    android:id="@+id/policy_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:textColor="#0B0202"
+                    android:text="Name"
+
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:textColor="#0C0B0B"
+                    android:text="Description"
+
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:padding="5sp"
+                    android:textSize="14sp" />
+
+
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1sp"
+                android:background="#0C0606"/>
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/insurance_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8sp"
+            tools:listitem="@layout/list_data"
+            android:layout_below="@+id/cards"
+
+            />
+
+    </LinearLayout>
+</LinearLayout>

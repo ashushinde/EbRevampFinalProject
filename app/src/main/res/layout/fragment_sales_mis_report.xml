@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5sp"
+    tools:context=".Fragment.SalesMisReportFragment">
+
+    <LinearLayout
+        android:background="@drawable/edit_back_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:orientation="vertical"
+        android:padding="5sp">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" Start Date "
+                android:textColorHint="#020202"
+                android:textColor="#000000"
+                android:fontFamily="@font/bold"
+                android:textStyle="bold"
+                android:layout_marginStart="10sp"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/dte_of_adminsiion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+
+            android:hint="Select Start Date"
+            android:fontFamily="@font/bold"
+
+            android:focusableInTouchMode="false"
+            android:drawableEnd="@drawable/datedata"
+            android:drawablePadding="10sp"
+      android:background="@drawable/edit_back"
+            android:padding="10sp"
+            android:singleLine="true"
+            android:textColor="#5F5F5F"
+            android:drawableRight="@drawable/datedata" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/edit_back_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="vertical"
+        android:padding="5sp">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="10sp"
+                android:hint=" End Date"
+                android:textColorHint="#020202"
+                android:textColor="#000000"
+                android:fontFamily="@font/bold"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+            <TextView
+                android:fontFamily="@font/bold"
+                android:textStyle="bold"
+                android:textSize="15sp"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:hint=""
+                android:textColorHint="#962525"
+                android:textColor="#B93434"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/discharge_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+
+            android:hint="Select End Date"
+            android:fontFamily="@font/bold"
+
+            android:focusableInTouchMode="false"
+            android:drawableEnd="@drawable/datedata"
+            android:drawablePadding="10sp"
+            android:background="@drawable/edit_back"
+            android:padding="10sp"
+            android:singleLine="true"
+            android:textColor="#5F5F5F"
+            android:drawableRight="@drawable/datedata"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="end"
+        android:layout_marginTop="20sp"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/btn_reg"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="#fff"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#28E3E1E1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:text="@string/hello_blank_fragment" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:text="@string/hello_blank_fragment" >
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginTop="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:text="@string/hello_blank_fragment" >
+                            <View
+                                android:layout_width="10sp"
+                                android:layout_height="40sp"
+                                android:background="#F44336"/>
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:text="STATUS"
+                                android:textColor="#0B0202"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/bold"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="8sp"
+                                android:layout_marginEnd="10sp"
+                                android:background="@drawable/cardvie"
+
+                                >
+                                <Spinner
+                                    android:id="@+id/funnel_spin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42sp"
+                                    android:layout_marginStart="5sp"
+                                    android:backgroundTint="#2C2B2A" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="10sp"
+                            >
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/hos_claim_recycle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                tools:listitem="@layout/dashboard_funel_list" />
+
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginBottom="10sp"
+
+                                >
+
+                                <jie.com.funnellib.FunnelView
+                                    android:id="@+id/funnelView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200sp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:paddingRight="10dp"
+
+                                    android:paddingLeft="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingBottom="10dp"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginTop="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:text="@string/hello_blank_fragment" >
+                            <View
+                                android:layout_width="10sp"
+                                android:layout_height="40sp"
+                                android:background="#F44336"/>
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:text="MEMBER WISE"
+                                android:textColor="#0B0202"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/bold"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="8sp"
+                                android:layout_marginEnd="10sp"
+                                android:background="@drawable/cardvie"
+
+                                >
+                                <Spinner
+                                    android:id="@+id/status_spin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42sp"
+                                    android:layout_marginStart="5sp"
+                                    android:backgroundTint="#2C2B2A" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="10sp"
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_gravity="start"
+                                android:gravity="center"
+                                android:layout_marginStart="10sp"
+
+                                >
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:visibility="gone"
+                                    android:padding="5sp"
+                                    android:background="@drawable/card_select_blue_data"
+                                    >
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5sp"
+                                        android:text="Curve Series"
+
+                                        android:textColor="#FFFFFF"
+                                        android:layout_gravity="center"
+                                        android:padding="5sp"
+                                        android:fontFamily="@font/bold"
+                                        android:gravity="center"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:padding="5sp"
+                                    android:layout_marginStart="10sp"
+                                    android:background="@drawable/light_blue"
+
+                                    >
+
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5sp"
+                                        android:text="Line Chart"
+                                        android:padding="5sp"
+                                        android:textColor="#070303"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:fontFamily="@font/bold"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold" />
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="10sp"
+                            android:background="@drawable/cardvie"
+                            >
+
+
+                            <com.github.mikephil.charting.charts.LineChart
+                                android:layout_gravity="center"
+                                android:id="@+id/line"
+                                android:layout_width="match_parent"
+                                android:layout_height="300sp">
+                            </com.github.mikephil.charting.charts.LineChart>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginTop="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:text="@string/hello_blank_fragment" >
+                            <View
+                                android:layout_width="10sp"
+                                android:layout_height="40sp"
+                                android:background="#F44336"/>
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:text="New Visitors"
+                                android:textColor="#0B0202"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/bold"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="10sp"
+                            android:background="@drawable/cardvie"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                tools:context="com.example.parsaniahardik.progressanimation.MainActivity">
+
+                                <ProgressBar
+
+                                    android:id="@+id/circularProgressbar"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="250dp"
+                                    android:layout_height="250dp"
+                                    android:indeterminate="false"
+                                    android:max="100"
+                                    android:progress="50"
+                                    android:layout_centerInParent="true"
+                                    android:progressDrawable="@drawable/circular"
+                                    android:secondaryProgress="100"
+                                    />
+
+                                <ImageView
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:background="@drawable/circle"
+                                    android:layout_centerInParent="true"/>
+
+                                <TextView
+                                    android:id="@+id/tv"
+                                    android:layout_width="250dp"
+                                    android:layout_height="250dp"
+                                    android:gravity="center"
+                                    android:text="25%"
+                                    android:layout_centerInParent="true"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:textSize="20sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:cardBackgroundColor="#fcfcfc"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:layout_marginTop="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:text="@string/hello_blank_fragment" >
+                            <View
+                                android:layout_width="10sp"
+                                android:layout_height="40sp"
+                                android:background="#F44336"/>
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:text="New Visitors"
+                                android:textColor="#0B0202"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/bold"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginBottom="10sp"
+                            android:background="@drawable/cardvie"
+                            >
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                tools:context=".MainActivity">
+
+                                <!--Ui component for our bar chart-->
+                                <com.github.mikephil.charting.charts.BarChart
+                                    android:id="@+id/idBarChart"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="250sp" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

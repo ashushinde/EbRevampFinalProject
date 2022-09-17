@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#F2F3FD"
+    android:padding="5sp"
+    android:layout_marginStart="20sp"
+    android:layout_marginEnd="20sp"
+    android:layout_marginTop="30sp"
+    android:layout_marginBottom="30sp"
+    android:layout_gravity="center"
+
+
+
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginBottom="3sp"
+
+        android:padding="5sp"
+        android:orientation="vertical"
+        android:paddingBottom="5sp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_back_grey"
+            android:orientation="vertical"
+            android:padding="5sp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:id="@+id/hos_date_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="Start Date"
+                    android:textColor="#000000"
+                    android:textColorHint="#020202"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="*"
+                    android:textColor="#B61919"
+                    android:textColorHint="#B61919"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+
+            <EditText
+                android:id="@+id/hos_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_weight="1.5"
+                android:backgroundTint="#fff"
+                android:drawableRight="@drawable/datedata"
+                android:ems="10"
+                android:focusableInTouchMode="false"
+                android:hint="Select Start Date"
+                android:inputType="textPersonName"
+                android:padding="10sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dis_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_back_grey"
+            android:orientation="vertical"
+            android:padding="5sp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="End Date"
+                    android:textColor="#000000"
+                    android:textColorHint="#020202"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="*"
+                    android:textColor="#B61919"
+                    android:textColorHint="#B61919"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+
+
+            <EditText
+                android:id="@+id/discharge_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:layout_weight="1.5"
+                android:backgroundTint="#fff"
+                android:drawableRight="@drawable/datedata"
+                android:ems="10"
+                android:focusableInTouchMode="false"
+                android:hint="Select End Date"
+                android:inputType="textPersonName"
+                android:padding="10sp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_back_grey"
+            android:orientation="vertical"
+            android:layout_marginTop="15sp"
+            android:padding="5sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5sp"
+                android:orientation="horizontal"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="Claim Type"
+                    android:textColor="#000000"
+                    android:textColorHint="#020202"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginLeft="10sp"
+                    android:layout_weight="1.0"
+                    android:fontFamily="@font/pop_reg"
+                    android:hint="*"
+                    android:textColor="#B61919"
+                    android:textColorHint="#B61919"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/claim_type_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/pop_reg"
+                    android:textSize="12sp"
+                    android:backgroundTint="#0e0b0a"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/claim_clear_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/btn_cancle"
+                android:fontFamily="@font/pop_reg"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/add_user_btn"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="5sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="5sp"
+                android:background="@drawable/save_btn"
+                android:fontFamily="@font/pop_reg"
+                android:gravity="center"
+                android:text="Save"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/info_text"
+            android:layout_width="5sp"
+            android:layout_height="18sp"
+            android:layout_marginStart="10sp"
+            android:background="#FF5722" />
+
+        <TextView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pop_reg"
+            android:text="Enrolment"
+            android:layout_marginStart="10sp"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40sp"
+        android:layout_marginBottom="85dp"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:id="@+id/info_text_GH"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10sp"
+            android:padding="5sp"
+            android:src="@drawable/no_image"
+            android:text="Cashless Form Revised"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="RtlCompat" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/core_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:layout_marginTop="10sp"
+            tools:listitem="@layout/my_flex_cards_new" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginEnd="10sp"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/light_blue_streaight"
+            android:orientation="horizontal">
+
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1.5"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pop_reg"
+                android:text="Profuct Feature"
+                android:layout_marginStart="10sp"
+                android:textColor="#3F51B5"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginStart="10sp"
+                android:src="@drawable/plus" />
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Policy Level"
+                    android:textStyle="bold"
+                    android:textColor="#08080B"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_gravity="center"
+                    android:gravity="end"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="Policy Level Content"
+                        android:textColor="#808185"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

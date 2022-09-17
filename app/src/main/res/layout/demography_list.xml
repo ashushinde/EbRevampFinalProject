@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#74F1F1F1"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_marginStart="5sp"
+    android:layout_marginTop="5sp"
+    android:layout_marginBottom="5sp"
+    android:layout_marginEnd="5sp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+     >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+
+            android:orientation="horizontal"
+            >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/pop_reg"
+                    android:gravity="start"
+                    android:text="Min Age :"
+                    android:textColor="#070502"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10sp"
+
+                    />
+                <TextView
+                    android:id="@+id/min_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/pop_reg"
+                    android:gravity="start"
+                    android:text="45"
+                    android:textColor="#534F48"
+                    android:textSize="13sp"
+
+
+                    />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pop_reg"
+                android:gravity="start"
+                android:text="Max Age :"
+                android:textColor="#070502"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10sp"
+
+                />
+            <TextView
+                android:id="@+id/max_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pop_reg"
+                android:gravity="start"
+                android:text="45"
+                android:textColor="#534F48"
+                android:textSize="13sp"
+
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5sp"
+
+            android:orientation="horizontal"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pop_reg"
+                android:gravity="start"
+                android:text="No. of Employee :"
+                android:textColor="#070502"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="10sp"
+
+                />
+            <TextView
+                android:id="@+id/employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pop_reg"
+                android:gravity="start"
+                android:text="45"
+                android:textColor="#534F48"
+                android:textSize="13sp"
+
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

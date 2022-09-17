@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00611616"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00F1F1F1"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:orientation="horizontal"
+
+
+                    >
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+                    <TextView
+                        android:id="@+id/head"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="start"
+                        android:text="Features"
+                        android:textColorHint="#590202"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="50sp"
+                            android:layout_height="5sp"
+                            android:layout_gravity="start"
+                            android:gravity="start"
+                            android:text="-"
+                           android:background="#FF9800"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ab"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/white_circle"
+                        android:paddingStart="5sp"
+                        android:elevation="20sp"
+                        android:src="@drawable/ic_close_black_24dp"
+                        android:paddingEnd="5sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5sp"
+                    android:padding="5sp"
+
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                    <ImageView
+                     
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/sum_insured"
+
+                        />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="#00FFFFFF"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="start"
+                                android:text="Sum-Insured"
+                                android:textColorHint="#590202"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:layout_marginStart="5sp"
+                                android:src="@drawable/ic_baseline_info_24"
+
+                                />
+                        </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFCFC"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#E2ECF1"
+                        android:padding="5sp"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="#00FFFFFF"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                         
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:src="@drawable/sum_insured"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="Sum-Insured"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="#00FFFFFF"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="15sp"
+                                    android:layout_height="15sp"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_gravity="center"
+                                    android:padding="2sp"
+                                    android:src="@drawable/rupee"
+
+                                    />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="50000"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="start"
+                                    android:text="/- per life"
+                                    android:textColorHint="#590202"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                                <ImageView
+                                    android:layout_width="20sp"
+                                    android:layout_height="20sp"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/ic_baseline_info_24"
+
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

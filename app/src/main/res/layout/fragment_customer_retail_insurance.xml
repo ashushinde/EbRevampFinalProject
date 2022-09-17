@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3FD"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/info_text_GH"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10sp"
+        android:padding="5sp"
+        android:src="@drawable/no_image"
+        android:text="Cashless Form Revised"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:ignore="RtlCompat" />
+    <LinearLayout
+        android:layout_marginBottom="100sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:layout_marginBottom="10sp"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+                    android:background="#ff8a84"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bold"
+                    android:text="Purchased Policies"
+                    android:layout_marginStart="10sp"
+                    android:textColor="#160BAE"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/hos_claim_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            tools:listitem="@layout/customer_insurance" />
+    </LinearLayout>
+
+
+</RelativeLayout>

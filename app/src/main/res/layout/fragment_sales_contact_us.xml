@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3FD"
+    android:orientation="vertical"
+    tools:context=".Fragment.ContactUsFinalFragment">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F3FD"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginTop="20sp"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/contactUsItemLinearLayout_broker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginEnd="5sp"
+                android:orientation="vertical"
+                android:background="@drawable/level1"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:id="@+id/contactUsItemLevel_broker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Level - 1"
+                    android:visibility="gone"
+                    android:textColor="#75a9f9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="6sp"
+                        android:layout_height="15sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5sp"
+                        android:background="#ff8a84"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="Broker"
+                        android:layout_marginStart="10sp"
+                        android:textColor="#160BAE"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@+id/brokername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10sp"
+                        android:fontFamily="@font/bold"
+                        android:text="Broker"
+                        android:textColor="#160BAE"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/broker_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Name"
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/name_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Joker"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/broker_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Contact Number"
+                    android:textColor="#aa671d" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/contact_broker_a"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="9920765572"
+                        android:textColor="#000" />
+
+
+
+                    <TextView
+                        android:id="@+id/contact_broker_b"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="9920765572"
+                        android:textColor="#000" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/broker_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Email - Id"
+                    android:textColor="#aa671d" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/email_broker_a"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="abcd@gmail.com"
+                        android:textColor="#000" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/email_broker_b"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="abcd@gmail.com"
+                        android:textColor="#000" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/broker_add_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Address  "
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/address_broker_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Tata Motors Insurance Broking Marol Maroshi Road,"
+                    android:textColor="#000" />
+
+
+                <TextView
+                    android:id="@+id/broker_id_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Address  "
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/address_broker_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Tata Motors Insurance  Marol Maroshi Road, Andheri (East), India"
+                    android:textColor="#000" />
+
+
+
+                <TextView
+                    android:id="@+id/broker_id_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Address "
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/address_broker_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="  Marol Maroshi Road, Andheri (East), Mumbai 400 059, India"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/contactUsItemLinearLayout_employer"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+
+                android:layout_marginEnd="5sp"
+                android:orientation="vertical"
+                android:background="@drawable/level2"
+                android:padding="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="6sp"
+                        android:layout_height="15sp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5sp"
+                        android:background="#ff8a84"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bold"
+                        android:text="Employer"
+                        android:layout_marginStart="10sp"
+                        android:textColor="#160BAE"
+                        android:textSize="22sp" />
+                    <TextView
+                        android:id="@+id/employername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10sp"
+                        android:fontFamily="@font/bold"
+                        android:text="Broker"
+                        android:textColor="#160BAE"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/employer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Name"
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/employer_name_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Joker"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/employer_contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Contact Number"
+                    android:textColor="#aa671d" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/contact_employer_a"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="9920765572"
+                        android:textColor="#000" />
+
+
+
+                    <TextView
+                        android:id="@+id/contact_employer_b"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="9920765572"
+                        android:textColor="#000" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/employer_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Email - Id"
+                    android:textColor="#aa671d" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/email_employer_a"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="abcd@gmail.com"
+                        android:textColor="#000" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/email_employer_b"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="abcd@gmail.com"
+                        android:textColor="#000" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/employer_add_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Address  "
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/address_employer_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Tata Motors Insurance Broking Marol Maroshi Road,"
+                    android:textColor="#000" />
+
+
+                <TextView
+                    android:id="@+id/employer_id_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Address  "
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/address_employer_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Tata Motors Insurance  Marol Maroshi Road, Andheri (East), India"
+                    android:textColor="#000" />
+
+
+
+                <TextView
+                    android:id="@+id/employer_id_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/bold"
+                    android:text="Address "
+                    android:textColor="#aa671d" />
+
+                <TextView
+                    android:id="@+id/address_employer_c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="  Marol Maroshi Road, Andheri (East), Mumbai 400 059, India"
+                    android:textColor="#000" />
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/broker_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/broker_list" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/admin_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/broker_list" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

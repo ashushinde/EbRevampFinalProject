@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:background="#F2F3FA"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="15sp"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:id="@+id/pre_sale"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:orientation="horizontal"
+        android:padding="15sp"
+        android:background="@drawable/card_back">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Pre Sale"
+            android:textSize="20sp"
+            android:textColor="#0C0909"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/bold"/>
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:src="@drawable/arrow_next"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/post_sale"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:orientation="horizontal"
+        android:padding="15sp"
+        android:layout_marginTop="30sp"
+        android:background="@drawable/card_back">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Post Sale"
+            android:textSize="20sp"
+            android:textColor="#0C0909"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/bold"/>
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:src="@drawable/arrow_next"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

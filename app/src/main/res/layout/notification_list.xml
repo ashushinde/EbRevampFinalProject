@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5sp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:id="@+id/s_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:orientation="horizontal">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="Notifications"
+        android:padding="5sp"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/ic_close_white_24dp"/>
+    </LinearLayout>
+
+
+    <ImageView
+android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        android:src="@drawable/no_image"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ghi_recycle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="15sp"
+        tools:listitem="@layout/notify_list"
+
+        />
+
+
+
+</LinearLayout>
+
+

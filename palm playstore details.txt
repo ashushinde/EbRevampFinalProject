@@ -1,0 +1,20 @@
+Palm Care Benefits
+
+Clients for managing their Group Health & Personal Insurance Policy.  
+
+
+Palm Insurance Brokers Pvt. Ltd. is an Insurance Broking Company registered under Insurance Regulatory Development Authority (Insurance Brokers) Regulation 2002 act with License No- DB295/05 in the year 2005 as Direct Broker. The company provides entire range of services catering to Life and Non-life Insurance Sectors and aims for total customer satisfaction. We specialize in rendering risk management and related insurance covers for Corporate, Professionals and Individuals through our highly dedicated and qualified team of people empowering us to offer solutions for all complex insurance matters.
+Palm Care Benefits is a Mobile App of Palm Insurance Brokers Pvt Ltd to provide its customers a complete one stop solution for managing their Health Insurance Program. It provides access to Policy Features, Ecards, Claims, Network Hospital, Wellness etc. The app also allows customers to store, renew and buy personal policies like Health, Term, Car and Bike. 
+Discover the new digital transformation in the Employee Benefit right at click of a button.
+
+helpdesk@palminsurance.in
+
++918860005761
+
+Palm password :
+ config {
+             keyAlias 'key0'
+             keyPassword '!Fyn@Master#96531@0'
+            storeFile file('palmkey.jks')
+            storePassword '!Fyn@Master#96531@0'
+        }

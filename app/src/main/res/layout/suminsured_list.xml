@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="2sp"
+
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginStart="10sp"
+        android:layout_marginEnd="10sp"
+        >
+        <FrameLayout
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:background="#00FFFFFF"
+            android:layout_height="wrap_content">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10sp"
+                app:cardBackgroundColor="#FFFFFF"
+
+                android:layout_margin="10sp"
+                app:cardElevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5sp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8sp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:id="@+id/plan_name"
+                                android:layout_width="match_parent"
+
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Enhance Suminsured"
+
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="#0E091B"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="15sp"
+                                android:layout_height="15sp"
+                                android:layout_marginEnd="3sp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/rupee"
+                                android:textColor="#fff"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/flex_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="2,00,000"
+                                android:textColor="#0A0909"
+                                android:textSize="13sp" />
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5sp"
+                        android:background="@drawable/dash_line_">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pop_reg"
+                            android:text="Annual Premium "
+
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="#0E091B"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="15sp"
+                            android:layout_height="15sp"
+                            android:layout_marginEnd="3sp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/rupee"
+                            android:textColor="#fff"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:id="@+id/premium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pop_reg"
+                            android:text="2,00,000"
+                            android:textColor="#0A0909"
+                            android:textSize="13sp" />
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pop_reg"
+                            android:text=" (Incl GST)"
+                            android:layout_marginStart="3sp"
+                            android:textColor="#0A0909"
+                            android:textSize="13sp" />
+
+
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="30sp"
+            android:background="@drawable/circle_blu_dark"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:layout_marginStart="3sp"
+            android:layout_height="30sp">
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/hide"
+        android:layout_width="match_parent"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:layout_marginStart="3sp"
+        android:layout_height="wrap_content">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feature_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp"
+
+        tools:listitem="@layout/feature_list_flex"
+        android:layout_below="@+id/cards"
+
+        />
+    </LinearLayout>
+
+</LinearLayout>

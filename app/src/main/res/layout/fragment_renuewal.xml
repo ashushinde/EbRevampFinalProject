@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F3FD"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8sp"
+        android:orientation="vertical">
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/my_insurance_cover_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical"
+                        >
+
+                        <LinearLayout
+                            android:background="@drawable/edit_back_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginStart="10sp"
+                                android:text="Select Policy Type"
+                                android:textColor="#000000"
+                                android:fontFamily="@font/bold"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:layout_marginBottom="5sp"
+                                android:orientation="horizontal">
+
+                                <Spinner
+                                    android:id="@+id/policy_type_spin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42sp"
+                                    android:textColor="#000000"
+                                    android:fontFamily="@font/pop_reg"
+                                    android:textSize="12sp"
+                                    android:backgroundTint="#0e0b0a" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/vehical_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15sp"
+                                android:background="@drawable/edit_back_grey"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10sp"
+                                        android:layout_marginTop="5sp"
+                                        android:fontFamily="@font/bold"
+                                        android:singleLine="true"
+                                        android:text="Vehical Reg No."
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="10sp" />
+                                </LinearLayout>
+
+                                <EditText
+                                    android:id="@+id/reg_no"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5sp"
+                                    android:backgroundTint="#fff"
+                                    android:ems="10"
+                                    android:fontFamily="@font/bold"
+                                    android:hint="Enter Reg No."
+                                    android:inputType="textPersonName"
+                                    android:padding="10sp"
+                                    android:singleLine="true"
+                                    android:textColor="#616161"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15sp"
+                                android:background="@drawable/edit_back_grey"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10sp"
+                                        android:layout_marginTop="5sp"
+                                        android:fontFamily="@font/bold"
+                                        android:singleLine="true"
+                                        android:text="Vehical Reg Date"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="10sp" />
+                                </LinearLayout>
+
+                                <EditText
+                                    android:id="@+id/reg_date"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5sp"
+                                    android:layout_weight="1.5"
+                                    android:hint="Select Vehical Reg Date"
+                                    android:drawableEnd="@drawable/datedata"
+                                    android:drawablePadding="10sp"
+                                    android:ems="10"
+                                    android:backgroundTint="#ffffff"
+                                    android:fontFamily="@font/bold"
+                                    android:focusableInTouchMode="false"
+                                    android:inputType="textPersonName"
+                                    android:padding="10sp"
+                                    android:singleLine="true"
+                                    android:textColor="#5F5F5F"
+                                    android:textSize="13sp"
+                                    />
+                            </LinearLayout>
+
+
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/travel_linear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15sp"
+                                android:background="@drawable/edit_back_grey"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10sp"
+                                        android:layout_marginTop="5sp"
+                                        android:fontFamily="@font/bold"
+                                        android:singleLine="true"
+                                        android:text="Travel Location"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="10sp" />
+                                </LinearLayout>
+
+                                <EditText
+                                    android:id="@+id/location"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5sp"
+                                    android:backgroundTint="#fff"
+                                    android:ems="10"
+                                    android:fontFamily="@font/bold"
+                                    android:hint="Enter Location"
+                                    android:inputType="textPersonName"
+                                    android:padding="10sp"
+                                    android:singleLine="true"
+                                    android:textColor="#616161"
+                                    android:textSize="13sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15sp"
+                                android:background="@drawable/edit_back_grey"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10sp"
+                                        android:layout_marginTop="5sp"
+                                        android:fontFamily="@font/bold"
+                                        android:singleLine="true"
+                                        android:text="Travel Trip Type"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginLeft="10sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5sp"
+                                    android:layout_marginBottom="5sp"
+                                    android:orientation="horizontal">
+
+                                    <Spinner
+                                        android:id="@+id/dummy_spin"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="42sp"
+                                        android:textColor="#000000"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textSize="12sp"
+                                        android:backgroundTint="#0e0b0a" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp"
+                            android:background="@drawable/edit_back_grey"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginTop="5sp"
+                                    android:fontFamily="@font/bold"
+                                    android:singleLine="true"
+                                    android:text="Policy Number"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="10sp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/policy_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:backgroundTint="#fff"
+                                android:ems="40"
+                                android:fontFamily="@font/bold"
+                                android:hint="Enter Policy Number"
+                                android:inputType="textPersonName"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:maxLength="40"
+                                android:maxEms="40"
+                                android:minEms="40"
+                                android:digits="0123456789abcdefghijklmnopqrstuvwxyz-/"
+                                android:textColor="#616161"
+                                android:textSize="13sp"  />
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:background="@drawable/edit_back_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp"
+                            android:orientation="vertical"
+                            android:padding="5sp">
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Policy Start Date "
+                                    android:textColorHint="#020202"
+                                    android:textColor="#000000"
+                                    android:fontFamily="@font/bold"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="10sp"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/dte_of_adminsiion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:layout_weight="1.5"
+                                android:hint="Select Policy Start Date"
+                                android:fontFamily="@font/bold"
+                                android:ems="10"
+                                android:focusableInTouchMode="false"
+                                android:drawableEnd="@drawable/datedata"
+                                android:drawablePadding="10sp"
+                                android:backgroundTint="#ffffff"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textSize="13sp"
+
+                                android:inputType="textPersonName"
+                                android:textColor="#5F5F5F"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:background="@drawable/edit_back_grey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp"
+                            android:orientation="vertical"
+                            android:padding="5sp">
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginStart="10sp"
+                                    android:hint="Policy End Date"
+                                    android:textColorHint="#020202"
+                                    android:textColor="#000000"
+                                    android:fontFamily="@font/bold"
+                                    android:textStyle="bold"
+                                    android:textSize="14sp" />
+                                <TextView
+                                    android:fontFamily="@font/bold"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+
+                                    android:hint=""
+                                    android:textColorHint="#962525"
+                                    android:textColor="#B93434"
+                                    />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/discharge_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:layout_weight="1.5"
+                                android:hint="Select Policy End Date"
+                                android:drawableEnd="@drawable/datedata"
+                                android:drawablePadding="10sp"
+                                android:ems="10"
+                                android:backgroundTint="#ffffff"
+                                android:fontFamily="@font/bold"
+                                android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textColor="#5F5F5F"
+                                android:textSize="13sp"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp"
+                            android:background="@drawable/edit_back_grey"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginTop="5sp"
+                                    android:fontFamily="@font/bold"
+                                    android:singleLine="true"
+                                    android:text="Company Name"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="10sp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/company_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:backgroundTint="#fff"
+                                android:ems="10"
+
+                                android:fontFamily="@font/bold"
+                                android:hint="Enter Company Name"
+                                android:inputType="textPersonName"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textColor="#616161"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/email_lin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp"
+                            android:background="@drawable/edit_back_grey"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginTop="5sp"
+                                    android:fontFamily="@font/bold"
+                                    android:singleLine="true"
+                                    android:text="Sum Insured"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="10sp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/sum_insured"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:backgroundTint="#fff"
+                                android:ems="10"
+                                android:fontFamily="@font/bold"
+
+                                android:hint="Enter Sum Insured"
+                                android:inputType="number"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textColor="#616161"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/mob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp"
+                            android:background="@drawable/edit_back_grey"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10sp"
+                                    android:layout_marginTop="5sp"
+                                    android:fontFamily="@font/bold"
+                                    android:singleLine="true"
+                                    android:text="Premium"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginLeft="10sp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/premium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:backgroundTint="#fff"
+                                android:ems="10"
+
+                                android:fontFamily="@font/bold"
+                                android:hint="Enter Premium"
+                                android:inputType="number"
+                                android:padding="10sp"
+                                android:singleLine="true"
+                                android:textColor="#616161"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3sp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5sp">
+
+                            <RelativeLayout
+                                android:id="@+id/adhaarBackLayout_cheque1"
+                                android:layout_width="0dp"
+                                android:layout_height="150sp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15sp"
+                                android:layout_marginBottom="3sp"
+                                android:layout_weight="1.5"
+                                android:background="@drawable/dash_shadow"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                >
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    >
+                                    <LinearLayout
+                                        android:id="@+id/hide"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        >
+
+                                        <ImageView
+                                            android:layout_width="30sp"
+                                            android:layout_height="30sp"
+                                            android:padding="2sp"
+                                            android:src="@drawable/attachment"
+                                            />
+
+                                        <LinearLayout
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1.5"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="5sp"
+                                            >
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:padding="5sp"
+                                                >
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:hint="Attach File"
+                                                    android:textColorHint="#020202"
+                                                    android:textColor="#000000"
+                                                    android:fontFamily="@font/bold"
+                                                    android:textStyle="bold"
+                                                    android:layout_marginStart="10sp"
+                                                    android:textSize="14sp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:hint="*"
+                                                    android:textColorHint="#F44336"
+                                                    android:textColor="#F44336"
+                                                    android:fontFamily="@font/bold"
+                                                    android:textStyle="bold"
+                                                    android:layout_marginStart="10sp"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:hint="(File Format : Jpeg,Png,-Max File Size :2 MB)"
+                                                android:textColorHint="#FF5722"
+                                                android:textColor="#FF5722"
+                                                android:fontFamily="@font/bold"
+                                                android:textStyle="bold"
+                                                android:layout_marginStart="10sp"
+                                                android:textSize="12sp" />
+
+                                        </LinearLayout>
+
+
+
+                                    </LinearLayout>
+
+
+
+                                    <ImageView
+                                        android:id="@+id/bankPreview1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:visibility="gone"
+                                        />
+
+                                </LinearLayout>
+
+
+
+
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/btn_policy"
+                            android:layout_width="150sp"
+                            android:layout_height="48sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginEnd="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:background="@drawable/btn_cancle"
+                            android:gravity="center"
+                            android:text="View My Policies"
+                            android:textColor="#fff"
+                            />
+
+
+                        <Button
+                            android:id="@+id/send"
+                            android:layout_width="150sp"
+                            android:layout_height="48sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginEnd="10sp"
+                            android:layout_marginBottom="5sp"
+                            android:background="@drawable/btn_reg"
+                            android:gravity="center"
+                            android:text="Submit"
+                            android:textColor="#fff"
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

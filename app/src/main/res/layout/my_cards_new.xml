@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00ECECEC"
+    android:padding="3dp">
+
+
+
+    <LinearLayout
+        android:layout_width="340sp"
+        android:layout_height="160sp"
+        android:background="@drawable/card_back"
+
+        android:layout_margin="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/frogm"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="Group Mediclaim"
+                        android:textColor="#040405"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/cover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:fontFamily="@font/pop_reg"
+                        android:textColor="#FFFFFF"
+                        android:text="Enrolment Window Closed"
+                        android:padding="5sp"
+                        android:background="@drawable/blues"
+                        android:textStyle="bold"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/dash_line_"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:id="@+id/two_five"
+                        android:layout_width="50dp"
+                        android:layout_height="50sp"
+                        android:padding="5sp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:src="@drawable/twofive"/>
+                    <ImageView
+                        android:id="@+id/one_four"
+                        android:layout_width="50dp"
+                        android:layout_height="50sp"
+                        android:padding="5sp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:src="@drawable/onefour"/>
+                    <ImageView
+                        android:id="@+id/three_six"
+                        android:layout_width="50dp"
+                        android:layout_height="50sp"
+                        android:padding="5sp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/threesix"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15sp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+
+                            android:orientation="horizontal">
+
+
+
+                            <TextView
+                                android:id="@+id/m_cov"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#0B0606"
+                                android:text=" vbngnfgnfg gfnfgnfg nfgnfg gffg fgnfgn fgnfg fnfg gnfg fgfg "
+                                android:textStyle="bold"
+                                android:textSize="11sp" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/opd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2sp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:text="Enrolment Confirmation   : "
+                                android:textColor="#0A0909"
+                                android:textSize="12sp" />
+
+
+                            <TextView
+                                android:id="@+id/opd_cover"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#ff5d55"
+                                android:text="Closed"
+                                android:textStyle="bold"
+                                android:textSize="11sp" />
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

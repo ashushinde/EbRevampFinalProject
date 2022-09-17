@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Asawari/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/drawable/my_health_btn.xml" value="0.139" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/drawable/my_health_card.xml" value="0.139" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/drawable/my_opd_btn.xml" value="0.139" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/drawable/my_surgery_card.xml" value="0.139" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/drawable/myopd_card.xml" value="0.139" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_bank_detail_java.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_change_passforce.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_forget_password.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_member_cover_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_upload_deficiency.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_view_over_all_claim.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/app_bar_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/demologin.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/download_member.xml" value="0.17447916666666666" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_dashboard_benifit.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_download_ecard.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_my_claims.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_my_claims_track.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_new_dash_board.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_submit_claim.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_track_claim2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/fragment_wellness_second.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/member_home_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/my_overall_claim_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/myicon.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/drawable/card_back.xml" value="0.1595" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1595" />
+        <entry key="app/src/main/res/layout/fragment_my_enroll_ment_cards.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/layout/topup_popup.xml" value="0.23802083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

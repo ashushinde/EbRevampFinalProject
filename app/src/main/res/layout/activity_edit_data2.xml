@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_main_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/info_text"
+                android:layout_width="50sp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:padding="5sp"
+                android:src="@drawable/back_button"
+                android:text="Cashless Form Revised"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bold"
+                android:text="List"
+                android:textColor="#8F4DFA"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/policy_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_down_to_up"
+
+            tools:listitem="@layout/view_data_list" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

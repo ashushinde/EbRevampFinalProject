@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00F2F2F2"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="15sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/card_back"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/first_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="2.0"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="Why should you take a group insurance instead of an individual health insurance?"
+                        android:textColor="#030405"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.4"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+
+
+                        <ImageView
+                            android:id="@+id/expand"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginEnd="5sp"
+
+                            android:gravity="center"
+                            android:padding="5sp"
+                            android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="5sp">
+
+
+
+                        <TextView
+                            android:id="@+id/gender"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="1.5"
+
+                            android:fontFamily="@font/pop_reg"
+                            android:gravity="start"
+
+                            android:text="A group health insurance is beneficial in several ways. You have to pay one single premium amount to secure a group of employees against any medical expenses. You can even cover their spouses and children in the same policy. So, there is a lot less hassle and documentation with just one group policy instead of many."
+                            android:textColor="#3F51B5"
+                            android:textSize="12sp"
+
+
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="3sp"
+            android:layout_height="50sp"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="15sp"
+            android:layout_marginBottom="10sp"
+            android:background="#de2323" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

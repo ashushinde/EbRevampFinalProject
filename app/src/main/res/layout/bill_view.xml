@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginStart="10sp"
+    android:layout_marginEnd="10sp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_gravity="end"
+        android:layout_marginBottom="3sp"
+        android:layout_marginTop="3sp"
+        android:src="@drawable/ic_close_black_24dp">
+
+    </ImageView>
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="30sp"
+
+    android:orientation="horizontal">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/edit_back"
+
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+                android:layout_height="60sp"
+                android:orientation="vertical"
+                android:background="@drawable/edit_back"
+                android:padding="5sp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:text="Bill No"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="3sp"
+                    android:textColor="#350F7A"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+                android:layout_height="60sp"
+                android:orientation="vertical"
+                android:background="@drawable/edit_back"
+                android:padding="5sp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:text="Bill Date"
+                    android:singleLine="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="3sp"
+                    android:textColor="#350F7A"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+                android:layout_height="60sp"
+                android:orientation="vertical"
+                android:background="@drawable/edit_back"
+                android:padding="5sp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:text="Bill Amount"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="3sp"
+
+                    android:textColor="#350F7A"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+                android:layout_height="60sp"
+                android:orientation="vertical"
+                android:background="@drawable/edit_back"
+                android:padding="5sp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:text="Bill Comment"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="3sp"
+                    android:textColor="#350F7A"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+
+                android:layout_height="60sp"
+                android:orientation="vertical"
+                android:background="@drawable/edit_back"
+                android:padding="5sp">
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/bold"
+                    android:text="Bill Type"
+                    android:padding="3sp"
+                    android:textColor="#350F7A"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bill_nos"
+
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+
+
+                tools:listitem="@layout/bil_list"
+                android:layout_height="wrap_content" >
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bill_dates"
+                android:layout_width="0dp"
+                android:layout_weight="3.5"
+                tools:listitem="@layout/bil_list"
+                android:layout_height="wrap_content" >
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bill_amounts"
+                android:layout_width="0dp"
+                android:layout_weight="2.5"
+
+                tools:listitem="@layout/bil_list"
+                android:layout_height="wrap_content" >
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/billcomments"
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+
+                tools:listitem="@layout/bil_list"
+                android:layout_height="wrap_content" >
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/types"
+                android:layout_width="0dp"
+                android:layout_weight="4.5"
+
+                tools:listitem="@layout/bil_list"
+                android:layout_height="wrap_content" >
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+    </LinearLayout>
+</HorizontalScrollView>
+</LinearLayout>

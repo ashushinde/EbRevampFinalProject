@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:background="#00F3F3F3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                app:cardElevation="5sp"
+                >
+                <LinearLayout
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+
+
+                    >
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10sp"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="5sp"
+                        android:padding="5sp"
+                        android:layout_marginLeft="50sp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5sp"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:layout_marginBottom="10sp"
+                            android:background="#F2F3FD"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/logo_policy"
+                                android:layout_width="100sp"
+                                android:layout_height="45sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:layout_marginEnd="10sp"
+                                android:src="@drawable/demo_icon" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/policy_type"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="15sp"
+                                android:layout_gravity="center"
+                                android:text="Group Mediclaim"
+                                android:layout_marginEnd="10sp"
+                                android:textStyle="bold"
+                                android:singleLine="false"
+                                android:textColor="#293DAF"
+                                android:layout_marginLeft="10sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:padding="8sp"
+                           >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4sp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="12sp"
+                                android:layout_gravity="center"
+                                android:text="Policy Name  :"
+                                android:textStyle="bold"
+                                android:textColor="#030303"
+                                />
+
+                            <TextView
+                                android:id="@+id/policy"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:gravity="start"
+                                android:layout_gravity="start"
+                                android:textColor="#FF5722"
+                                android:text="96"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4sp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:text="Insurer Name :"
+                                android:textColor="#030303"
+                                />
+
+                            <TextView
+                                android:id="@+id/insure_name"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="12sp"
+                                android:layout_gravity="start"
+                                android:textStyle="bold"
+                                android:gravity="start"
+                                android:textColor="#FF5722"
+                                android:text="Tata AIG General"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4sp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"
+                                android:text="Member Covered :"
+                                android:textColor="#030303"
+                                />
+                            <TextView
+                                android:id="@+id/member_cover"
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textSize="12sp"
+                                android:layout_gravity="start"
+                                android:text="6"
+                                android:textStyle="bold"
+                                android:gravity="start"
+                                android:textColor="#FF5722"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/options"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginEnd="10sp"
+                        android:layout_marginBottom="15sp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/policy_detail"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="20sp"
+                            android:layout_marginRight="5sp"
+                            android:background="@drawable/flex_butoon"
+                            android:text="Member  Detail"
+                            android:fontFamily="@font/pop_reg"
+                            android:textColor="#BE2BFC"
+                            android:textStyle="bold"
+                            android:textSize="11sp" />
+
+                        <Button
+                            android:id="@+id/policy_doc"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/green_light"
+                            android:gravity="center"
+
+                            android:layout_marginStart="20sp"
+                            android:text="Benefit Manual"
+                            android:fontFamily="@font/pop_reg"
+                            android:textColor="#39DD3D"
+                            android:textStyle="bold"
+                            android:textSize="11sp"
+
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="3sp"
+                    android:layout_height="180sp"
+                       android:visibility="gone"
+                    android:background="#de2323"/>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/hh"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:gravity="end"
+            android:layout_marginEnd="5sp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50sp"
+            android:visibility="gone"
+
+            >
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+

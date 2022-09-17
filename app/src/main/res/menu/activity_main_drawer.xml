@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Profile"
+            android:capitalize="none"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/pro_nav_a"
+            android:textAllCaps="true"
+            android:textSize="12sp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/Dashboard"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/dashboard_nav_a"
+            android:textSize="12sp"
+            android:title="Dashboard" />
+
+        <item
+            android:id="@+id/policy"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/add_member_nav_a"
+            android:textSize="12sp"
+            android:title="Enrollment" />
+
+        <item
+            android:id="@+id/flexi"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/flexi_benefit_nav"
+            android:textSize="12sp"
+            android:title="Flex Benefit" />
+
+
+
+        <item
+            android:id="@+id/network"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/network_hospital_nav_a"
+            android:textSize="12sp"
+            android:title="Network Hospital" />
+
+
+
+        <item
+            android:id="@+id/well"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/wellness_a"
+            android:textSize="12sp"
+            android:title="Wellness" />
+
+
+        <item
+            android:id="@+id/form"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/form_center_nav_a"
+            android:textSize="12sp"
+            android:title="Form Center" />
+
+        <item
+            android:id="@+id/contact"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/contact_us_a"
+            android:textSize="12sp"
+            android:title="Contact Us" />
+
+
+        <item
+            android:id="@+id/faq"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/help"
+            android:textSize="12sp"
+            android:title="Help" />
+
+        <item
+            android:id="@+id/mypolicy"
+            android:fontFamily="@font/bold"
+            android:icon="@drawable/my_policy"
+            android:textSize="12sp"
+            android:title="My Policy" />
+
+
+
+    </group>
+
+    <item
+        android:id="@+id/clm"
+        android:title="Claim">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+
+                <item
+                    android:id="@+id/in_claim"
+                    android:fontFamily="@font/bold"
+                    android:icon="@drawable/claim_nav_a"
+                    android:textSize="12sp"
+                    android:title="Intimate Claim" />
+
+                <item
+                    android:id="@+id/submit_claim"
+                    android:fontFamily="@font/bold"
+                    android:icon="@drawable/add_member_nav_a"
+                    android:textSize="12sp"
+                    android:title="Submit Claim" />
+                <item
+                    android:id="@+id/my_claim"
+                    android:fontFamily="@font/bold"
+                    android:icon="@drawable/my_claim"
+                    android:textSize="12sp"
+                    android:title="My Claim" />
+
+                <item
+                    android:id="@+id/track_claim"
+                    android:fontFamily="@font/bold"
+                    android:icon="@drawable/track_claim_final"
+                    android:textSize="12sp"
+                    android:title="Track Claim" />
+
+
+            </group>
+
+        </menu>
+    </item>
+
+</menu>
+

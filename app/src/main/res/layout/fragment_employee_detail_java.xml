@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F5FF"
+    android:orientation="vertical"
+    tools:context=".Activity.PersnolDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical"
+                android:padding="5sp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:singleLine="true"
+                    android:text="Employee Detail"
+                    android:textColor="#011DB5"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:singleLine="true"
+                    android:text="Enter Employee Detail below"
+                    android:textColor="#59595A"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_back_grey"
+                    android:layout_marginTop="20sp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Employee Name"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/emp_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:drawablePadding="10sp"
+                        android:ems="10"
+                        android:text="nkdkfnk"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:hint=" Employee Name"
+                        android:inputType="textPersonName"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Date of Birth"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/dob"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+
+                        android:backgroundTint="#fff"
+                        android:drawableEnd="@drawable/datedata"
+                        android:drawablePadding="10sp"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+                        android:hint=" DOB"
+                        android:inputType="textPersonName"
+
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp"
+                        android:drawableRight="@drawable/datedata" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Date of Joining"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/doj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:drawableEnd="@drawable/datedata"
+                        android:drawablePadding="10sp"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+                        android:hint=" DOJ"
+                        android:inputType="textPersonName"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp"
+                        android:drawableRight="@drawable/datedata" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/grade_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:visibility="gone"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Grade"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/grade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+
+                        android:inputType="textPersonName"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Email ID"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+                        android:hint=" Email Id"
+                        android:inputType="textPersonName"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/email_lin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Alternate Email ID"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/alternate_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:ems="10"
+                        android:fontFamily="@font/bold"
+                        android:focusableInTouchMode="false"
+                        android:hint="Enter Alternate Email id"
+                        android:inputType="textPersonName"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Mobile Number"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/contact_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+                        android:hint="Enter Mobile Number"
+                        android:minEms="10"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:inputType="number"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/hidden"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+
+
+
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/em_con"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Emergency Contact Person"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+                    <EditText
+                        android:id="@+id/emg_contact_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:fontFamily="@font/bold"
+                        android:hint="Enter Contact Person"
+                        android:focusableInTouchMode="false"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:singleLine="true"
+                        android:inputType="textPersonName"
+                        android:padding="10sp"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/em_mob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Emergency Contact Number"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/emg_contact_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:ems="10"
+                        android:fontFamily="@font/bold"
+                        android:hint="Enter Contact Number"
+                        android:focusableInTouchMode="false"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:minEms="10"
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/designation_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:visibility="gone"
+                    android:background="@drawable/edit_back_grey"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10sp"
+                            android:layout_marginTop="5sp"
+                            android:fontFamily="@font/bold"
+                            android:singleLine="true"
+                            android:text="Designation"
+                            android:textColor="#6E6D6D"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10sp" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/designation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:backgroundTint="#fff"
+                        android:ems="10"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/bold"
+                        android:hint="Enter Designation"
+                        android:inputType="textPersonName"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:padding="10sp"
+                        android:singleLine="true"
+                        android:textColor="#100707"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                       android:gravity="end"
+                        android:layout_marginTop="10sp"
+                        android:orientation="horizontal"
+                        android:padding="5sp">
+
+
+                        <Button
+                            android:id="@+id/emp_detail_save"
+                            android:layout_width="100sp"
+                            android:layout_height="40sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginLeft="8sp"
+                            android:layout_marginEnd="5sp"
+                            android:layout_marginBottom="5sp"
+                            android:background="@drawable/btn_cancle"
+                            android:gravity="center"
+                            android:text="Save"
+                           android:visibility="gone"
+                            android:textColor="#fff"
+                            tools:ignore="RtlCompat" />
+
+
+                        <Button
+                            android:id="@+id/send"
+                            android:layout_width="100sp"
+                            android:layout_height="40sp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginBottom="5sp"
+                            android:background="@drawable/btn_cancle"
+                            android:gravity="center"
+                            android:text="Edit"
+                            android:textColor="#fff"
+                            />
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+
+               <LinearLayout
+                   android:id="@+id/view_more"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="end"
+                   android:gravity="end"
+                   android:layout_marginBottom="80sp"
+                   android:orientation="horizontal">
+
+                   <TextView
+                       android:id="@+id/view_data"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="10sp"
+                       android:layout_marginTop="5sp"
+                       android:fontFamily="@font/pop_reg"
+                       android:singleLine="true"
+                       android:text="View More..."
+                       android:textColor="#3D50A2"
+                       android:paddingStart="10sp"
+                       android:paddingEnd="10sp"
+                       android:background="@drawable/light_blue"
+                       android:textSize="12sp"
+                       android:textStyle="bold"
+                       android:layout_marginLeft="10sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

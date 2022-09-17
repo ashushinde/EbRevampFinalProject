@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10sp"
+            android:gravity="end">
+            <ImageView
+                android:id="@+id/ab"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_gravity="end"
+                android:paddingStart="5sp"
+                android:padding="5sp"
+                android:layout_marginBottom="3sp"
+
+                android:src="@drawable/ic_close_black_24dp"
+                android:background="@drawable/edit_back"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10sp"
+            android:padding="10sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/pop_reg"
+                android:layout_marginStart="5sp"
+                android:scrollbars="vertical"
+                android:text="Meal Card be dfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfdfloaded every first business day of the month. As per the allocated/Selected amount on FlexiBen programme."
+                android:textColor="#413a3a"
+                android:textColorHint="#bebdbd"
+                android:textSize="11sp"
+                android:padding="5sp"
+                android:layout_marginLeft="5sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+

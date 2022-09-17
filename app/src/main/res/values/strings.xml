@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name"> </string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Dashboard</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+    <string name="NotFound">No Data Found</string>
+
+    <string name="str_ava">Service Not Available For This Location</string>
+    <string name="str_error">There Is Some Problem</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="ok">YES</string>
+    <string name="no">NO</string>
+    <string name="OK">Ok</string>
+    <string name="tata_logo">Tata Logo</string>
+
+    <string name="class_name">class name should be start with upper case letter and evry inner word should start with lower case letter
+    this type of convention called camel case convention String StringBuffer InputStreamReader Etc</string>
+    <string name="desc_about_app">Weather forecast | ☀️ OpenWheatherMap</string>
+    <string name="version">Version</string>
+
+    <string name="cancel">Cancel</string>
+    <string name="progress">Loading..</string>
+    <string name="msg_failed">Something went wrong...Please try later!</string>
+    <string name="msg_gps">Please enable GPS for current location access</string>
+    <string name="msg_internet">Please connect to Internet</string>
+    <string name="msg_location_services">Allow the application access to location permission</string>
+
+    <string name="desc_app_logo">App Logo</string>
+    <string name="msg_splash_bottom_tag">Made with ❤️ in India | Open Source Project </string>
+    <string name="action_search">Search Weather by City Name</string>
+    <string name="action_about">About</string>
+    <string name="search_title"> 🔍 Enter City Name </string>
+
+    <string name="desc_weather">Weather condition</string>
+
+    <string name="temp_lable">Temperature:</string>
+    <string name="temp_unit">\u00B0C</string>
+    <string name="wind_lable">Wind:</string>
+    <string name="wind_unit">m/s</string>
+    <string name="pressure_lable">Pressure:</string>
+    <string name="pressure_unit">hPa</string>
+    <string name="humidity_lable">humidity:</string>
+    <string name="humidity_unit">%</string>
+
+    <string name="label_btn_find">Find</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="str_btn_find">Find</string>
+    <string name="interface_name">interface should start with upper case and inner word should be uppercase class name should be nouns.
+    called camel case convetion
+    ex-Serializble,
+        Clonable
+        Random Access</string>
+    <string-array name="place_type">
+        <item>airport</item>
+        <item>atm</item>
+        <item>bank</item>
+        <item>bus_station</item>
+        <item>church</item>
+        <item>doctor</item>
+        <item>hospital</item>
+        <item>mosque</item>
+        <item>movie_theater</item>
+        <item>hindu_temple</item>
+        <item>restaurant</item>
+    </string-array>
+
+    <string-array name="place_type_name">
+        <item>Airport</item>
+        <item>ATM</item>
+        <item>Bank</item>
+        <item>Bus Station</item>
+        <item>Church</item>
+        <item>Doctor</item>
+        <item>Hospital</item>
+        <item>Mosque</item>
+        <item>Movie Theater</item>
+        <item>Hindu Temple</item>
+        <item>Restaurant</item>
+    </string-array>
+    <string name="dash">-</string>
+    <string name="sampleBigString">mydata</string>
+    <!--   <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="or">or</string>-->
+</resources>

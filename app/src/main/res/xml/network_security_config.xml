@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--    <base-config cleartextTrafficPermitted="true">
+            <trust-anchors>
+                <certificates src="@raw/uat_eb"/>
+            </trust-anchors>
+
+        </base-config>-->
+    <!--<domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">lifekaplan-eb.com</domain>
+    </domain-config>-->
+
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">ebapi.aceinsurance.com</domain>
+    </domain-config>
+
+//apilifekaplanuat-eb.tmibasl.in :tata
+//policyanchor.com  : Palm
+    //uatapiportal.kmdastur.com  :KMD
+   // uat-ebapi.aceinsurance.com   : ace
+    // apiuateb.insuringall.com  :spa
+
+    //api.userhb.in  :howden
+
+
+    // api.howdenbenefits.in  :howden prod
+
+    //apiportal.kmdastur.com  KMD prod
+
+//apieb.insuringall.com   spa prod
+    // ebapi.aceinsurance.com  ace prod
+
+    // uatapicare.uibinsure.com   uib prod
+
+</network-security-config>

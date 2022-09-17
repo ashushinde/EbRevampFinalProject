@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10sp"
+    android:background="#F2F3FD"
+    tools:context=".Fragment.QueriesComplaintsFragment"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#F2F3FD"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10sp"
+
+            >
+
+
+        <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8sp"
+    android:background="@drawable/edit_back_grey"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Query Type"
+        android:textColor="#252121"
+        android:padding="5sp"
+        android:textStyle="bold"
+        />
+
+   <Spinner
+       android:id="@+id/sp_query_type"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="5sp"
+
+       />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/edit_back_grey"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Sub Type"
+            android:padding="5sp"
+            android:textColor="#252121"
+            android:textStyle="bold"
+            />
+
+        <Spinner
+            android:id="@+id/sp_sub_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5sp"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/edit_back_grey"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Comment"
+            android:padding="5sp"
+            android:textColor="#252121"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/edt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:hint="Type here..."
+            android:layout_gravity="start"
+            android:backgroundTint="#fff"
+            android:gravity="start"
+            android:textSize="14sp"
+            android:textColor="#7C7B7B"
+            android:layout_marginTop="5sp"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_back_grey"
+        android:padding="8sp"
+        android:layout_marginTop="15sp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/bold"
+                android:text="Document"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginTop="9sp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10sp"
+                android:text=" *"
+                android:textColor="#b72424"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/bankBtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="Last 3 Month Statement"
+            android:textColor="#939393"
+            android:visibility="gone"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="1sp"
+            android:layout_marginLeft="1sp"
+            android:layout_marginBottom="3sp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5sp">
+
+            <RelativeLayout
+                android:id="@+id/adhaarBackLayout_cheque1"
+                android:layout_width="0dp"
+                android:layout_height="150sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="1sp"
+                android:layout_marginLeft="1sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginBottom="3sp"
+                android:layout_weight="1.5"
+                android:background="@drawable/dash_shadow"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5sp">
+
+                <ImageView
+                    android:id="@+id/bankPreview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150sp"
+                    android:src="@drawable/no_icon"
+
+
+
+                    />
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/upload_id_proof"
+            android:layout_width="match_parent"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="#DDFFDE"
+            android:layout_marginTop="10sp"
+            android:padding="3sp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/uc1"
+
+                android:layout_width="18sp"
+                android:layout_height="18sp"
+                android:layout_marginStart="1sp"
+                android:layout_marginLeft="1sp"
+                android:singleLine="true"
+                android:src="@drawable/plusicon"
+                android:layout_marginEnd="5sp"
+                android:textColor="@android:color/holo_red_dark"
+                />
+
+            <TextView
+                android:id="@+id/up1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Select  Document To Upload"
+                android:textColor="#339B37"
+                android:textSize="13sp"
+                android:fontFamily="@font/pop_reg"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="20sp"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            >
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:background="@drawable/btn_cancle"
+            android:elevation="10sp"
+            android:text="View Queries"
+
+            android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_can"
+            android:layout_width="120sp"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:background="@drawable/save_btn"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginEnd="15sp"
+            android:padding="10sp"
+            android:elevation="10sp"
+
+            />
+
+
+</LinearLayout>
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

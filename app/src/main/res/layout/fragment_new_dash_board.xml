@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3FD"
+    tools:context=".Fragment.NewDashBoardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/announcement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/card_back"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="5sp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pop_reg"
+                            android:text="This is an Announcement."
+                            android:textColor="#130D0D"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="2sp"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/content"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/pop_reg"
+                            android:text="This is an Announcement."
+                            android:textColor="#130D0D"
+                            android:layout_marginStart="5sp"
+                            android:layout_marginTop="2sp"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/logo"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginEnd="20sp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+                <LinearLayout
+                    android:id="@+id/my_benifit"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/my_benifit_card"
+
+                    android:layout_margin="10sp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+
+                            android:orientation="vertical">
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                   
+                                    android:layout_width="100sp"
+                                    android:layout_height="100sp"
+                                    android:layout_gravity="center"
+                                    android:padding="5sp"
+                                    android:src="@drawable/my_benifit_dash"/>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.5"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10sp"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="2sp"
+
+                                        android:orientation="horizontal">
+
+
+
+                                        <TextView
+                                          
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="5dp"
+                                            android:layout_marginLeft="5dp"
+                                            android:fontFamily="@font/pop_reg"
+                                            android:textColor="#0B0606"
+                                            android:text="My Benefits "
+                                            android:textStyle="bold"
+                                            android:textSize="25sp" />
+
+
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                    
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="2sp"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/pop_reg"
+                                            android:text="Insurance/Flex"
+                                            android:textColor="#0A0909"
+                                            android:textSize="15sp" />
+
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_gravity="end"
+                                android:gravity="end"
+                                android:padding="5sp"
+                                android:background="@drawable/my_benifit_btn"
+                                android:orientation="horizontal">
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/pop_reg"
+                                    android:textColor="#FFFFFF"
+                                    android:text="Select"
+                                    android:padding="5sp"
+
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="5sp"
+                                    android:textSize="15sp" />
+
+
+                                <ImageView
+
+                                    android:layout_width="30sp"
+                                    android:layout_height="30sp"
+                                    android:layout_gravity="center"
+                                    android:padding="5sp"
+                                    android:src="@drawable/arrow_next"/>
+
+
+                            </LinearLayout>
+                            </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_family"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_family_card"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/my_family_dash"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="My Family "
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:text="Enrol Members"
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/my_family_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/my_doctor_call"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_doctor_card"
+                android:visibility="gone"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/my_doctor"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="Doctor on Call "
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/my_doctor_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_wellness"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_wellness_card"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/my_wellness"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="My Wellness "
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/my_wellness_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                android:id="@+id/my_health"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_health_card"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/health_center"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="My Health Service Center "
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+android:text="Claim Service"
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/my_health_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/surgery"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_surgery_card"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/surgery"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="Surgery Care"
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:text=""
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/my_benifit_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/opd_care"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:background="@drawable/myopd_card"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/opd"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="OPD Care"
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:text=""
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/my_opd_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/connect_heal"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/connect_heal_card"
+
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+
+                                android:layout_width="100sp"
+                                android:layout_height="100sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/connect_heal"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1.5"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+
+                                    android:orientation="horizontal">
+
+
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:fontFamily="@font/pop_reg"
+                                        android:textColor="#0B0606"
+                                        android:text="Connect &amp; Heal"
+                                        android:textStyle="bold"
+                                        android:textSize="25sp" />
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="2sp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/pop_reg"
+
+                                        android:textColor="#0A0909"
+                                        android:textSize="15sp" />
+
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:padding="5sp"
+                            android:background="@drawable/connect_heal_btn"
+                            android:orientation="horizontal">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FFFFFF"
+                                android:text="Select"
+                                android:padding="5sp"
+
+                                android:textStyle="bold"
+                                android:layout_marginStart="5sp"
+                                android:textSize="15sp" />
+
+
+                            <ImageView
+
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_gravity="center"
+                                android:padding="5sp"
+                                android:src="@drawable/arrow_next"/>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    </ScrollView>

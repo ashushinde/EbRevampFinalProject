@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3FD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/arrorw"
+                android:layout_marginStart="20sp"
+                android:padding="3sp"
+                android:layout_marginEnd="20sp"
+                android:elevation="10sp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/info_text"
+                    android:layout_width="60sp"
+                    android:layout_height="50sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10sp"
+
+                    android:src="@drawable/toolbar_arrow"
+                    android:text="Cashless Form Revised"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    tools:ignore="RtlCompat" />
+                <TextView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Deficiency Resolution"
+                    android:textColor="#5B2AAC"
+                    android:layout_marginStart="10sp"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:background="@drawable/edit_back"
+                            android:orientation="vertical"
+                            android:padding="8sp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="10sp"
+                                    android:layout_marginStart="5sp"
+                                    android:fontFamily="@font/bold"
+                                    android:text="Claim Id"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="1sp"
+                                    android:layout_marginLeft="1sp"
+                                    android:singleLine="true"
+
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/claim_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="40sp"
+                                android:backgroundTint="#ffffff"
+                                android:drawablePadding="10sp"
+                                android:ems="10"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                               android:focusableInTouchMode="false"
+                                android:inputType="textPersonName"
+                                android:imeOptions="actionNext"
+
+                                android:singleLine="true"
+                                android:textColor="#818181"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:background="@drawable/edit_back"
+                            android:orientation="vertical"
+                            android:padding="8sp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="10sp"
+                                    android:layout_marginStart="5sp"
+
+                                    android:fontFamily="@font/bold"
+                                    android:text="Deficiency Raised Date"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="1sp"
+                                    android:layout_marginLeft="1sp"
+                                    android:singleLine="true"
+
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/raised_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="40sp"
+                                android:backgroundTint="#ffffff"
+                                android:drawablePadding="10sp"
+                                android:ems="10"
+                               android:focusableInTouchMode="false"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:singleLine="true"
+                                android:textColor="#818181"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:background="@drawable/edit_back"
+                            android:orientation="vertical"
+                            android:padding="8sp">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawablePadding="10sp"
+                                    android:fontFamily="@font/bold"
+                                    android:text="Deficiency Reason"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:layout_marginStart="5sp"
+
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="1sp"
+                                    android:layout_marginLeft="1sp"
+                                    android:singleLine="true"
+
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/reason_def"
+                                android:layout_width="match_parent"
+                                android:layout_height="40sp"
+                                android:backgroundTint="#ffffff"
+                                android:drawablePadding="10sp"
+                                android:ems="10"
+                                android:text="-"
+
+                               android:focusableInTouchMode="false"
+                                android:imeOptions="actionNext"
+
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:singleLine="true"
+                                android:textColor="#818181"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+
+        >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="5sp"
+        android:orientation="vertical"
+        android:padding="5sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:orientation="vertical">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/info_text"
+                    android:layout_width="5sp"
+                    android:layout_height="18sp"
+                    android:layout_marginStart="10sp"
+                    android:background="#4CAF50" />
+
+                <TextView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Upload Medical Bill and Discharge Summary"
+                    android:layout_marginStart="10sp"
+                    android:textColor="#3951D6"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="*"
+                    android:layout_marginStart="10sp"
+                    android:textColor="#BA3F18"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/edit_back"
+                android:orientation="vertical"
+                android:padding="8sp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10sp"
+                        android:fontFamily="@font/bold"
+                        android:text="Document Name"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp"
+                        android:layout_marginStart="5sp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="1sp"
+                        android:layout_marginLeft="1sp"
+                        android:singleLine="true"
+
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/doc_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:backgroundTint="#ffffff"
+                    android:drawablePadding="10sp"
+                    android:ems="10"
+                    android:hint="Document Name"
+
+
+                    android:imeOptions="actionNext"
+
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:textColor="#818181"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3sp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="5sp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="1sp"
+                    android:layout_marginLeft="1sp"
+                    android:layout_marginBottom="3sp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5sp">
+
+                    <RelativeLayout
+                        android:id="@+id/adhaarBackLayout_cheque"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="1sp"
+                        android:layout_marginLeft="1sp"
+                        android:layout_marginTop="5sp"
+                        android:layout_marginBottom="3sp"
+                        android:background="@drawable/dash_shadow"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="5sp">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/bankPreview"
+                                android:layout_width="match_parent"
+                                android:layout_height="150sp"
+                                android:src="@drawable/no_icon"
+                                />
+
+
+                            <TextView
+                                android:id="@+id/pdf_document"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:fontFamily="@font/pop_reg"
+                                android:textColor="#FF5722"
+                                android:textSize="20sp"
+                                android:visibility="gone"
+                                android:gravity="center"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:id="@+id/hideh"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginStart="20sp"
+                                android:layout_marginEnd="20sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginBottom="10sp"
+                                android:padding="5sp"
+                                android:background="@drawable/green_light"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/up"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Select File To Upload"
+                                    android:fontFamily="@font/pop_reg"
+                                    android:textColor="#4CAF50"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:id="@+id/uc"
+                                    android:layout_width="25sp"
+                                    android:layout_height="25sp"
+                                    android:layout_marginStart="15sp"
+                                    android:layout_marginLeft="15sp"
+                                    android:singleLine="true"
+                                    android:src="@drawable/plusicon"
+                                    android:textColor="@android:color/holo_red_dark"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+    </RelativeLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="(file format : jpeg,png,pdf)"
+                    android:textColor="#FC754B"
+                    android:textSize="11sp"
+
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/claim_clear_btn"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_cancle"
+                        android:gravity="center"
+                        android:text="Clear"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/add_doc"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/save_btn"
+                        android:gravity="center"
+                        android:text="Upload"
+                        android:textColor="#fff"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="30sp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/save_doc"
+                    android:layout_width="50sp"
+                    android:layout_height="25sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_cancle"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textColor="#fff"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/view_doc"
+                    android:layout_width="50sp"
+                    android:layout_height="25sp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="5sp"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_reg"
+                    android:gravity="center"
+                    android:text="view"
+                    android:textColor="#fff"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
