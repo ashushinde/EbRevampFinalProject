@@ -167,6 +167,7 @@ public class SubmitClaimFragment extends Fragment {
 
     String bank_city_value = "";
     RelativeLayout a, b, c;
+    String selProfilePath;
     String token, name;
     byte[] inputData;
     String emailPattern = "[a-zA-Z0-9\\\\+\\\\.\\\\_\\\\%\\\\-\\\\+]{1,256}\" + \"\\\\@\"\n" +
@@ -221,10 +222,9 @@ public class SubmitClaimFragment extends Fragment {
     String id = null;
     TextView bankBtn_cheque;
     ImageView bankPreview_cheque;
-    String selProfilePath = "null";
 
-    Button save_doc, view_doc;
-    TextView add_doc, claim_clear_btn;
+
+
     ArrayList<String> bank_branch = null;
     ArrayList<SpinnerModal> bank_branchList = null;
     ArrayAdapter<SpinnerModal> bank_branchAdapter = null;
@@ -232,6 +232,8 @@ public class SubmitClaimFragment extends Fragment {
     Bitmap myBitmap;
 
     Uri picUri;
+    Button save_doc, view_doc;
+    TextView add_doc, claim_clear_btn;
     ImageView viewImage;
     LinearLayout hideh;
     RelativeLayout bf;
@@ -1250,7 +1252,7 @@ public class SubmitClaimFragment extends Fragment {
 
     }
 
-    @SuppressLint("NewApi")
+    @SuppressLint({"NewApi", "Range"})
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode) {

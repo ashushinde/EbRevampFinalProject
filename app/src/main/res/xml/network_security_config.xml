@@ -11,7 +11,7 @@
     </domain-config>-->
 
     <domain-config cleartextTrafficPermitted="false">
-        <domain includeSubdomains="true">ebapi.aceinsurance.com</domain>
+        <domain includeSubdomains="true">apiportal.kmdastur.com</domain>
     </domain-config>
 
 //apilifekaplanuat-eb.tmibasl.in :tata

@@ -42,16 +42,20 @@
     <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:icon="@mipmap/ace_launch"
-        android:label="ACE APP"
+        android:icon="@mipmap/kmd_launch"
+        android:label="KMD APP"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ace_launch"
+        android:roundIcon="@mipmap/kmd_launch"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="HardcodedDebugMode"
         tools:replace="android:label">
+
+        <activity
+            android:name=".Activity.ViewDataActivtyDoc"
+            android:exported="false" />
         <activity
             android:name=".Activity.UploadDeficiencyActivity"
             android:exported="false" />

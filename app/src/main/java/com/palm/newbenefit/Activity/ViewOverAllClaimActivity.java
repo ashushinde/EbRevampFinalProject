@@ -65,7 +65,9 @@ TextView bill_amount,claim_aprove_amount,claim_increed_amount,chrge_settle_amoun
     String token = null;
     String user_id = null;
     String claimid,claim_amnt;
-    TextView deduct_amount,reported_amount,deduct_reason,claim_sub_status;
+    TextView deduct_amount,reported_amount,
+            def_second_remind,balance_sum,
+            claim_typeipd,exp_clos_date,deduct_reason,claim_sub_status;
   TextView resolvedeficiency;
 ImageView info_text;
     @Override
@@ -85,14 +87,14 @@ ImageView info_text;
         post_hospital_amount=findViewById(R.id.post_hospital_amount);
         chrge_settle_amount=findViewById(R.id.chrge_settle_amount);
         claim_increed_amount=findViewById(R.id.claim_increed_amount);
-
+        def_second_remind=findViewById(R.id.def_second_remind);
         claim_aprove_amount=findViewById(R.id.claim_aprove_amount);
         bill_amount=findViewById(R.id.bill_amount);
         deduct_reason=findViewById(R.id.deduct_reason);
         claim_sub_status=findViewById(R.id.claim_sub_status);
         deduct_amount=findViewById(R.id.deduct_amount);
         reported_amount=findViewById(R.id.reported_amount);
-
+        balance_sum=findViewById(R.id.balance_sum);
         info_text=findViewById(R.id.info_text);
         resolvedeficiency=findViewById(R.id.resolvedeficiency);
         maternity_amount=findViewById(R.id.maternity_amount);
@@ -102,8 +104,8 @@ ImageView info_text;
         icu_amount=findViewById(R.id.icu_amount);
         dom_charge=findViewById(R.id.dom_charge);
         invest_charge=findViewById(R.id.invest_charge);
-
-
+        exp_clos_date=findViewById(R.id.exp_clos_date);
+        claim_typeipd=findViewById(R.id.claim_typeipd);
         claim_aprove_date=findViewById(R.id.claim_aprove_date);
         emp_email_id=findViewById(R.id.emp_email_id);
         emp_mob_no=findViewById(R.id.emp_mob_no);
@@ -154,6 +156,12 @@ ImageView info_text;
         def_raised_date=findViewById(R.id.def_raised_date);
         def_reason=findViewById(R.id.def_reason);
         claim_settle_date=findViewById(R.id.claim_settle_date);
+        Intent intent = getIntent();
+
+
+
+        claimid = intent.getStringExtra("claim_id");
+        claim_amnt = intent.getStringExtra("claim_amnt");
 
 
         info_text.setOnClickListener(new View.OnClickListener() {
@@ -166,16 +174,30 @@ ImageView info_text;
         resolvedeficiency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(ViewOverAllClaimActivity.this, UploadDeficiencyActivity.class);
+
+                intent.putExtra("claim_id", claimid);
+                intent.putExtra("claim_amnt","");
+                        //  intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
             }
         });
 
-        Intent intent = getIntent();
 
 
+        doc_upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewOverAllClaimActivity.this,
+                        ViewDataActivtyDoc.class);
 
-        claimid = intent.getStringExtra("claim_id");
-        claim_amnt = intent.getStringExtra("claim_amnt");
+                intent.putExtra("claim_id", claimid);
+                intent.putExtra("claim_amnt","");
+                //  intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
+            }
+        });
+
 
 
 
@@ -223,6 +245,8 @@ ImageView info_text;
                         String policy_types = explrObject.getString("policy_type");
                         String policy_start_dates = explrObject.getString("policy_start_date");
                         String policy_end_dates = explrObject.getString("policy_end_date");
+                            String employee_mail = explrObject.getString("employee_mail");
+                            String employee_mobile_number = explrObject.getString("employee_mobile_number");
 
                         String member_start_date = explrObject.getString("member_start_date");
                         String company_name = explrObject.getString("company_name");
@@ -300,16 +324,50 @@ ImageView info_text;
                         String disallowance_reason_6 = explrObject.getString("disallowance_reason_6");
 
 
-
+                            String deficiency_second_reminder = explrObject.getString("deficiency_second_reminder");
 
                             String report_amount = explrObject.getString("reported_amount");
                             String dudecutamount = explrObject.getString("deduction_amount");
                             String deduction_reason = explrObject.getString("deduction_reason");
                             String sub = explrObject.getString("claim_sub_status");
                           String documents = explrObject.getString("documents");
+                            String balance_suminsured = explrObject.getString("balance_suminsured");
+                            String deficiency_expected_closure_date = explrObject.getString("deficiency_expected_closure_date");
+
+                            String claim_type_ipd_opd =
+                                    explrObject.getString("claim_type_ipd_opd");
+                            if (deficiency_expected_closure_date == "null" || deficiency_expected_closure_date.isEmpty()) {
+
+                                claim_typeipd.setText("-");
+
+                            }else {
+                                claim_typeipd.setText(claim_type_ipd_opd);
+                            }
 
 
 
+                            if (deficiency_expected_closure_date == "null" || deficiency_expected_closure_date.isEmpty()) {
+
+                                exp_clos_date.setText("-");
+
+                            }else {
+                                exp_clos_date.setText(deficiency_expected_closure_date);
+                            }
+                            if (deficiency_second_reminder == "null" || deficiency_second_reminder.isEmpty()) {
+
+                                def_second_remind.setText("-");
+
+                            }else {
+                                def_second_remind.setText(deficiency_second_reminder);
+                            }
+
+                            if (balance_suminsured == "null" || balance_suminsured.isEmpty()) {
+
+                                balance_sum.setText("-");
+
+                            }else {
+                                balance_sum.setText(balance_suminsured);
+                            }
 
 
                             if (sub == "null" || report_amount.isEmpty()||
@@ -347,10 +405,10 @@ ImageView info_text;
                                     deduction_reason.equalsIgnoreCase("null")
                                     ||deduction_reason.equalsIgnoreCase("0")) {
 
-
+                                deduct_reason.setText("-");
 
                             }else {
-                                deduct_reason.setText("hospital discount calculated 4430");
+                                deduct_reason.setText(deduction_reason);
                             }
 
 
@@ -381,19 +439,19 @@ ImageView info_text;
                         }else {
                             employe_name.setText(employee_name);
                         }
-                        if (member_email == "null" || member_email.isEmpty()) {
+                        if (employee_mail == "null" || employee_mail.isEmpty()) {
 
 
 
                         }else {
-                            emp_email_id.setText(member_email);
+                            emp_email_id.setText(employee_mail);
                         }
-                        if (member_mobile == "null" || member_mobile.isEmpty()) {
+                        if (employee_mobile_number == "null" || employee_mobile_number.isEmpty()) {
 
 
 
                         }else {
-                            emp_mob_no.setText(member_mobile);
+                            emp_mob_no.setText(employee_mobile_number);
                         }
 
                             if (claim_settled_amount == "null" || claim_settled_amount.isEmpty()) {

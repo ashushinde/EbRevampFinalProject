@@ -1,12 +1,8 @@
 package com.palm.newbenefit.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -17,12 +13,32 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.error.AuthFailureError;
+import com.android.volley.error.VolleyError;
+import com.android.volley.request.StringRequest;
+import com.android.volley.toolbox.HurlStack;
+import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.Adapter.ViewImageAdapter;
+import com.palm.newbenefit.Adapter.ViewImageAdapterDoc;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.DatabaseHelper.DBHelper;
 import com.palm.newbenefit.Module.ImageData;
+import com.palm.newbenefit.Module.Wellness;
 import com.palm.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -36,14 +52,16 @@ import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
 
-public class ViewDataActivty extends AppCompatActivity {
+public class ViewDataActivtyDoc extends AppCompatActivity {
     Constants con = null;
     Context context;
     String mobileNumber = null;
@@ -55,24 +73,34 @@ public class ViewDataActivty extends AppCompatActivity {
     LinearLayout ll_main_data;
     RelativeLayout allempnotdatafound;
     // List<BillAllData> ob;
-
-    private List<ImageData> ob ;
-    ViewImageAdapter adapter = null;
+    ViewImageAdapterDoc adapter = null;
     RecyclerView recyclerView = null;
     TextView tv_data_not_found;
     DBHelper db;
     ImageData bill;
     ImageView info_text;
+    String claimid;
+    private List<ImageData> ob ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_data_activty_doc);
+        setContentView(R.layout.activity_view_data_activty);
         con = new Constants();
         recyclerView = findViewById(R.id.policy_recycle);
         // bill=new BillAllData();
         ob =new ArrayList<ImageData>();
         db=new DBHelper(this);
         info_text=findViewById(R.id.info_text);
+        Intent intent = getIntent();
+        SharedPreferences prefs =getSharedPreferences(getPackageName(), Context.MODE_PRIVATE);
+
+        token = prefs.getString("api_token", null);
+        user_id = prefs.getString("user_id", null);
+
+
+
+        claimid = intent.getStringExtra("claim_id");
 
         info_text.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,19 +111,11 @@ public class ViewDataActivty extends AppCompatActivity {
 
             }
         });
-
-        ob=  db.getImage();
-
-
-
-        adapter = new ViewImageAdapter(this, ob);
+        GetEmployeeId();
 
 
 
-        RecyclerView.LayoutManager reLayoutManager =new LinearLayoutManager(ViewDataActivty.this);
-        recyclerView.setLayoutManager(reLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapter);
+
 
 
 
@@ -154,17 +174,6 @@ public class ViewDataActivty extends AppCompatActivity {
 
 
 
-   /* private void setBankDet() {
-
-        ob=db.getAllBanks();
-
-        //bill_no_list = db.getBillNo();
-
-
-        adapter.notifyDataSetChanged();
-
-
-    }*/
 
 
 
@@ -172,10 +181,8 @@ public class ViewDataActivty extends AppCompatActivity {
 
 
 
-    public void Data(){
 
 
-    }
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
@@ -184,6 +191,90 @@ public class ViewDataActivty extends AppCompatActivity {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+
+    void GetEmployeeId(){
+        String url = con.base_url+"/api/admin/get-claim-data";
+
+
+        RequestQueue mRequestQueue = Volley.newRequestQueue(ViewDataActivtyDoc.this,
+                new HurlStack(null, getSocketFactory()));
+        mRequestQueue.getCache().clear();
+        StringRequest smr = new StringRequest(Request.Method.POST, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject explrObjectd=new JSONObject(response);
+
+                            JSONObject explrObject=explrObjectd.getJSONObject("data");
+
+                            JSONArray tpa_claim_documents = explrObject.getJSONArray("tpa_claim_documents");
+
+
+                            for (int j = 0; j < tpa_claim_documents.length(); j++) {
+
+                                String id = String.valueOf(tpa_claim_documents.get(j));
+
+
+
+
+
+
+                                ob.add(new ImageData(id));
+
+
+                            }
+
+                            adapter = new ViewImageAdapterDoc(ViewDataActivtyDoc.this, ob);
+
+
+
+                            RecyclerView.LayoutManager reLayoutManager =new LinearLayoutManager(ViewDataActivtyDoc.this);
+                            recyclerView.setLayoutManager(reLayoutManager);
+                            recyclerView.setItemAnimator(new DefaultItemAnimator());
+                            recyclerView.setAdapter(adapter);
+
+
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("onErrorResponse", error.toString());
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Authorization", "Bearer " + token);
+                return headers;
+            }
+        };
+
+        HashMap<String, String> params = new HashMap<>();
+
+
+        params.put("claim_id", claimid);
+
+
+        smr.setParams(params);
+
+
+
+
+        mRequestQueue.add(smr);
+
+
+
+
+
+    }
 
     private SSLSocketFactory getSocketFactory() {
 

@@ -375,7 +375,8 @@ String startdate=null,enddate=null;
 //                         context. startActivity(intent);
 
 
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(train.getMember_id()));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                                Uri.parse(train.getMember_id()));
                         context. startActivity(browserIntent);
                         Log.d("healthcard",train.getMember_id());
 

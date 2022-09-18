@@ -11,11 +11,15 @@
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/drawable/myopd_card.xml" value="0.139" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_bank_detail_java.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_change_passforce.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_claim_detail.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_edit_data2.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_forget_password.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_member_cover_home.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_upload_deficiency.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_view_data_activty.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_view_data_activty_doc.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/activity_view_over_all_claim.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/app_bar_main.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/demologin.xml" value="0.17552083333333332" />
@@ -31,6 +35,9 @@
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/member_home_list.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/my_overall_claim_list.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/myicon.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/view_data_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/view_doc_list.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/Asawari/Downloads/lifekaplan_revampfinal10thsep/lifekaplan_revamp 2/app/src/main/res/layout/view_doc_list_doc.xml" value="0.17447916666666666" />
         <entry key="app/src/main/res/drawable/card_back.xml" value="0.1595" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1595" />
         <entry key="app/src/main/res/layout/fragment_my_enroll_ment_cards.xml" value="0.23802083333333332" />

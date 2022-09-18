@@ -119,7 +119,7 @@
                android:gravity="end"
 
                 android:layout_gravity="center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 >
                 <TextView
                     android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
                     android:gravity="end"
 
                     android:layout_gravity="center"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -372,6 +372,7 @@
                         android:layout_width="match_parent"
                         android:layout_marginTop="5sp"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="horizontal">
 
 
@@ -771,6 +772,32 @@
 
                 />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Balance SumInsured :  "
+                    android:textColor="#0d0905"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/balance_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="-"
+                    android:textColor="#171211"
+                    android:textSize="12sp"
+
+
+
+
+                    />
+
         </LinearLayout>
         </LinearLayout>
 
@@ -996,7 +1023,83 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_reg"
-                        android:text="Deficiency Closure Date :  "
+                        android:layout_marginTop="5sp"
+                        android:text="Resolve Deficiency :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/resolvedeficiency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/blue_card"
+                        android:fontFamily="@font/pop_reg"
+                        android:padding="5sp"
+                        android:text=" Upload Documents "
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="Deficiency Expected Closure Date :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/exp_clos_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="-"
+                        android:textColor="#171211"
+                        android:textSize="12sp"
+
+
+
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:orientation="vertical"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/pop_reg"
+                        android:text="Deficiency Actual Closure Date :  "
                         android:layout_marginTop="5sp"
 
                         android:textColor="#0d0905"
@@ -1024,6 +1127,7 @@
 
             </LinearLayout>
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -1046,6 +1150,27 @@
                 android:textSize="12sp"
               />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pop_reg"
+                android:text="Deficiency Second Reminder :  "
+                android:layout_marginTop="5sp"
+                android:textColor="#0d0905"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/def_second_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pop_reg"
+                android:text="-"
+                android:textColor="#171211"
+                android:textSize="12sp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1068,30 +1193,6 @@
                 android:textColor="#171211"
                 android:textSize="12sp"
                 />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pop_reg"
-                android:text="Resolve Deficiency :  "
-                android:layout_marginTop="5sp"
-                android:textColor="#0d0905"
-                android:textSize="12sp"
-                android:textStyle="bold"
-
-                />
-
-            <TextView
-                android:id="@+id/resolvedeficiency"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pop_reg"
-                android:background="@drawable/blue_card"
-                android:text=" Upload Documents "
-                android:padding="5sp"
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                />
-
 
         </LinearLayout>
 
@@ -1230,7 +1331,31 @@
 
 
                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:fontFamily="@font/pop_reg"
+                android:text="Claim Type(IPD/OPD) :  "
+                android:textColor="#0d0905"
+                android:textSize="12sp"
+                android:textStyle="bold"
 
+                />
+
+            <TextView
+                android:id="@+id/claim_typeipd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pop_reg"
+                android:text="-"
+                android:textColor="#171211"
+                android:textSize="12sp"
+
+
+
+
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1604,15 +1729,23 @@
 
                 />
 
+
+
             <TextView
                 android:id="@+id/doc_upload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/pop_reg"
-                android:text="-"
-                android:textColor="#171211"
+                android:background="@drawable/blue_card"
+                android:padding="5sp"
+                android:text=" View  Documents "
+                android:textColor="#FFFFFF"
                 android:textSize="12sp"
                 />
+
+
+
+
         </LinearLayout>
         <LinearLayout
         
