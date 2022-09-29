@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.palm.newbenefit.Fragment.FinalbenifitSummaryFragment;
+import com.palm.newbenefit.Fragment.FinalbenifitSummaryFragmentDemo;
 
 
 public class DashBenifitTabAdaptersingle extends FragmentStatePagerAdapter {
@@ -26,7 +27,7 @@ public class DashBenifitTabAdaptersingle extends FragmentStatePagerAdapter {
         //Returning the current tabs
         switch (position) {
             case 0:
-                FinalbenifitSummaryFragment tab1 = new FinalbenifitSummaryFragment();
+                FinalbenifitSummaryFragmentDemo tab1 = new FinalbenifitSummaryFragmentDemo();
                 return tab1;
 
 

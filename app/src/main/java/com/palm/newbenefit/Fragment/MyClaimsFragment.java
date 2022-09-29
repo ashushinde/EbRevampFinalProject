@@ -275,16 +275,18 @@ public class MyClaimsFragment extends Fragment {
 
 
                     if (bank_city_modal.getSelKey().equalsIgnoreCase("")) {
+                        SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
                         ob_e = new ArrayList<>();
-                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                         ghi_recycle_plan.setAdapter(adapter_e);
 
                         setBankDetCahsless();
 
 
+
                         ob = new ArrayList<>();
-                        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+                        adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
                         recyclerView.setAdapter(adapter);
 
                         setBankDet();
@@ -298,14 +300,16 @@ public class MyClaimsFragment extends Fragment {
                         setBankDetVoluntary();
 
                     } else {
+                        SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
+
                         ob = new ArrayList<>();
-                        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+                        adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
                         recyclerView.setAdapter(adapter);
 
                         setBankDetM();
 
                         ob_e = new ArrayList<>();
-                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                         ghi_recycle_plan.setAdapter(adapter_e);
 
 
@@ -979,9 +983,10 @@ public class MyClaimsFragment extends Fragment {
 
         SpinnerModal policy_typ = (SpinnerModal) policy_type_spin_no.getSelectedItem();
         SpinnerModal policy_noo = (SpinnerModal) bank_citySpin.getSelectedItem();
+        SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
         ob = new ArrayList<>();
-        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+        adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
         recyclerView.setAdapter(adapter);
         RequestQueue rq = Volley.newRequestQueue(getActivity(),
                 new HurlStack(null, getSocketFactory()));
@@ -1103,7 +1108,9 @@ public class MyClaimsFragment extends Fragment {
 
     private void setBankDetM_cashless() {
         ob_e = new ArrayList<>();
-        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+        SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
+
+        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
         ghi_recycle_plan.setAdapter(adapter_e);
         RequestQueue rq = Volley.newRequestQueue(getActivity(),
                 new HurlStack(null, getSocketFactory()));
@@ -1259,16 +1266,17 @@ public class MyClaimsFragment extends Fragment {
                             // policy_type_spin_no.setAdapter(bank_nameAdapter);
 
 
+                            SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
                             ob = new ArrayList<>();
-                            adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+                            adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
                             recyclerView.setAdapter(adapter);
 
                             setBankDet();
 
 
                             ob_e = new ArrayList<>();
-                            adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                            adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                             ghi_recycle_plan.setAdapter(adapter_e);
 
                             setBankDetCahsless();

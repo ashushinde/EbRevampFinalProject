@@ -28,6 +28,7 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Fragment.EnrollMentFragmentJava;
+import com.palm.newbenefit.Fragment.NoMemberCoverdFragment;
 import com.palm.newbenefit.Module.EnrollmentCards;
 import com.kmd.newbenefit.R;
 
@@ -234,244 +235,495 @@ public class EnrollmentCrdAdapter extends RecyclerView.Adapter<EnrollmentCrdAdap
             public void onClick(View view) {
 
 
-
-                if(viewHolder.opd_cover.getText().toString().trim().equalsIgnoreCase("Closed")){
-                    Context context = view.getContext();
-                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                    SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = prefs.edit();
-                    editor.putString("policy_id",train.getId());
-                    editor.putString("shown","onlylist");
-                    editor.putString("start_date",train.getEnrollement_start_date());
-                    editor.putString("end_date",train.getEnrollement_end_date());
-                    editor.apply();
-
-                    EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                            travel, travel.getTag()).addToBackStack("back").commit();
-                }else {
-                    if(train.getEnrollement_confirmed().equalsIgnoreCase("1")
-                            &&train.getEnrollement_status().equalsIgnoreCase("1")
-                            &&train.getPolicy_enrollment_window().equalsIgnoreCase("1")){
-                        Context context = view.getContext();
-                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putString("policy_id",train.getId());
-                        editor.putString("shown","onlylist");
-                        editor.putString("start_date",train.getEnrollement_start_date());
-                        editor.putString("end_date",train.getEnrollement_end_date());
-                        editor.apply();
-
-                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                travel, travel.getTag()).addToBackStack("back").commit();
-                    }else if(train.getEnrollement_start_date().equalsIgnoreCase("0")
-                            &&
-                            train.getEnrollement_end_date().equalsIgnoreCase("0")) {
-                        Context context = view.getContext();
-                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putString("policy_id",train.getId());
-                        editor.putString("shown","onlylist");
-                        editor.putString("start_date",train.getEnrollement_start_date());
-                        editor.putString("end_date",train.getEnrollement_end_date());
-                        editor.apply();
-
-                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                travel, travel.getTag()).addToBackStack("back").commit();
-                    }else if(train.getEnrollement_confirmed().equalsIgnoreCase("1")) {
-                        Context context = view.getContext();
-                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putString("policy_id",train.getId());
-                        editor.putString("shown","onlylist");
-                        editor.putString("start_date",train.getEnrollement_start_date());
-                        editor.putString("end_date",train.getEnrollement_end_date());
-                        editor.apply();
-
-                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                travel, travel.getTag()).addToBackStack("back").commit();
-                    }else  if(train.getEnrollement_confirmed().equalsIgnoreCase("0")
-                            ||train.getEnrollement_status().equalsIgnoreCase("0")
-                            ||train.getPolicy_enrollment_window().equalsIgnoreCase("0")){
+                String url = con.base_url + "/api/employee/get/enroll/members?policy_id=" + train.getId();
+                RequestQueue mRequestQueue = Volley.newRequestQueue(context, new HurlStack(null, getSocketFactory()));
+                mRequestQueue.getCache().clear();
+                StringRequest mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
 
                         try {
-                            int status= new SimpleDateFormat("yyyy-MM-dd").parse(train.getEnrollement_end_date()).compareTo(new Date());
-                            Log.d("status_date",String.valueOf(status));
-                            if(String.valueOf(status).equalsIgnoreCase("-1")){
-                                Context context = view.getContext();
-                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                                SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                                SharedPreferences.Editor editor = prefs.edit();
-                                editor.putString("policy_id",train.getId());
-                                editor.putString("shown","onlylist");
-                                editor.putString("start_date",train.getEnrollement_start_date());
-                                editor.putString("end_date",train.getEnrollement_end_date());
-                                editor.apply();
+                            JSONObject js = new JSONObject(response);
 
-                                EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                                activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                        travel, travel.getTag()).addToBackStack("back").commit();
-                            }else {
+                            Log.d("response", response);
+
+                            String status=js.getString("status");
 
 
 
-                                    String url = con.base_url + "/api/employee/get/enroll/members?policy_id=" + train.getId();
+                            if(status.equalsIgnoreCase("false")){
+                                String message=js.getString("message");
+                                if(message.equalsIgnoreCase("Member Not Enrolled")){
+                                    Context context = view.getContext();
+                                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
 
+                                    NoMemberCoverdFragment travel = new NoMemberCoverdFragment();
+                                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                            travel, travel.getTag()).addToBackStack("back").commit();
+                                }else {
+                                    if(viewHolder.opd_cover.getText().toString().trim().equalsIgnoreCase("Closed")){
+                                        Context context = view.getContext();
+                                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("policy_id",train.getId());
+                                        editor.putString("shown","onlylist");
+                                        editor.putString("start_date",train.getEnrollement_start_date());
+                                        editor.putString("end_date",train.getEnrollement_end_date());
+                                        editor.apply();
 
+                                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                travel, travel.getTag()).addToBackStack("back").commit();
+                                    }else {
+                                        if(train.getEnrollement_confirmed().equalsIgnoreCase("1")
+                                                &&train.getEnrollement_status().equalsIgnoreCase("1")
+                                                &&train.getPolicy_enrollment_window().equalsIgnoreCase("1")){
+                                            Context context = view.getContext();
+                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = prefs.edit();
+                                            editor.putString("policy_id",train.getId());
+                                            editor.putString("shown","onlylist");
+                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                            editor.apply();
 
-                                    RequestQueue mRequestQueue = Volley.newRequestQueue(context, new HurlStack(null, getSocketFactory()));
-                                    mRequestQueue.getCache().clear();
-                                    StringRequest mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-                                        @Override
-                                        public void onResponse(String response) {
+                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                        }else if(train.getEnrollement_start_date().equalsIgnoreCase("0")
+                                                &&
+                                                train.getEnrollement_end_date().equalsIgnoreCase("0")) {
+                                            Context context = view.getContext();
+                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = prefs.edit();
+                                            editor.putString("policy_id",train.getId());
+                                            editor.putString("shown","onlylist");
+                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                            editor.apply();
+
+                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                        }else if(train.getEnrollement_confirmed().equalsIgnoreCase("1")) {
+                                            Context context = view.getContext();
+                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = prefs.edit();
+                                            editor.putString("policy_id",train.getId());
+                                            editor.putString("shown","onlylist");
+                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                            editor.apply();
+
+                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                        }else  if(train.getEnrollement_confirmed().equalsIgnoreCase("0")
+                                                ||train.getEnrollement_status().equalsIgnoreCase("0")
+                                                ||train.getPolicy_enrollment_window().equalsIgnoreCase("0")){
 
                                             try {
-                                                JSONObject js = new JSONObject(response);
+                                                int statuss= new SimpleDateFormat("yyyy-MM-dd").parse(train.getEnrollement_end_date()).compareTo(new Date());
+                                                Log.d("status_date",String.valueOf(statuss));
+                                                if(String.valueOf(status).equalsIgnoreCase("-1")){
+                                                    Context context = view.getContext();
+                                                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                                    SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                    SharedPreferences.Editor editor = prefs.edit();
+                                                    editor.putString("policy_id",train.getId());
+                                                    editor.putString("shown","onlylist");
+                                                    editor.putString("start_date",train.getEnrollement_start_date());
+                                                    editor.putString("end_date",train.getEnrollement_end_date());
+                                                    editor.apply();
 
-                                                Log.d("response", response);
-                                                JSONArray jsonArr = js.getJSONArray("data");
+                                                    EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                            travel, travel.getTag()).addToBackStack("back").commit();
+                                                }else {
 
 
-                                                for (int i = 0; i < jsonArr.length(); i++) {
+
+
+                                                    try {
+
+                                                        JSONArray jsonArr = js.getJSONArray("data");
 
 
 
-                                                    if(jsonArr.length()==1){
+                                                        for (int i = 0; i < jsonArr.length(); i++) {
 
-                                                        JSONObject jsonObj = jsonArr.getJSONObject(i);
 
-                                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                                                        SharedPreferences.Editor editor = prefs.edit();
-                                                        editor.putString("policy_id",train.getId());
-                                                        editor.putString("shown","all");
-                                                        editor.putString("start_date",train.getEnrollement_start_date());
-                                                        editor.putString("end_date",train.getEnrollement_end_date());
-                                                        editor.apply();
-                                                        if (jsonObj.getString("relation_name").equalsIgnoreCase("self")) {
-                                                            Context context = view.getContext();
-                                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
 
-                                                            //EnrollMentFragmentJavaWithoutAdd
-                                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                                            if(jsonArr.length()==1){
 
-                                                        }else {
-                                                            Context context = view.getContext();
-                                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                                                JSONObject jsonObj = jsonArr.getJSONObject(i);
 
-                                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                                                SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                                SharedPreferences.Editor editor = prefs.edit();
+                                                                editor.putString("policy_id",train.getId());
+                                                                editor.putString("shown","all");
+                                                                editor.putString("start_date",train.getEnrollement_start_date());
+                                                                editor.putString("end_date",train.getEnrollement_end_date());
+                                                                editor.apply();
+                                                                if (jsonObj.getString("relation_name").equalsIgnoreCase("self")) {
+                                                                    Context context = view.getContext();
+                                                                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                                                                    //EnrollMentFragmentJavaWithoutAdd
+                                                                    EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                                            travel, travel.getTag()).addToBackStack("back").commit();
+
+                                                                }else {
+                                                                    Context context = view.getContext();
+                                                                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                                                                    EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                                            travel, travel.getTag()).addToBackStack("back").commit();
+
+                                                                }
+
+                                                            }else {
+                                                                Context context = view.getContext();
+                                                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                                                SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                                SharedPreferences.Editor editor = prefs.edit();
+                                                                editor.putString("policy_id",train.getId());
+                                                                editor.putString("shown","all");
+                                                                editor.putString("start_date",train.getEnrollement_start_date());
+                                                                editor.putString("end_date",train.getEnrollement_end_date());
+                                                                editor.apply();
+
+                                                                EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                                activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                                        travel, travel.getTag()).addToBackStack("back").commit();
+                                                            }
+
+
+
+
 
                                                         }
 
-                                                    }else {
-                                                        Context context = view.getContext();
-                                                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                                                        SharedPreferences.Editor editor = prefs.edit();
-                                                        editor.putString("policy_id",train.getId());
-                                                        editor.putString("shown","all");
-                                                        editor.putString("start_date",train.getEnrollement_start_date());
-                                                        editor.putString("end_date",train.getEnrollement_end_date());
-                                                        editor.apply();
 
-                                                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                                                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                                                travel, travel.getTag()).addToBackStack("back").commit();
+                                                    } catch (Exception e) {
+
+
                                                     }
 
 
 
 
 
+
+
+                                                }
+                                            } catch (ParseException e) {
+
+
+                                                e.printStackTrace();
+
+                                                Context context = view.getContext();
+                                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                                SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor = prefs.edit();
+                                                editor.putString("policy_id",train.getId());
+                                                editor.putString("shown","onlylist");
+                                                editor.putString("start_date",train.getEnrollement_start_date());
+                                                editor.putString("end_date",train.getEnrollement_end_date());
+                                                editor.apply();
+
+                                                EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                        travel, travel.getTag()).addToBackStack("back").commit();
+                                            }
+                                        }
+
+
+                                        else
+                                        {
+
+
+
+                                            Context context = view.getContext();
+                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = prefs.edit();
+                                            editor.putString("policy_id",train.getId());
+                                            editor.putString("shown","all");
+                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                            editor.apply();
+
+                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                        }
+
+
+
+                                    }
+
+                                }
+
+
+                            }else {
+                                JSONArray jsonArr = js.getJSONArray("data");
+
+                                if(viewHolder.opd_cover.getText().toString().trim().equalsIgnoreCase("Closed")){
+                                    Context context = view.getContext();
+                                    AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                    SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = prefs.edit();
+                                    editor.putString("policy_id",train.getId());
+                                    editor.putString("shown","onlylist");
+                                    editor.putString("start_date",train.getEnrollement_start_date());
+                                    editor.putString("end_date",train.getEnrollement_end_date());
+                                    editor.apply();
+
+                                    EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                    activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                            travel, travel.getTag()).addToBackStack("back").commit();
+                                }else {
+                                    if(train.getEnrollement_confirmed().equalsIgnoreCase("1")
+                                            &&train.getEnrollement_status().equalsIgnoreCase("1")
+                                            &&train.getPolicy_enrollment_window().equalsIgnoreCase("1")){
+                                        Context context = view.getContext();
+                                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("policy_id",train.getId());
+                                        editor.putString("shown","onlylist");
+                                        editor.putString("start_date",train.getEnrollement_start_date());
+                                        editor.putString("end_date",train.getEnrollement_end_date());
+                                        editor.apply();
+
+                                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                travel, travel.getTag()).addToBackStack("back").commit();
+                                    }else if(train.getEnrollement_start_date().equalsIgnoreCase("0")
+                                            &&
+                                            train.getEnrollement_end_date().equalsIgnoreCase("0")) {
+                                        Context context = view.getContext();
+                                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("policy_id",train.getId());
+                                        editor.putString("shown","onlylist");
+                                        editor.putString("start_date",train.getEnrollement_start_date());
+                                        editor.putString("end_date",train.getEnrollement_end_date());
+                                        editor.apply();
+
+                                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                travel, travel.getTag()).addToBackStack("back").commit();
+                                    }else if(train.getEnrollement_confirmed().equalsIgnoreCase("1")) {
+                                        Context context = view.getContext();
+                                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("policy_id",train.getId());
+                                        editor.putString("shown","onlylist");
+                                        editor.putString("start_date",train.getEnrollement_start_date());
+                                        editor.putString("end_date",train.getEnrollement_end_date());
+                                        editor.apply();
+
+                                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                travel, travel.getTag()).addToBackStack("back").commit();
+                                    }else  if(train.getEnrollement_confirmed().equalsIgnoreCase("0")
+                                            ||train.getEnrollement_status().equalsIgnoreCase("0")
+                                            ||train.getPolicy_enrollment_window().equalsIgnoreCase("0")){
+
+                                        try {
+                                            int statuss= new SimpleDateFormat("yyyy-MM-dd").parse(train.getEnrollement_end_date()).compareTo(new Date());
+                                            Log.d("status_date",String.valueOf(statuss));
+                                            if(String.valueOf(status).equalsIgnoreCase("-1")){
+                                                Context context = view.getContext();
+                                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                                SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                SharedPreferences.Editor editor = prefs.edit();
+                                                editor.putString("policy_id",train.getId());
+                                                editor.putString("shown","onlylist");
+                                                editor.putString("start_date",train.getEnrollement_start_date());
+                                                editor.putString("end_date",train.getEnrollement_end_date());
+                                                editor.apply();
+
+                                                EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                        travel, travel.getTag()).addToBackStack("back").commit();
+                                            }else {
+
+
+
+
+                                                try {
+
+
+
+
+                                                    for (int i = 0; i < jsonArr.length(); i++) {
+
+
+
+                                                        if(jsonArr.length()==1){
+
+                                                            JSONObject jsonObj = jsonArr.getJSONObject(i);
+
+                                                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                            SharedPreferences.Editor editor = prefs.edit();
+                                                            editor.putString("policy_id",train.getId());
+                                                            editor.putString("shown","all");
+                                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                                            editor.apply();
+                                                            if (jsonObj.getString("relation_name").equalsIgnoreCase("self")) {
+                                                                Context context = view.getContext();
+                                                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                                                                //EnrollMentFragmentJavaWithoutAdd
+                                                                EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                                activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                                        travel, travel.getTag()).addToBackStack("back").commit();
+
+                                                            }else {
+                                                                Context context = view.getContext();
+                                                                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+
+                                                                EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                                activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                                        travel, travel.getTag()).addToBackStack("back").commit();
+
+                                                            }
+
+                                                        }else {
+                                                            Context context = view.getContext();
+                                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                                            SharedPreferences.Editor editor = prefs.edit();
+                                                            editor.putString("policy_id",train.getId());
+                                                            editor.putString("shown","all");
+                                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                                            editor.apply();
+
+                                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                                    travel, travel.getTag()).addToBackStack("back").commit();
+                                                        }
+
+
+
+
+
+                                                    }
+
+
+                                                } catch (Exception e) {
+
+
                                                 }
 
 
-                                            } catch (Exception e) {
+
+
+
 
 
                                             }
+                                        } catch (ParseException e) {
 
-                                        }
-                                    }, new Response.ErrorListener() {
-                                        @Override
-                                        public void onErrorResponse(VolleyError error) {
-                                            Log.e("onErrorResponse", error.toString());
-                                        }
-                                    }) {
-                                        @Override
-                                        public Map<String, String> getHeaders() throws AuthFailureError {
-                                            Map<String, String> headers = new HashMap<>();
+
+                                            e.printStackTrace();
+
+                                            Context context = view.getContext();
+                                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
                                             SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                            SharedPreferences.Editor editor = prefs.edit();
+                                            editor.putString("policy_id",train.getId());
+                                            editor.putString("shown","onlylist");
+                                            editor.putString("start_date",train.getEnrollement_start_date());
+                                            editor.putString("end_date",train.getEnrollement_end_date());
+                                            editor.apply();
 
-
-
-                                           String token = prefs.getString("api_token", null);
-                                            headers.put("Authorization", "Bearer " + token);
-                                            return headers;
+                                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                    travel, travel.getTag()).addToBackStack("back").commit();
                                         }
-                                    };
-                                    mRequestQueue.add(mStringRequest);
+                                    }
+
+
+                                    else
+                                    {
 
 
 
+                                        Context context = view.getContext();
+                                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                                        SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
+                                        SharedPreferences.Editor editor = prefs.edit();
+                                        editor.putString("policy_id",train.getId());
+                                        editor.putString("shown","all");
+                                        editor.putString("start_date",train.getEnrollement_start_date());
+                                        editor.putString("end_date",train.getEnrollement_end_date());
+                                        editor.apply();
+
+                                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
+                                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
+                                                travel, travel.getTag()).addToBackStack("back").commit();
+                                    }
 
 
+
+                                }
 
                             }
-                        } catch (ParseException e) {
 
 
-                            e.printStackTrace();
 
-                            Context context = view.getContext();
-                            AppCompatActivity activity = (AppCompatActivity) view.getContext();
-                            SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putString("policy_id",train.getId());
-                            editor.putString("shown","onlylist");
-                            editor.putString("start_date",train.getEnrollement_start_date());
-                            editor.putString("end_date",train.getEnrollement_end_date());
-                            editor.apply();
 
-                            EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                            activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                    travel, travel.getTag()).addToBackStack("back").commit();
+
+
+                        } catch (Exception e) {
+
+
                         }
+
                     }
-
-
-                    else
-                    {
-
-
-
-                        Context context = view.getContext();
-                        AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("onErrorResponse", error.toString());
+                    }
+                }) {
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> headers = new HashMap<>();
                         SharedPreferences prefs = context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putString("policy_id",train.getId());
-                        editor.putString("shown","all");
-                        editor.putString("start_date",train.getEnrollement_start_date());
-                        editor.putString("end_date",train.getEnrollement_end_date());
-                        editor.apply();
 
-                        EnrollMentFragmentJava travel = new EnrollMentFragmentJava();
-                        activity.getSupportFragmentManager().beginTransaction().replace(R.id.relativelayout_for_fragement,
-                                travel, travel.getTag()).addToBackStack("back").commit();
+
+
+                        String token = prefs.getString("api_token", null);
+                        headers.put("Authorization", "Bearer " + token);
+                        return headers;
                     }
+                };
+                mRequestQueue.add(mStringRequest);
 
 
 
-                }
+
+
+
+
+
+
+
 
 
 

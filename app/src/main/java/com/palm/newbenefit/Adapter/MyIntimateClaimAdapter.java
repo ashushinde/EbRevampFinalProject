@@ -5,11 +5,14 @@ import android.app.ProgressDialog;
 import android.content.Context;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.icu.text.SimpleDateFormat;
 import android.os.Build;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -18,6 +21,14 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.error.AuthFailureError;
+import com.android.volley.error.VolleyError;
+import com.android.volley.request.StringRequest;
+import com.android.volley.toolbox.HurlStack;
+import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.Activity.ClaimDetailActivity;
 import com.palm.newbenefit.Activity.PlanHospitalActivity;
 import com.palm.newbenefit.Activity.TrackActivity;
@@ -25,22 +36,34 @@ import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.MyHosClaimModel;
 import com.palm.newbenefit.Module.MyIntimateClaimModel;
 import com.kmd.newbenefit.R;
+import com.palm.newbenefit.Module.SpinnerModal;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.text.NumberFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 public class MyIntimateClaimAdapter extends
         RecyclerView.Adapter<MyIntimateClaimAdapter.ViewHolder> {
 Constants con;
     private List<MyIntimateClaimModel> mTrain;
     private Context context = null;
-
+    String policyname;
+    String emp_id;
+    String tpamemberid;
+    String memeberid;
     // Pass in the contact array into the constructor
-    public MyIntimateClaimAdapter(Context context, List<MyIntimateClaimModel> train) {
+    public MyIntimateClaimAdapter(Context context, List<MyIntimateClaimModel> train,String policyname) {
         this.context = context;
-        mTrain = train;
+        this.mTrain = train;
+        this.policyname=policyname;
     }
 
     @Override
@@ -64,7 +87,10 @@ Constants con;
         MyIntimateClaimModel train = mTrain.get(position);
         con=new Constants();
         // Set item views based on your views and data model
+        SharedPreferences prefs =context.getSharedPreferences(context.getPackageName(), Context.MODE_PRIVATE);
 
+        String token = prefs.getString("api_token", null);
+        String  user_id = prefs.getString("user_id", null);
         TextView member_name = viewHolder.mem_name;
         TextView mem_id = viewHolder.claim_id;
         TextView mem_type = viewHolder.claim_type;
@@ -363,20 +389,157 @@ try{
         });
 
 
+
+
+        String url = con.base_url+"/api/admin/user";
+
+        RequestQueue rq = Volley.newRequestQueue(context,
+                new HurlStack(null));
+
+        rq.getCache().clear();
+        StringRequest mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONObject js=new JSONObject(response);
+
+                    Log.d("mydata",response);
+                    JSONArray jsonObj=js.getJSONArray("data");
+
+                    for (int i = 0; i < jsonObj.length(); i++) {
+                        JSONObject explrObject = jsonObj.getJSONObject(0);
+
+
+
+
+
+                        emp_id = explrObject.getString("employee_id");
+
+
+
+
+
+
+                    }
+
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("onErrorResponse", error.toString());
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Authorization", "Bearer " + token);
+                return headers;
+            }
+        };
+        HashMap<String, String> params = new HashMap<>();
+        params.put("user_id", user_id);
+        params.put("master_user_type_id", "5");
+
+
+        mStringRequest.setParams(params);
+        rq.add(mStringRequest);
+
+
+
         viewHolder.tra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
 
 
-                Context context = v.getContext();
 
-                MyIntimateClaimModel train = mTrain.get(position);
+                RequestQueue rq = Volley.newRequestQueue(context,
+                        new HurlStack(null));
 
-                Intent intent = new Intent(context, TrackActivity.class);
-                intent.putExtra("policy", "4036081210");
-                intent.putExtra("member",train.getStatus());
-                intent.putExtra("claim",train.getClaim_intimate_id());
-                context.startActivity(intent);
+                rq.getCache().clear();
+                String url = con.base_url+"/api/admin/get/emp_member";
+                StringRequest smr = new StringRequest(Request.Method.POST, url,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    Log.d("emp_member",response);
+
+                                    JSONObject jsonArra = new JSONObject(response);
+
+                                    String status= String.valueOf(jsonArra.getBoolean("status"));
+
+
+                                        JSONArray array=jsonArra.getJSONArray("data");
+
+
+
+                                        for (int i = 0; i < array.length(); i++) {
+                                            JSONObject jsonObj = array.getJSONObject(i);
+
+                                            if(train.getName().equalsIgnoreCase(jsonObj.getString("name"))){
+                                                tpamemberid= jsonObj.getString("tpa_member_id");
+                                                memeberid= jsonObj.getString("member_id");
+                                            }
+
+                                             }
+                                    Context context = v.getContext();
+
+                                    MyIntimateClaimModel train = mTrain.get(position);
+
+                                    Intent intent = new Intent(context, TrackActivity.class);
+                                    intent.putExtra("policy",memeberid);
+                                    intent.putExtra("member",tpamemberid);
+                                    intent.putExtra("claim",train.getClaim_intimate_id());
+                                    context.startActivity(intent);
+
+
+
+                                } catch (Exception e) {
+                                    Log.e("onErrorResponse", e.toString());
+                                }
+
+                            }
+                        },  new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("onErrorResponse", error.toString());
+
+                    }
+                }) {
+                    @Override
+                    public Map<String, String> getHeaders() throws AuthFailureError {
+                        Map<String, String> headers = new HashMap<>();
+
+                        headers.put("Authorization", "Bearer " + token);
+                        return headers;
+                    }
+                };
+
+
+
+
+
+                HashMap<String, String> params = new HashMap<>();
+
+                params.put("policy_id", policyname);
+                params.put("employee_id", emp_id);
+                params.put("user_type_name", "Employee");
+
+
+
+                smr.setParams(params);
+                rq.add(smr);
+
+
+
 
 
 

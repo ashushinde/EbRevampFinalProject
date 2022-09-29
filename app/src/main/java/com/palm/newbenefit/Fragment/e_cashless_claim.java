@@ -231,11 +231,12 @@ public class e_cashless_claim extends Fragment {
                 if (isNetworkAvailable()) {
 
 
+                    SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
                     if(bank_city_modal.getSelKey().equalsIgnoreCase("")){
 
                         ob_e = new ArrayList<>();
-                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                         ghi_recycle_plan.setAdapter(adapter_e);
 
                         setBankDetCahsless();
@@ -248,7 +249,7 @@ public class e_cashless_claim extends Fragment {
 
 
                         ob_e = new ArrayList<>();
-                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                         ghi_recycle_plan.setAdapter(adapter_e);
 
 
@@ -510,9 +511,7 @@ int numberOfColumnsv=1;
 
     }
     private void setBankDetM() {
-        ob = new ArrayList<>();
-        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
-        recyclerView.setAdapter(adapter);
+
         RequestQueue rq = Volley.newRequestQueue(getActivity(),
                 new HurlStack(null, getSocketFactory()));
 
@@ -612,8 +611,10 @@ int numberOfColumnsv=1;
 
 
     private void setBankDetM_cashless() {
+        SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
+
         ob_e = new ArrayList<>();
-        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
         ghi_recycle_plan.setAdapter(adapter_e);
         RequestQueue rq = Volley.newRequestQueue(getActivity(),
                 new HurlStack(null, getSocketFactory()));
@@ -767,10 +768,11 @@ int numberOfColumnsv=1;
 
 
 
+                            SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
 
                             ob_e = new ArrayList<>();
-                            adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                            adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                             ghi_recycle_plan.setAdapter(adapter_e);
 
                             setBankDetCahsless();

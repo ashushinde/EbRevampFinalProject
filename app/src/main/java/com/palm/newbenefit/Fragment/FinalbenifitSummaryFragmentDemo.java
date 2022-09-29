@@ -30,6 +30,7 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.Volley;
 import com.kmd.newbenefit.R;
 import com.palm.newbenefit.Adapter.myvoluntaryAdapterGroupMyTermSumm;
+import com.palm.newbenefit.Adapter.sepreaterecycleadapter;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.VoluntaryBenefit;
@@ -99,7 +100,7 @@ public class FinalbenifitSummaryFragmentDemo extends Fragment {
 
     List<VoluntaryBenefit> policyob_term = null;
     List<String> policy_no = null;
-    myvoluntaryAdapterGroupMyTermSumm policySummaryAdapter_term = null;
+    sepreaterecycleadapter policySummaryAdapter_term = null;
 TextView summarydd,summaryd;
 
 
@@ -111,7 +112,7 @@ TextView summarydd,summaryd;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v= inflater.inflate(R.layout.fragment_benifitsum, container, false);
+        View v= inflater.inflate(R.layout.fragment_benifitsum_sep, container, false);
         con = new Constants();
 
         SharedPreferences prefs = getActivity().getSharedPreferences(getActivity().getPackageName(), Context.MODE_PRIVATE);
@@ -405,7 +406,7 @@ TextView summarydd,summaryd;
 
          policyob_term= new ArrayList<>();
          policy_no= new ArrayList<>();
-        policySummaryAdapter_term = new myvoluntaryAdapterGroupMyTermSumm(getActivity(), policyob_term);
+        policySummaryAdapter_term = new sepreaterecycleadapter(getActivity(), policyob_term);
         policy_cycle_term.setAdapter(policySummaryAdapter_term);
 
 

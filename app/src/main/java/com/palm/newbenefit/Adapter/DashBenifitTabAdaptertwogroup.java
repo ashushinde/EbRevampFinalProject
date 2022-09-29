@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.palm.newbenefit.Fragment.CoverDataFragmentGroup;
 import com.palm.newbenefit.Fragment.FinalbenifitSummaryFragment;
+import com.palm.newbenefit.Fragment.FinalbenifitSummaryFragmentDemo;
 
 
 public class DashBenifitTabAdaptertwogroup extends FragmentStatePagerAdapter {
@@ -32,7 +33,7 @@ public class DashBenifitTabAdaptertwogroup extends FragmentStatePagerAdapter {
 
 
             case 1:
-                FinalbenifitSummaryFragment tab3 = new FinalbenifitSummaryFragment();
+                FinalbenifitSummaryFragmentDemo tab3 = new FinalbenifitSummaryFragmentDemo();
                 return tab3;
 
 

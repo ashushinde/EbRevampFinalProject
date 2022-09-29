@@ -102,7 +102,7 @@ public class MyHosClaimFragment extends Fragment {
         if (isNetworkAvailable()) {
 
             ob = new ArrayList<>();
-            adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+            adapter = new MyIntimateClaimAdapter(getActivity(), ob,"");
             recyclerView.setAdapter(adapter);
 
             setBankDet();

@@ -322,18 +322,19 @@ public class MyTrackClaimFragment extends Fragment {
 
                 if (isNetworkAvailable()) {
 
+                    SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
                     if (bank_city_modal.getSelKey().equalsIgnoreCase("")) {
 
                         ob_e = new ArrayList<>();
-                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                         ghi_recycle_plan.setAdapter(adapter_e);
 
                         setBankDetCahsless();
 
 
                         ob = new ArrayList<>();
-                        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+                        adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
                         recyclerView.setAdapter(adapter);
 
                         setBankDet();
@@ -353,13 +354,13 @@ public class MyTrackClaimFragment extends Fragment {
 
 
                         ob = new ArrayList<>();
-                        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+                        adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
                         recyclerView.setAdapter(adapter);
 
                         setBankDetM();
 
                         ob_e = new ArrayList<>();
-                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                         ghi_recycle_plan.setAdapter(adapter_e);
 
 
@@ -1134,7 +1135,7 @@ public class MyTrackClaimFragment extends Fragment {
         SpinnerModal policy_noo = (SpinnerModal) bank_citySpin.getSelectedItem();
 
         ob = new ArrayList<>();
-        adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+        adapter = new MyIntimateClaimAdapter(getActivity(), ob,policy_typ.getSelKey());
         recyclerView.setAdapter(adapter);
         RequestQueue rq = Volley.newRequestQueue(getActivity(),
                 new HurlStack(null, getSocketFactory()));
@@ -1255,8 +1256,10 @@ public class MyTrackClaimFragment extends Fragment {
 
 
     private void setBankDetM_cashless() {
+        SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
+
         ob_e = new ArrayList<>();
-        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+        adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
         ghi_recycle_plan.setAdapter(adapter_e);
         RequestQueue rq = Volley.newRequestQueue(getActivity(),
                 new HurlStack(null, getSocketFactory()));
@@ -1411,17 +1414,18 @@ public class MyTrackClaimFragment extends Fragment {
                             policy_type_spin.setAdapter(bank_nameAdapter);
                             // policy_type_spin_no.setAdapter(bank_nameAdapter);
 
+                            SpinnerModal policyname = (SpinnerModal) policy_type_spin_no.getSelectedItem();
 
 
                             ob = new ArrayList<>();
-                            adapter = new MyIntimateClaimAdapter(getActivity(), ob);
+                            adapter = new MyIntimateClaimAdapter(getActivity(), ob,policyname.getSelKey());
                             recyclerView.setAdapter(adapter);
 
                             setBankDet();
 
 
                             ob_e = new ArrayList<>();
-                            adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e);
+                            adapter_e = new MyIntimateClaimAdapter(getActivity(), ob_e,policyname.getSelKey());
                             ghi_recycle_plan.setAdapter(adapter_e);
 
                             setBankDetCahsless();
