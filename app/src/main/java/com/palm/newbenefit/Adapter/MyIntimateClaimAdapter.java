@@ -1,5 +1,6 @@
 package com.palm.newbenefit.Adapter;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 
@@ -19,9 +20,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.Activity.ClaimDetailActivity;
 import com.palm.newbenefit.Activity.PlanHospitalActivity;
+import com.palm.newbenefit.Activity.TrackActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
+import com.palm.newbenefit.Module.MyHosClaimModel;
 import com.palm.newbenefit.Module.MyIntimateClaimModel;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.text.NumberFormat;
 import java.util.Date;
@@ -56,7 +59,7 @@ Constants con;
     // Involves populating data into the item through holder
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         // Get the data model based on position
         MyIntimateClaimModel train = mTrain.get(position);
         con=new Constants();
@@ -162,12 +165,12 @@ try{
 
         try {
             if(train.getAlltype().equalsIgnoreCase("hos")){
-            viewHolder.track.setVisibility(View.VISIBLE);
-               // viewHolder.track.setVisibility(View.GONE);
+              viewHolder.track.setVisibility(View.VISIBLE);
+              viewHolder.tra.setVisibility(View.VISIBLE);
             }else {
 
 
-                viewHolder.track.setVisibility(View.GONE);
+                viewHolder.tra.setVisibility(View.GONE);
             }
 
 
@@ -359,7 +362,29 @@ try{
 
         });
 
-viewHolder.tra.setVisibility(View.GONE);
+
+        viewHolder.tra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+
+
+                Context context = v.getContext();
+
+                MyIntimateClaimModel train = mTrain.get(position);
+
+                Intent intent = new Intent(context, TrackActivity.class);
+                intent.putExtra("policy", "4036081210");
+                intent.putExtra("member",train.getStatus());
+                intent.putExtra("claim",train.getClaim_intimate_id());
+                context.startActivity(intent);
+
+
+
+            }
+
+        });
+
+
 
 
 
@@ -384,7 +409,7 @@ viewHolder.tra.setVisibility(View.GONE);
                 subtype,mem_name,ailment,claim_date_plan,claim_type,claim_date,claim_amount,claim_settle_amt,claim_reason;
 
         public LinearLayout track;
-        TextView tra;
+        LinearLayout tra;
         TextView know;
         LinearLayout hide,know_more,view_detail,status_lin;
         ImageView expand;
@@ -411,7 +436,7 @@ viewHolder.tra.setVisibility(View.GONE);
             expand= (ImageView) itemView.findViewById(R.id.expand);
             hide= (LinearLayout) itemView.findViewById(R.id.hide);
            // amt=(LinearLayout) itemView.findViewById(R.id.amt);
-            tra = (TextView) itemView.findViewById(R.id.tra);
+            tra = (LinearLayout) itemView.findViewById(R.id.tra);
             know_more=itemView.findViewById(R.id.know_more);
             view_detail=itemView.findViewById(R.id.view_detail);
 

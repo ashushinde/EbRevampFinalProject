@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.DatabaseHelper.DBHelper;
 import com.palm.newbenefit.Module.ImageData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.List;
 

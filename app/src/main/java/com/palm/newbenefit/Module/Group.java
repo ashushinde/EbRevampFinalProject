@@ -20,40 +20,59 @@ public class Group {
 
     String cover_balancea;
     String opd_suminsured ;
-
-    public String getPo_id() {
-        return po_id;
-    }
-
-    public void setPo_id(String po_id) {
-        this.po_id = po_id;
-    }
+    String enhnace_cover;
 
     public Group() {
     }
 
-    public String getCover() {
-        return cover;
-    }
-
-    public void setCover(String cover) {
+    public Group(String po_id,String pol_id, String policy_type_id, String ins_co_name,
+                 String pol_mem_insured, String pol_sum_premmium, String pol_sub_type_name,
+                 String pol_sub_type_img_path, String insure_com_img_path,
+                 String pol_sub_type_id, String mem_count, String cover, int members,
+                 String opd, String cover_balancea, String opd_suminsured,String enhnace_cover) {
+        this.po_id = po_id;
+        this.pol_id = pol_id;
+        this.policy_type_id = policy_type_id;
+        this.ins_co_name = ins_co_name;
+        this.pol_mem_insured = pol_mem_insured;
+        this.pol_sum_premmium = pol_sum_premmium;
+        this.pol_sub_type_name = pol_sub_type_name;
+        this.pol_sub_type_img_path = pol_sub_type_img_path;
+        this.insure_com_img_path = insure_com_img_path;
+        this.pol_sub_type_id = pol_sub_type_id;
+        this.mem_count = mem_count;
         this.cover = cover;
-    }
-
-    public String getCover_balancea() {
-        return cover_balancea;
-    }
-
-    public void setCover_balancea(String cover_balancea) {
+        this.members = members;
+        this.opd = opd;
         this.cover_balancea = cover_balancea;
-    }
-
-    public String getOpd_suminsured() {
-        return opd_suminsured;
-    }
-
-    public void setOpd_suminsured(String opd_suminsured) {
         this.opd_suminsured = opd_suminsured;
+        this.enhnace_cover = enhnace_cover;
+
+    }
+
+    public Group(String po_id,String pol_id, String policy_type_id, String ins_co_name,
+                 String pol_mem_insured, String pol_sum_premmium, String pol_sub_type_name,
+                 String pol_sub_type_img_path, String insure_com_img_path,
+                 String pol_sub_type_id, String mem_count, String cover, int members,
+                 String opd, String cover_balancea, String opd_suminsured) {
+        this.po_id = po_id;
+        this.pol_id = pol_id;
+        this.policy_type_id = policy_type_id;
+        this.ins_co_name = ins_co_name;
+        this.pol_mem_insured = pol_mem_insured;
+        this.pol_sum_premmium = pol_sum_premmium;
+        this.pol_sub_type_name = pol_sub_type_name;
+        this.pol_sub_type_img_path = pol_sub_type_img_path;
+        this.insure_com_img_path = insure_com_img_path;
+        this.pol_sub_type_id = pol_sub_type_id;
+        this.mem_count = mem_count;
+        this.cover = cover;
+        this.members = members;
+        this.opd = opd;
+        this.cover_balancea = cover_balancea;
+        this.opd_suminsured = opd_suminsured;
+
+
     }
 
     @Override
@@ -75,7 +94,40 @@ public class Group {
                 ", opd='" + opd + '\'' +
                 ", cover_balancea='" + cover_balancea + '\'' +
                 ", opd_suminsured='" + opd_suminsured + '\'' +
+                ", enhnace_cover='" + enhnace_cover + '\'' +
                 '}';
+    }
+
+    public String getEnhnace_cover() {
+        return enhnace_cover;
+    }
+
+    public void setEnhnace_cover(String enhnace_cover) {
+        this.enhnace_cover = enhnace_cover;
+    }
+
+    public String getPo_id() {
+        return po_id;
+    }
+
+    public void setPo_id(String po_id) {
+        this.po_id = po_id;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
+    public String getCover_balancea() {
+        return cover_balancea;
+    }
+
+    public void setCover_balancea(String cover_balancea) {
+        this.cover_balancea = cover_balancea;
     }
 
     public Group(String pol_id, String policy_type_id, String ins_co_name, String pol_mem_insured, String pol_sum_premmium, String pol_sub_type_name, String pol_sub_type_img_path, String insure_com_img_path, String pol_sub_type_id, String mem_count, String cover, int members, String opd, String cover_balancea, String opd_suminsured) {
@@ -96,22 +148,11 @@ public class Group {
         this.opd_suminsured = opd_suminsured;
     }
 
-    public Group(String po_id,String pol_id, String policy_type_id, String ins_co_name, String pol_mem_insured, String pol_sum_premmium, String pol_sub_type_name, String pol_sub_type_img_path, String insure_com_img_path, String pol_sub_type_id, String mem_count, String cover, int members, String opd, String cover_balancea, String opd_suminsured) {
-        this.po_id = po_id;
-        this.pol_id = pol_id;
-        this.policy_type_id = policy_type_id;
-        this.ins_co_name = ins_co_name;
-        this.pol_mem_insured = pol_mem_insured;
-        this.pol_sum_premmium = pol_sum_premmium;
-        this.pol_sub_type_name = pol_sub_type_name;
-        this.pol_sub_type_img_path = pol_sub_type_img_path;
-        this.insure_com_img_path = insure_com_img_path;
-        this.pol_sub_type_id = pol_sub_type_id;
-        this.mem_count = mem_count;
-        this.cover = cover;
-        this.members = members;
-        this.opd = opd;
-        this.cover_balancea = cover_balancea;
+    public String getOpd_suminsured() {
+        return opd_suminsured;
+    }
+
+    public void setOpd_suminsured(String opd_suminsured) {
         this.opd_suminsured = opd_suminsured;
     }
 

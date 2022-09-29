@@ -21,7 +21,7 @@ import android.widget.ImageView;
 
 
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 public class PdfActivityjava extends AppCompatActivity   {
 

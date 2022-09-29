@@ -13,7 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.palm.newbenefit.Activity.MainActivity;
 
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.newbenefit.adapters.MyEcashlessTabAdapter;
 
 

@@ -35,13 +35,15 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.palm.newbenefit.Activity.MainActivity;
+import com.palm.newbenefit.Adapter.AddcoverAdapterHower;
 import com.palm.newbenefit.Adapter.FormAdapter;
 import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapter;
 import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapterLIst;
 import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapterLIstTerm;
 import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapternomwithout;
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.palm.newbenefit.Module.AddCover;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -58,6 +60,7 @@ import java.security.cert.Certificate;
 import java.security.cert.CertificateException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -425,7 +428,8 @@ public class EnrollMentFragmentJava extends Fragment {
             public void onClick(View v)
             {
 
-                showDialogTopup();
+
+                setBankDet();
 
 
 
@@ -960,6 +964,86 @@ try{
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
+    private void setBankDet() {
+
+
+
+        String url = con.base_url+"/api/employee/get/cover/details?"+"policy_id="+policy_id;
+
+        //RequestQueue rq = Volley.newRequestQueue(getActivity());
+
+        RequestQueue rq = Volley.newRequestQueue(getActivity(), new HurlStack(null, getSocketFactory()));
+        rq.getCache().clear();
+        StringRequest mStringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+
+                    JSONObject data= new JSONObject(response);
+
+
+                    Log.d("hower",response);
+
+
+                    String statusa= String.valueOf(data.getBoolean("status"));
+
+
+                    if (statusa.equalsIgnoreCase("false")) {
+                        try{
+                            if(nominne.equalsIgnoreCase("show")){
+                                viewPager.setCurrentItem(6);
+                            }else {
+                                viewPager.setCurrentItem(4);
+                            }
+
+                            show_all.setBackgroundResource(R.drawable.click_on_tab);
+                            employee.setBackgroundResource(R.drawable.click_tab);
+                            add_member.setBackgroundResource(R.drawable.click_tab);
+                            add_nominee.setBackgroundResource(R.drawable.click_tab);
+                            nominee_enroll.setBackgroundResource(R.drawable.click_tab);
+                            add_cover.setBackgroundResource(R.drawable.click_tab);
+                            member_enroll.setBackgroundResource(R.drawable.click_tab);
+
+
+                        }catch (Exception e){
+                            Log.d("myisue",e.toString());
+                        }
+                    } else {
+                        showDialogTopup();
+
+
+
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e("onErrorResponse", e.toString());
+                }
+
+            }
+        },  new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("onErrorResponse", error.toString());
+
+            }
+        }) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                Map<String, String> headers = new HashMap<>();
+                headers.put("Authorization", "Bearer " + token);
+                return headers;
+            }
+        };
+
+
+
+
+        rq.add(mStringRequest);
+    }
+
+
 
     public SSLSocketFactory getSocketFactory() {
 

@@ -52,7 +52,7 @@ import com.palm.newbenefit.ApiConfig.Utils;
 import com.palm.newbenefit.Module.MyHosClaimModel;
 import com.palm.newbenefit.Module.MyIntimateClaimModel;
 import com.palm.newbenefit.Module.SpinnerModal;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -1585,8 +1585,8 @@ public class MyClaimsFragment extends Fragment {
                                 intimation_lin.setVisibility(View.GONE);
                                 voluntary.setVisibility(View.GONE);
                             } else {
-
                                 info_text_voluntary.setVisibility(View.GONE);
+                                intimation_lin.setVisibility(View.VISIBLE);
                                 voluntary.setVisibility(View.VISIBLE);
                                 JSONArray jsonObj =resp.getJSONArray("data");
 
@@ -1601,15 +1601,15 @@ public class MyClaimsFragment extends Fragment {
                                     String name = jo_area.getString("member_name");
                                     String type = jo_area.getString("claim_type");
                                     String created_at = (jo_area.getString("claim_date"));
-                                    String total_claim_amount = (jo_area.getString("claim_amount"));
+                                    String total_claim_amount = (jo_area.getString("claim_amt"));
                                     String claim_reimb_reason = (jo_area.getString("claim_reason"));
 
 
-                                    oba.add(new MyHosClaimModel(claim_reimb_id, claim_reimb_id,
-                                            name, created_at, total_claim_amount, type,
-                                            "", claim_reimb_reason, claim_reimb_id,
-                                            "",claim_request_date));
-
+                                    oba.add(new MyHosClaimModel(claim_reimb_id,
+                                            claim_reimb_id, name, created_at,
+                                            total_claim_amount, type, "",
+                                            claim_reimb_reason, claim_reimb_id, ""
+                                            ,claim_request_date));
 
                                 }
 
@@ -1621,7 +1621,7 @@ public class MyClaimsFragment extends Fragment {
 
 
                         } catch (Exception e) {
-
+                            Log.e("onErrorResponse", e.toString());
                         }
 
                     }
@@ -1689,7 +1689,7 @@ public class MyClaimsFragment extends Fragment {
                                 voluntary.setVisibility(View.GONE);
                             } else {
                                 info_text_voluntary.setVisibility(View.GONE);
-                                intimation_lin.setVisibility(View.GONE);
+                                intimation_lin.setVisibility(View.VISIBLE);
                                 voluntary.setVisibility(View.VISIBLE);
                                 JSONArray jsonObj =resp.getJSONArray("data");
 

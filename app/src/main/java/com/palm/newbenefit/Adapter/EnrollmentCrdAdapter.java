@@ -29,7 +29,7 @@ import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Fragment.EnrollMentFragmentJava;
 import com.palm.newbenefit.Module.EnrollmentCards;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -129,13 +129,23 @@ public class EnrollmentCrdAdapter extends RecyclerView.Adapter<EnrollmentCrdAdap
 
        if(train.getEnrollement_start_date().equalsIgnoreCase("null")
                 ||train.getEnrollement_end_date().equalsIgnoreCase("null")
-               ){
-            viewHolder.opd_cover.setVisibility(View.GONE);
-            viewHolder.opd_cover.setTextColor(R.color.green);
-            viewHolder.cover.setVisibility(View.GONE);
-           viewHolder.opd.setVisibility(View.GONE);
-            viewHolder.cover.setBackgroundResource(R.drawable.btn_cancle);
-        }
+               )
+       {
+
+           if(train.getEnrollement_confirmed().equalsIgnoreCase("1")){
+               viewHolder.opd_cover.setText("Done");
+               viewHolder.cover.setVisibility(View.GONE);
+               viewHolder.opd.setVisibility(View.VISIBLE);
+
+           }else {
+               viewHolder.opd_cover.setVisibility(View.GONE);
+               viewHolder.opd_cover.setTextColor(R.color.green);
+               viewHolder.cover.setVisibility(View.GONE);
+               viewHolder.opd.setVisibility(View.GONE);
+               viewHolder.cover.setBackgroundResource(R.drawable.btn_cancle);
+           }
+
+       }
 
 
         else if(train.getEnrollement_confirmed().equalsIgnoreCase("1")

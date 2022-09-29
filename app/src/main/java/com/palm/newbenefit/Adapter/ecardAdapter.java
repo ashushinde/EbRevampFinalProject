@@ -21,7 +21,7 @@ import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.Ecard;
 import com.palm.newbenefit.Module.MemberData;
 import com.palm.newbenefit.Module.amount;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.List;
 

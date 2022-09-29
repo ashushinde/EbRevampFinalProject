@@ -29,7 +29,7 @@ import com.palm.newbenefit.Adapter.HomeGroupAdapter;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.Group;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -259,9 +259,23 @@ public class CoverDataFragmentVol extends Fragment {
 
                                 String cover_balancea = String.valueOf((jo_area.getInt("cover_balance")));
                                 String opd_suminsured = String.valueOf((jo_area.getInt("opd_suminsured")));
+                                String enhnace_cover = String.valueOf((jo_area.getString("enhnace_cover")));
 
 
                                 String premium = (jo_area.getString("premium"));
+
+                                double enhance_premium=0.0;
+                                double allenhance_premium=0.0;
+                                try{
+                                    enhance_premium=jo_area.getDouble("enhnace_premium");
+                                }catch (Exception e){
+                                    enhance_premium=0.0;
+                                }
+                                Double idss = jo_area.getDouble("premium");
+
+                                enhance_premium= enhance_premium+idss;
+
+                                String ids= String.valueOf(enhance_premium);
 
 
                                 if(premium.isEmpty()||premium.equalsIgnoreCase("null")
@@ -270,7 +284,14 @@ public class CoverDataFragmentVol extends Fragment {
                                 }else {
 
                                     if(!cover_balance.equalsIgnoreCase("0")){
-                                        oba.add(new Group(po_id,id, pol_id, in_co_name, pol_mem_insured, "", pol_sub_type_name, policy_sub_type_image_path, insurer_companies_img_path, policy_sub_type_id, members, cover_balance, amountrs, "",cover_balancea,opd_suminsured));
+                                        oba.add(new Group(po_id,ids, pol_id,
+                                                in_co_name, pol_mem_insured,
+                                                "", pol_sub_type_name,
+                                                policy_sub_type_image_path,
+                                                insurer_companies_img_path,
+                                                policy_sub_type_id, members,
+                                                cover_balance, amountrs, "",
+                                                cover_balancea,opd_suminsured,enhnace_cover));
 
                                     }
 

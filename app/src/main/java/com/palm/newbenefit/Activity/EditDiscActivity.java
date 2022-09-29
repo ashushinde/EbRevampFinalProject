@@ -48,7 +48,7 @@ import com.palm.newbenefit.ApiConfig.AppHelper;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.VolleyMultiPartRequest;
 import com.palm.newbenefit.Fragment.DashboardBenifitFragment;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import org.json.JSONObject;
 

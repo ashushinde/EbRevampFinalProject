@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
@@ -26,12 +27,13 @@ import com.android.volley.error.AuthFailureError;
 import com.android.volley.error.VolleyError;
 import com.android.volley.request.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.palm.newbenefit.Activity.DemoActivty;
 import com.palm.newbenefit.Activity.MainActivity;
 import com.palm.newbenefit.Adapter.MyOverAllAdapter;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.OverAllClaim;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,7 +57,7 @@ public class OverAllClaimFragment extends Fragment {
     List<OverAllClaim> ob_e = null;
     MyOverAllAdapter adapter_e = null;
 
-
+    ProgressDialog progressDialog = null;
     RecyclerView recyclerView,voluntary,ghi_recycle_plan;
     int amountrs = 500;
     String emp_id,employer_id,employee_id=null,employer_id_data;
@@ -195,6 +197,7 @@ public class OverAllClaimFragment extends Fragment {
 
 
     private void setBankDetCahsless(String myid) {
+
         ob_e = new ArrayList<>();
         adapter_e = new MyOverAllAdapter(getActivity(), ob_e);
         ghi_recycle_plan.setAdapter(adapter_e);
@@ -216,6 +219,7 @@ public class OverAllClaimFragment extends Fragment {
                             if (statusa.equalsIgnoreCase("false")) {
                                 info_text_plan.setVisibility(View.VISIBLE);
                                 ghi_recycle_plan.setVisibility(View.GONE);
+                                progressDialog.dismiss();
                             } else {
                                 info_text_plan.setVisibility(View.GONE);
                                 ghi_recycle_plan.setVisibility(View.VISIBLE);
@@ -250,12 +254,18 @@ public class OverAllClaimFragment extends Fragment {
                                     String deduction_amount = (jo_area.getString("deduction_amount"));
 
                                     String type = (jo_area.getString("type"));
-                                    String employee_email = (jo_area.getString("employee_email"));
+                                    String employee_email = (jo_area.getString("employee_mail"));
+
+                                      String policy_number = (jo_area.getString("policy_number"));
+                                      String claim_types = (jo_area.getString("claim_type"));
+                                      String employee_code = (jo_area.getString("employee_code"));
+                                      String substatus = (jo_area.getString("claim_sub_status"));
 
                                     ob_e.add(new OverAllClaim(claim_id,employer_name,employee_name,
                                             member_relation,member_name,claim_amount,settled_amount,claim_type ,
                                             tpa,claim_registration_date,claim_status,claim_tat,
-                                            color_code,deduction_amount,type,employee_email));
+                                            color_code,deduction_amount,type,employee_email,policy_number,employee_code,
+                                            claim_types,substatus));
 
                                 }
 
@@ -263,10 +273,13 @@ public class OverAllClaimFragment extends Fragment {
                                 adapter_e.notifyDataSetChanged();
                                 }
 
+                                progressDialog.dismiss();
+
                             }
 
 
                         } catch (Exception e) {
+                            progressDialog.dismiss();
                             Log.e("onErrorResponse", e.toString());
                         }
 
@@ -274,6 +287,7 @@ public class OverAllClaimFragment extends Fragment {
                 },  new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                progressDialog.dismiss();
                 Log.e("onErrorResponse", error.toString());
 
             }
@@ -301,7 +315,10 @@ public class OverAllClaimFragment extends Fragment {
     }
 
     void GetEmployeeId(){
-    String url = con.base_url+"/api/admin/user";
+        progressDialog = ProgressDialog.show(getActivity(), "",
+                "Saving. Please wait...", true);
+
+        String url = con.base_url+"/api/admin/user";
 
         RequestQueue rq = Volley.newRequestQueue(getActivity());
 
@@ -354,9 +371,10 @@ public class OverAllClaimFragment extends Fragment {
                     }
 
 
-
+  progressDialog.dismiss();
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    progressDialog.dismiss();
                 }
 
 
@@ -364,6 +382,7 @@ public class OverAllClaimFragment extends Fragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                progressDialog.dismiss();
                 Log.e("onErrorResponse", error.toString());
             }
         }) {
@@ -393,6 +412,8 @@ public class OverAllClaimFragment extends Fragment {
 
 
     public void setProfileDet() {
+        progressDialog = ProgressDialog.show(getActivity(), "",
+                "Saving. Please wait...", true);
 
     String url = con.base_url+"/api/admin/user";
        RequestQueue mRequestQueue = Volley.newRequestQueue(getActivity());
@@ -430,12 +451,14 @@ public class OverAllClaimFragment extends Fragment {
                     }
 
                 } catch (Exception e) {
+                    progressDialog.dismiss();
 
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                progressDialog.dismiss();
                 Log.e("onErrorResponse", error.toString());
             }
         }) {

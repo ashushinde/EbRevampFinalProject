@@ -44,7 +44,7 @@ import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.AppHelper;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.VolleyMultiPartRequest;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;

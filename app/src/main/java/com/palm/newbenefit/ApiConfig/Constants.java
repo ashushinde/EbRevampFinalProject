@@ -7,8 +7,8 @@ public class Constants {
     //https://mybenefits.policyanchor.com/home
   //  apiuatmybenefits.policyanchor.com
 
-    public   final String domain = "apiportal.kmdastur.com";
-    public final String base_url = "https://apiportal.kmdastur.com";//http://eb.fynity.in
+    public   final String domain = "apilifekaplanuat-eb.tmibasl.in";
+    public final String base_url = "https://apilifekaplanuat-eb.tmibasl.in";//http://eb.fynity.in
     //http://heroapi.fynity.in/api/
 //https://uat-herocareapi.heroinsurance.com
     //https://herocareapi.heroinsurance.com:8443

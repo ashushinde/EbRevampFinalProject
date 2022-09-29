@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.newbenefit.models.ContactUsMain;
 
 import java.util.List;

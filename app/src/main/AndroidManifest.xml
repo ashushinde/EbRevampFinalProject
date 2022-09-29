@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.palm.newbenefit">
+    package="com.kmd.newbenefit">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -42,10 +42,10 @@
     <uses-permission android:name="ANDROID.PERMISSION.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:icon="@mipmap/kmd_launch"
-        android:label="KMD APP"
+        android:icon="@mipmap/howden_launch"
+        android:label="Howden Benefit"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/kmd_launch"
+        android:roundIcon="@mipmap/howden_launch"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
@@ -54,17 +54,17 @@
         tools:replace="android:label">
 
         <activity
-            android:name=".Activity.ViewDataActivtyDoc"
+            android:name="com.palm.newbenefit.Activity.ViewDataActivtyDoc"
             android:exported="false" />
         <activity
-            android:name=".Activity.UploadDeficiencyActivity"
+            android:name="com.palm.newbenefit.Activity.UploadDeficiencyActivity"
             android:exported="false" />
-        <activity android:name=".Activity.UploadActivity" />
-        <activity android:name=".Activity.PassowrdPolicyActivity" />
-        <activity android:name=".Activity.QuestionsAnsActivity" />
-        <activity android:name=".Activity.ClaimDetailActivity" />
-        <activity android:name=".Activity.HealthCheckupActivity" />
-        <activity android:name=".Activity.ViewOverAllClaimActivity" />
+        <activity android:name="com.palm.newbenefit.Activity.UploadActivity" />
+        <activity android:name="com.palm.newbenefit.Activity.PassowrdPolicyActivity" />
+        <activity android:name="com.palm.newbenefit.Activity.QuestionsAnsActivity" />
+        <activity android:name="com.palm.newbenefit.Activity.ClaimDetailActivity" />
+        <activity android:name="com.palm.newbenefit.Activity.HealthCheckupActivity" />
+        <activity android:name="com.palm.newbenefit.Activity.ViewOverAllClaimActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -82,112 +82,112 @@
             android:required="false" />
 
         <activity
-            android:name=".Activity.MapsActivity"
+            android:name="com.palm.newbenefit.Activity.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".Activity.EditDiscActivity"
+            android:name="com.palm.newbenefit.Activity.EditDiscActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.RouteActivity"
+            android:name="com.palm.newbenefit.Activity.RouteActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.PlanHospitalActivity"
+            android:name="com.palm.newbenefit.Activity.PlanHospitalActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MyPersonalActivity"
+            android:name="com.palm.newbenefit.Activity.MyPersonalActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MyPoliciesActivity"
+            android:name="com.palm.newbenefit.Activity.MyPoliciesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.BankDetailExample"
+            android:name="com.palm.newbenefit.Activity.BankDetailExample"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.MainActivity"
+            android:name="com.palm.newbenefit.Activity.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.ViewDataActivty"
+            android:name="com.palm.newbenefit.Activity.ViewDataActivty"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.EditDataActivity"
+            android:name="com.palm.newbenefit.Activity.EditDataActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.TrackActivity"
+            android:name="com.palm.newbenefit.Activity.TrackActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.QueriesListActivity"
+            android:name="com.palm.newbenefit.Activity.QueriesListActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.EditMemberActivity"
+            android:name="com.palm.newbenefit.Activity.EditMemberActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.WebActivity"
+            android:name="com.palm.newbenefit.Activity.WebActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.PdfDataActivity"
+            android:name="com.palm.newbenefit.Activity.PdfDataActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.MemberCoverHomeActivity"
+            android:name="com.palm.newbenefit.Activity.MemberCoverHomeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.HomePoliciesActivity"
+            android:name="com.palm.newbenefit.Activity.HomePoliciesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.EditNomineeActivity"
+            android:name="com.palm.newbenefit.Activity.EditNomineeActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.NomineeViewActivity"
+            android:name="com.palm.newbenefit.Activity.NomineeViewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.AddFamilyDataActivity"
+            android:name="com.palm.newbenefit.Activity.AddFamilyDataActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.FamilyDataActivity"
+            android:name="com.palm.newbenefit.Activity.FamilyDataActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.ForgetPasswordActivity"
+            android:name="com.palm.newbenefit.Activity.ForgetPasswordActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.WebviewActivity"
+            android:name="com.palm.newbenefit.Activity.WebviewActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.PdfActivityjava"
+            android:name="com.palm.newbenefit.Activity.PdfActivityjava"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.ChangePassforceActivity"
+            android:name="com.palm.newbenefit.Activity.ChangePassforceActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.DemoActivty"
+            android:name="com.palm.newbenefit.Activity.DemoActivty"
             android:exported="false"
             android:screenOrientation="portrait" /> <!-- <activity -->
-        <!-- android:name=".Activity.BankDetailActivity" -->
+        <!-- android:name="com.palm.newbenefit.Activity.BankDetailActivity" -->
         <!-- android:screenOrientation="portrait" /> -->
         <activity
-            android:name=".Activity.FamilyMemberActivity"
+            android:name="com.palm.newbenefit.Activity.FamilyMemberActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.SplashScreen"
+            android:name="com.palm.newbenefit.Activity.SplashScreen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>

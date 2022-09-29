@@ -39,7 +39,7 @@ import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.CoreData;
 import com.palm.newbenefit.Module.amount;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 
@@ -113,7 +113,7 @@ public class CoreDemoAdapter extends RecyclerView.Adapter<CoreDemoAdapter.ViewHo
     // Involves populating data into the item through holder
     @SuppressLint({"ResourceAsColor", "WrongConstant", "NewApi"})
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
 
 
         CoreData train = mTrain.get(position);

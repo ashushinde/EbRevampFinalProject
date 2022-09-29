@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.palm.newbenefit.Activity.EditDiscActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.DiscData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.io.InputStream;
 import java.util.List;

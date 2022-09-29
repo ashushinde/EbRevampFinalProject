@@ -41,7 +41,7 @@ import com.palm.newbenefit.Activity.DemoActivty;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.Member_Team;
 import com.palm.newbenefit.Module.SpinnerModal;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

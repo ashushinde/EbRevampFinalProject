@@ -41,7 +41,7 @@ import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapterLIstTerm;
 import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapternm;
 import com.palm.newbenefit.Adapter.InrollmentAdapterTabAdapternomwithoutnm;
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

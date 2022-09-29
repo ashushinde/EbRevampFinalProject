@@ -39,7 +39,7 @@ import com.squareup.picasso.Picasso;
 import com.palm.newbenefit.Activity.HomePoliciesActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.Group;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -241,7 +241,10 @@ public class HomeGroupAdapter extends RecyclerView.Adapter<HomeGroupAdapter.View
 
 
 
-        if(train.getPol_id().equalsIgnoreCase("null")||train.getPol_id().isEmpty()||(train.getPol_id().equalsIgnoreCase("0"))){
+        if(train.getPol_id().equalsIgnoreCase("null")||
+                train.getPol_id().isEmpty()||
+                (train.getPol_id().equalsIgnoreCase("0")||
+                        train.getPol_id().equalsIgnoreCase("0.0"))){
             viewHolder.premium_data.setText(train.getPol_id());
             viewHolder.pre.setVisibility(View.GONE);
         }else {
@@ -251,6 +254,18 @@ public class HomeGroupAdapter extends RecyclerView.Adapter<HomeGroupAdapter.View
 
             viewHolder.premium_data.setText(cover_data);
             viewHolder.pre.setVisibility(View.VISIBLE);
+        }
+
+        if(train.getEnhnace_cover().equalsIgnoreCase("0")||
+        train.getEnhnace_cover().equalsIgnoreCase("null")||
+        train.getEnhnace_cover().equalsIgnoreCase("")){
+            viewHolder.enhance_value.setVisibility(View.GONE);
+            viewHolder.enhance.setText(null);
+
+        }else {
+            viewHolder.enhance_head.setText("IPD Sum Insured + Enhance");
+            viewHolder.enhance_value.setVisibility(View.VISIBLE);
+            viewHolder.enhance.setText(train.getEnhnace_cover());
         }
 
 
@@ -513,9 +528,10 @@ public class HomeGroupAdapter extends RecyclerView.Adapter<HomeGroupAdapter.View
     public class ViewHolder extends RecyclerView.ViewHolder {
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
-        public TextView p_type,opd_cover,policyname, covera,m_cov, cov, cover, premium, frogm, premium_data;
+        public TextView p_type,opd_cover,policyname, covera,m_cov,enhance,
+                enhance_head,cov, cover, premium, frogm, premium_data;
         public ImageView two_five, one_four,three_six,s_logo;
-        LinearLayout balance, pre,opd;
+        LinearLayout balance, pre,opd,enhance_value;
         LinearLayout see_details;
 
 
@@ -533,7 +549,7 @@ public class HomeGroupAdapter extends RecyclerView.Adapter<HomeGroupAdapter.View
             premium = (TextView) itemView.findViewById(R.id.premium);
             m_cov = (TextView) itemView.findViewById(R.id.m_cov);
             cov = (TextView) itemView.findViewById(R.id.cov);
-
+            enhance_head= (TextView) itemView.findViewById(R.id.enhance_head);
             s_logo = (ImageView) itemView.findViewById(R.id.s_logo);
             cover = (TextView) itemView.findViewById(R.id.cover);
             premium_data = (TextView) itemView.findViewById(R.id.premium_data);
@@ -542,7 +558,9 @@ public class HomeGroupAdapter extends RecyclerView.Adapter<HomeGroupAdapter.View
             opd= (LinearLayout) itemView.findViewById(R.id.opd);
             opd_cover= (TextView) itemView.findViewById(R.id.opd_cover);
             covera= (TextView) itemView.findViewById(R.id.covera);
+            enhance= (TextView) itemView.findViewById(R.id.enhance);
             see_details= (LinearLayout) itemView.findViewById(R.id.see_details);
+            enhance_value= (LinearLayout) itemView.findViewById(R.id.enhance_value);
         }
     }
 

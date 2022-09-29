@@ -61,7 +61,7 @@ import com.palm.newbenefit.ApiConfig.MyDateListener;
 import com.palm.newbenefit.ApiConfig.Utils;
 import com.palm.newbenefit.Module.Policy;
 import com.palm.newbenefit.Module.SpinnerModal;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 
 import org.json.JSONArray;

@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import com.palm.newbenefit.Activity.MainActivity;
 import com.palm.newbenefit.Adapter.IntimateClaimTabAdapter;
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 /**
  * A simple {@link Fragment} subclass.

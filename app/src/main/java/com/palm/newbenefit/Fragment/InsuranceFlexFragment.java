@@ -41,7 +41,7 @@ import com.palm.newbenefit.Module.FlexBenefit;
 import com.palm.newbenefit.Module.FlexBenefitWellness;
 import com.palm.newbenefit.Module.MyInsuranceFlex;
 import com.palm.newbenefit.Module.VoluntaryBenefit;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

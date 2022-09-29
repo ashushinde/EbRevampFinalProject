@@ -23,7 +23,7 @@ import com.squareup.picasso.Picasso;
 import com.palm.newbenefit.Activity.MemberCoverHomeActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.PolicyData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.io.InputStream;
 import java.util.List;

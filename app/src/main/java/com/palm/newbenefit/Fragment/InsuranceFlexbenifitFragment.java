@@ -47,7 +47,7 @@ import com.palm.newbenefit.Module.FlexBenefit;
 import com.palm.newbenefit.Module.FlexBenefitWellness;
 import com.palm.newbenefit.Module.InsuranceCover;
 import com.palm.newbenefit.Module.VoluntaryBenefit;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

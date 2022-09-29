@@ -23,7 +23,7 @@ import com.palm.newbenefit.Adapter.NomineeAdapter;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.DatabaseHelper.DBHelper;
 import com.palm.newbenefit.Module.AddNominee;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import java.io.FileNotFoundException;

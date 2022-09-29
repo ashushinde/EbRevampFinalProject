@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 public class PassowrdPolicyActivity extends AppCompatActivity {
 

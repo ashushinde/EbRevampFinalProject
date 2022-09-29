@@ -13,7 +13,7 @@ import android.webkit.WebView;
 import android.widget.ProgressBar;
 
 import com.palm.newbenefit.Activity.MainActivity;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.HashMap;
 import java.util.Map;

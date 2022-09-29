@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activity.ViewOverAllClaimActivity">
+   >
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -271,9 +271,11 @@
 
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/reported_amount_lin"
                         android:layout_width="match_parent"
                         android:layout_marginTop="5sp"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="horizontal">
 
 
@@ -302,9 +304,11 @@
 
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
 
+                    <LinearLayout
+                        android:id="@+id/settle_amount_lin"
+                        android:layout_width="match_parent"
+android:visibility="gone"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5sp"
                         android:orientation="horizontal">
@@ -335,9 +339,11 @@
 
                     </LinearLayout>
                     <LinearLayout
+                        android:id="@+id/deduct_amount_lin"
                         android:layout_width="match_parent"
                         android:layout_marginTop="5sp"
                         android:layout_height="wrap_content"
+                        android:visibility="gone"
                         android:orientation="horizontal">
 
 
@@ -1012,6 +1018,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/uploaddochide"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
@@ -1717,31 +1724,40 @@
                 android:textSize="12sp"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/upload_hide"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/pop_reg"
-                android:text="Document Uploaded :  "
-                android:layout_marginTop="5sp"
-                android:textColor="#0d0905"
-                android:textSize="12sp"
-                android:textStyle="bold"
+                android:orientation="vertical">
+                <TextView
 
-                />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/pop_reg"
+                    android:text="Document Uploaded :  "
+                    android:textColor="#0d0905"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+
+                    />
 
 
 
-            <TextView
-                android:id="@+id/doc_upload"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pop_reg"
-                android:background="@drawable/blue_card"
-                android:padding="5sp"
-                android:text=" View  Documents "
-                android:textColor="#FFFFFF"
-                android:textSize="12sp"
-                />
+                <TextView
+                    android:id="@+id/doc_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/blue_card"
+                    android:fontFamily="@font/pop_reg"
+                    android:padding="5sp"
+                    android:text=" View  Documents "
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
 
 
 
@@ -1790,6 +1806,7 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
@@ -1821,11 +1838,13 @@
                 </LinearLayout>
 
                 <LinearLayout
+                   android:id="@+id/claim_aprove_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
+
 
                     >
                     <TextView
@@ -1866,8 +1885,10 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/claim_increed_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
@@ -1899,11 +1920,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/chrge_settle_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -1945,6 +1967,8 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/post_hospital_amount_lin"
+                    android:visibility="gone"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
@@ -1978,12 +2002,13 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/pre_hos_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
 
+                    android:visibility="gone"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -2017,8 +2042,10 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/room_rent_charges_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
@@ -2046,11 +2073,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/consultation_charges_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2084,10 +2112,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/med_charge_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+                    android:visibility="gone"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -2117,11 +2147,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/invest_charge_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2161,8 +2192,10 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/dom_charge_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
+                    android:visibility="gone"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
@@ -2194,11 +2227,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/icu_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2238,11 +2272,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/icu_rel_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2271,11 +2306,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/nurse_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2315,11 +2351,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/health_checkup_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone"  >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2348,12 +2385,13 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/maternity_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
 
+                    android:visibility="gone"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -2392,11 +2430,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/daycare_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone" >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2425,11 +2464,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/organ_don_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2469,11 +2509,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/ancilary_service_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2502,11 +2543,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/dental_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2545,11 +2587,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/patient_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone" >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2578,11 +2621,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/pa_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
+                    android:visibility="gone"
 
                     >
                     <TextView
@@ -2620,11 +2664,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/ci_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone" >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2653,12 +2698,13 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/tds_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end"
 
+                    android:visibility="gone"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -2698,11 +2744,12 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/service_tax_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:visibility="gone" >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -2731,11 +2778,12 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/copayment_amount_lin"
                     android:layout_width="0dp"
                     android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:gravity="end">
+                    android:visibility="gone"  >
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

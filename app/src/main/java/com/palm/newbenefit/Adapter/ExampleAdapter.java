@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.Module.ExampleItem;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.ArrayList;
 

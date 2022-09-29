@@ -7,7 +7,7 @@ import android.graphics.PixelFormat
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.palm.newbenefit.ApiConfig.AnalyticsApplication
-import com.palm.newbenefit.R
+import com.kmd.newbenefit.R
 import java.io.File
 
 class SplashScreen : AppCompatActivity() {

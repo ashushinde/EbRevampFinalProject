@@ -13,6 +13,11 @@ public class ImageData {
                 '}';
     }
 
+    public ImageData(String image, String imagedata) {
+        this.image = image;
+        this.imagedata = imagedata;
+    }
+
     public ImageData(String image) {
         this.image = image;
     }

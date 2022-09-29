@@ -2,8 +2,8 @@ package com.palm.tatarewamp.retrofit
 
 import android.content.Context
 import android.util.Log
-import com.palm.newbenefit.BuildConfig
-import com.palm.newbenefit.R
+import com.kmd.newbenefit.BuildConfig
+import com.kmd.newbenefit.R
 
 import com.palm.tatarewamp.SslData.NullHostNameVerifier
 import okhttp3.OkHttpClient

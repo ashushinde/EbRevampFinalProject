@@ -30,7 +30,7 @@ import com.palm.newbenefit.Adapter.myvoluntaryAdapterGroupMyTermSumm;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.VoluntaryBenefit;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -39,6 +39,8 @@ import org.json.JSONObject;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.security.KeyManagementException;
 import java.security.KeyStore;
 import java.security.KeyStoreException;
@@ -423,6 +425,7 @@ TextView summarydd,summaryd;
                     public void onResponse(String response) {
 
 //                int allsum = 0;
+                        Double allenhance_premium=0.0;
                 Double allPremium=0.0;
                 try {
 
@@ -455,16 +458,24 @@ TextView summarydd,summaryd;
                             JSONObject jo_areag = (JSONObject) jsonObja.get(k);
 
                             double employee_premium= jo_areag.getDouble("employee_premium");
-
-
+                            double enhance_premium=0.0;
+                            try{
+                                enhance_premium=jo_areag.getDouble("enhance_premium");
+                            }catch (Exception e){
+                                enhance_premium=0.0;
+                            }
+                            allenhance_premium=enhance_premium+allenhance_premium;
                             allPremium=employee_premium+allPremium;
 
                         }
 
 
 
-                        String allPremiumdata= String.valueOf(allPremium);
 
+
+                        allPremium=allPremium+allenhance_premium;
+
+                        String allPremiumdata= String.valueOf(allPremium);
                         if(allPremiumdata.equalsIgnoreCase("0")
                                 ||allPremiumdata.equalsIgnoreCase("null")
                                 ||allPremiumdata.equalsIgnoreCase("")||
@@ -473,8 +484,9 @@ TextView summarydd,summaryd;
                             hide_data.setVisibility(GONE);
                         }
                         else {
-
-                            premium.setText(allPremiumdata);
+                            BigDecimal bd = new BigDecimal(allPremiumdata);
+                            BigDecimal res = bd.setScale(2, RoundingMode.DOWN);
+                            premium.setText(res.toPlainString());
                       /*  try{
                             int data= Integer.parseInt(String.valueOf(toPay));
 

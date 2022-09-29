@@ -110,6 +110,7 @@
                                             android:padding="5sp"
                                             android:layout_gravity="center"
                                             android:src="@drawable/no_image"
+                                            android:visibility="gone"
 
                                             android:textColor="#fff"
                                             android:textStyle="bold" />

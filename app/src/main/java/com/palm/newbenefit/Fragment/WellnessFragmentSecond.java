@@ -40,7 +40,7 @@ import com.palm.newbenefit.Adapter.MyWellnessAdapter;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.Wellness;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

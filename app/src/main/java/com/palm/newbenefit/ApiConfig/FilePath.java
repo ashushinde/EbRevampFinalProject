@@ -29,7 +29,7 @@ import java.io.InputStream;
 
 import static android.icu.util.ULocale.getName;
 import static com.android.volley.VolleyLog.TAG;
-import static com.palm.newbenefit.BuildConfig.DEBUG;
+import static com.kmd.newbenefit.BuildConfig.DEBUG;
 
 
 public class FilePath

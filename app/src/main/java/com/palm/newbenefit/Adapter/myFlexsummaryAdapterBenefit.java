@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.FlexBenefit;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.io.InputStream;
 import java.util.List;

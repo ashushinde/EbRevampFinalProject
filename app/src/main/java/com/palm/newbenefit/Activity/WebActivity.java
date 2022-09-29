@@ -16,7 +16,7 @@ import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 public class WebActivity extends AppCompatActivity {
 

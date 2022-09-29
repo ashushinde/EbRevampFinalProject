@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.Feature;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.squareup.picasso.Picasso;
 
 import java.io.InputStream;

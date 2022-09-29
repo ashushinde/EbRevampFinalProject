@@ -20,7 +20,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import android.content.pm.PackageManager;
 import android.location.Location;

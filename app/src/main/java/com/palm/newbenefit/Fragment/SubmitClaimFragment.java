@@ -84,7 +84,7 @@ import com.palm.newbenefit.Module.ImageData;
 import com.palm.newbenefit.Module.SpinnerModal;
 import com.palm.newbenefit.Module.SpinnerModalFamilyData;
 import com.palm.newbenefit.Module.comment;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

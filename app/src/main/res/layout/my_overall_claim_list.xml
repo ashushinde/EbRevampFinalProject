@@ -11,10 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/card_back"
-
         android:layout_margin="10sp">
         <LinearLayout
-            android:layout_width="320sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
@@ -84,7 +83,7 @@
                         android:layout_marginTop="5sp"
                         android:layout_marginBottom="10sp"
                         android:gravity="center"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:padding="2sp">
 
                         <TextView
@@ -102,13 +101,12 @@
 
                         <TextView
                             android:id="@+id/claim_id"
-                            android:layout_width="0dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
-                            android:layout_weight="1.5"
                             android:fontFamily="@font/pop_reg"
                             android:gravity="start"
-                            android:text="101"
+                            android:text="109924354"
                             android:textColor="#FF5722"
                             android:textSize="12sp"
                             android:textStyle="bold"
@@ -133,6 +131,45 @@
 
 
                     </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="Policy Number :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/policy_no"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text=""
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -531,6 +568,42 @@
                         android:layout_gravity="end"
                         android:fontFamily="@font/pop_reg"
                         android:gravity="start"
+                        android:text="Claim Sub Status :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/claim_substatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="16/08/2018"
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
                         android:text="Type :  "
                         android:textColor="#0d0905"
                         android:textSize="12sp"
@@ -567,7 +640,44 @@
                         android:layout_gravity="end"
                         android:fontFamily="@font/pop_reg"
                         android:gravity="start"
-                        android:text="Email Id :  "
+                        android:text="Claim Type :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/claimtype"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="16/08/2018"
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="Employee Email Id :  "
                         android:textColor="#0d0905"
                         android:textSize="12sp"
                         android:textStyle="bold"
@@ -575,6 +685,79 @@
                         />
                     <TextView
                         android:id="@+id/email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="16/08/2018"
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="Employee Name :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/empname"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_weight="1.5"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="16/08/2018"
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    android:padding="3sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:fontFamily="@font/pop_reg"
+                        android:gravity="start"
+                        android:text="Employee Code :  "
+                        android:textColor="#0d0905"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+
+                        />
+                    <TextView
+                        android:id="@+id/empcode"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"

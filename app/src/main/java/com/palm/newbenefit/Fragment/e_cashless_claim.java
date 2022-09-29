@@ -36,7 +36,7 @@ import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.MyHosClaimModel;
 import com.palm.newbenefit.Module.MyIntimateClaimModel;
 import com.palm.newbenefit.Module.SpinnerModal;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 

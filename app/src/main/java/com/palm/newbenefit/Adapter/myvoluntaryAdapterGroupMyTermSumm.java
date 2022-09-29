@@ -26,7 +26,7 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.VoluntaryBenefit;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -131,8 +131,9 @@ public class myvoluntaryAdapterGroupMyTermSumm extends RecyclerView.Adapter<myvo
                     public void onResponse(String response) {
 
                         int allsum = 0;
-
+                        int allenhance_suminsured=0;
                         int allopsum = 0;
+                        Double allenhance_premium=0.0;
                         Double allPremium=0.0;
                         try {
 
@@ -165,6 +166,22 @@ public class myvoluntaryAdapterGroupMyTermSumm extends RecyclerView.Adapter<myvo
                                      opdsuminsured=0;
                                 }
 
+                                int enhance_suminsured=0;
+                                try{
+                                     enhance_suminsured=jo_areag.getInt("enhance_suminsured");
+                                }catch (Exception e){
+                                     enhance_suminsured=0;
+                                }
+
+                                double enhance_premium=0.0;
+                                try{
+                                    enhance_premium=jo_areag.getDouble("enhance_premium");
+                                }catch (Exception e){
+                                    enhance_premium=0.0;
+                                }
+
+
+
 
                                 if(jo_areag.getString("relation_name").equalsIgnoreCase("Self")){
                                     selfsuminsured=  jo_areag.getInt("suminsured");
@@ -177,10 +194,11 @@ public class myvoluntaryAdapterGroupMyTermSumm extends RecyclerView.Adapter<myvo
 
 
 
-
+                                allenhance_suminsured=enhance_suminsured+allenhance_suminsured;
 
                                 allsum=suminsured+allsum;
                                 allPremium=employee_premium+allPremium;
+                                allenhance_premium=enhance_premium+allenhance_premium;
                                 allopsum=opdsuminsured+allopsum;
 
                             }
@@ -189,6 +207,9 @@ public class myvoluntaryAdapterGroupMyTermSumm extends RecyclerView.Adapter<myvo
 
 
                         }
+
+                            allsum=allsum+allenhance_suminsured;
+                            allPremium=allPremium+allenhance_premium;
 
                         Log.d("onlyself",onlyself);
 
@@ -267,7 +288,9 @@ public class myvoluntaryAdapterGroupMyTermSumm extends RecyclerView.Adapter<myvo
                                 }else {
                                     
                                     
-                                    if(train.getMember_mob_no().equalsIgnoreCase("null")){
+                                    if(train.getMember_mob_no().equalsIgnoreCase("null")||
+                                    train.getMember_mob_no().equalsIgnoreCase("0")||
+                                    train.getMember_mob_no().equalsIgnoreCase("0.0")){
                                         try{
 
 //                                            int datas= Integer.parseInt(String.valueOf(allsumdata));
@@ -392,7 +415,16 @@ public class myvoluntaryAdapterGroupMyTermSumm extends RecyclerView.Adapter<myvo
                                 String dob = (groupCoverMemberList.getString("dob"));
                                 String gender = (groupCoverMemberList.getString("gender"));
                                 String member_email = groupCoverMemberList.getString("member_email");
-                                String member_mob_no = groupCoverMemberList.getString("employee_premium");
+                                String member_mob_no="0";
+                                if(groupCoverMemberList.getString("employee_premium").equalsIgnoreCase("0.0")
+                                ||groupCoverMemberList.getString("employee_premium").equalsIgnoreCase("0.00")||
+                                        groupCoverMemberList.getString("employee_premium").equalsIgnoreCase("null")){
+
+                                    member_mob_no = groupCoverMemberList.getString("enhance_employee_premium");
+                                }else {
+                                    member_mob_no = groupCoverMemberList.getString("employee_premium");
+                                }
+
 
                                 String relation = groupCoverMemberList.getString("relation_name");
 

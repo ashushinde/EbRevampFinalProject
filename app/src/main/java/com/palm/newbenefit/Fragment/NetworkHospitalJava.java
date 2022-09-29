@@ -45,7 +45,7 @@ import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.MapAddress;
 import com.palm.newbenefit.Module.SpinnerModal;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

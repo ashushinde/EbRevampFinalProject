@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.palm.newbenefit.Module.MenuModel;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.HashMap;
 import java.util.List;

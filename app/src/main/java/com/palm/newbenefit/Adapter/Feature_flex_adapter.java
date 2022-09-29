@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.InsuranceCover;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import java.io.FileNotFoundException;

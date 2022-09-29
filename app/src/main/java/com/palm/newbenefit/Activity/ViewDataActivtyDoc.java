@@ -33,7 +33,7 @@ import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.DatabaseHelper.DBHelper;
 import com.palm.newbenefit.Module.ImageData;
 import com.palm.newbenefit.Module.Wellness;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -213,14 +213,21 @@ public class ViewDataActivtyDoc extends AppCompatActivity {
 
                             for (int j = 0; j < tpa_claim_documents.length(); j++) {
 
+                                JSONObject objects=tpa_claim_documents.getJSONObject(j);
+
                                 String id = String.valueOf(tpa_claim_documents.get(j));
+                                String document_url = objects.getString("document_url");
+                                String document_name = objects.getString("document_name");
 
 
 
 
 
 
-                                ob.add(new ImageData(id));
+
+
+
+                                ob.add(new ImageData(document_url,document_name));
 
 
                             }

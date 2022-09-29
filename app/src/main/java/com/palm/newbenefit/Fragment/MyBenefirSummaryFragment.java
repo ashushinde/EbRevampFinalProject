@@ -43,7 +43,7 @@ import com.palm.newbenefit.Module.MemberEnroll;
 import com.palm.newbenefit.Module.NomineeEnroll;
 import com.palm.newbenefit.Module.Note;
 import com.palm.newbenefit.Module.VoluntaryBenefit;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;

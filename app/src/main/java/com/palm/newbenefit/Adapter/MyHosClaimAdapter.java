@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.palm.newbenefit.Activity.TrackActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.MyHosClaimModel;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.text.NumberFormat;
 import java.util.Date;
@@ -209,6 +209,8 @@ Constants con;
 
         viewHolder.track.setVisibility(View.GONE);
         viewHolder.tra.setVisibility(View.GONE);
+
+
         viewHolder.track.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
@@ -297,8 +299,8 @@ Constants con;
     public class ViewHolder extends RecyclerView.ViewHolder {
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
-        public TextView tra,claim_id,mem_name,ailment,claim_date_plan,claim_type,claim_date,claim_amount,claim_settle_amt,claim_reason;
-        public LinearLayout track;
+        public TextView claim_id,mem_name,ailment,claim_date_plan,claim_type,claim_date,claim_amount,claim_settle_amt,claim_reason;
+        public LinearLayout track,tra;
         TextView know;
         LinearLayout hide,view_detail,status_lin;
         ImageView expand;
@@ -316,7 +318,7 @@ Constants con;
             ailment= (TextView) itemView.findViewById(R.id.ailment);
             no= (TextView) itemView.findViewById(R.id.no);
             claim_id = (TextView) itemView.findViewById(R.id.claim_id);
-            tra= (TextView) itemView.findViewById(R.id.tra);
+            tra= (LinearLayout) itemView.findViewById(R.id.tra);
             mem_name = (TextView) itemView.findViewById(R.id.mem_name);
             claim_type = (TextView) itemView.findViewById(R.id.claim_type);
             claim_date = (TextView) itemView.findViewById(R.id.claim_date);

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -20,9 +21,10 @@ import com.android.volley.request.StringRequest;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -58,7 +60,7 @@ TextView bill_amount,claim_aprove_amount,claim_increed_amount,chrge_settle_amoun
         ,def_reason,reject_reason,def_raised_date,def_clo_date,def_first_remind,
         patient_name,relation_emp,claim_aliment,tpa_name,claim_type,source,claim_reg_date,claim_amount,hos_name
         ,hos_add,hos_city,hos_state,hos_pincode,hos_date,dis_date,room_category,maternity,doc_upload;
-
+LinearLayout upload_hide;
     Constants con = null;
     Context context;
     String mobileNumber = null;
@@ -69,7 +71,18 @@ TextView bill_amount,claim_aprove_amount,claim_increed_amount,chrge_settle_amoun
             def_second_remind,balance_sum,
             claim_typeipd,exp_clos_date,deduct_reason,claim_sub_status;
   TextView resolvedeficiency;
+  LinearLayout uploaddochide;
 ImageView info_text;
+
+    LinearLayout claim_aprove_amount_lin,claim_increed_amount_lin,chrge_settle_amount_lin
+            ,post_hospital_amount_lin,pre_hos_amount_lin,room_rent_charges_lin,
+            consultation_charges_lin,med_charge_lin,invest_charge_lin
+            ,dom_charge_lin,icu_amount_lin,icu_rel_amount_lin,nurse_amount_lin,
+            health_checkup_amount_lin,maternity_amount_lin
+            ,daycare_amount_lin,organ_don_amount_lin,ancilary_service_amount_lin,
+            dental_amount_lin,patient_amount_lin
+            ,pa_amount_lin,ci_amount_lin,tds_amount_lin,service_tax_lin,
+            copayment_amount_lin,settle_amount_lin,reported_amount_lin,deduct_amount_lin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +93,39 @@ ImageView info_text;
 
         token = prefs.getString("api_token", null);
         setContentView(R.layout.activity_view_over_all_claim);
+        settle_amount_lin=findViewById(R.id.settle_amount_lin);
+        uploaddochide=findViewById(R.id.uploaddochide);
+        post_hospital_amount_lin=findViewById(R.id.post_hospital_amount_lin);
+        claim_increed_amount_lin=findViewById(R.id.claim_increed_amount_lin);
+        chrge_settle_amount_lin=findViewById(R.id.chrge_settle_amount_lin);
+        pre_hos_amount_lin=findViewById(R.id.pre_hos_amount_lin);
+        pa_amount_lin=findViewById(R.id.pa_amount_lin);
+        room_rent_charges_lin=findViewById(R.id.room_rent_charges_lin);
+        consultation_charges_lin=findViewById(R.id.consultation_charges_lin);
+        med_charge_lin=findViewById(R.id.med_charge_lin);
+        invest_charge_lin=findViewById(R.id.invest_charge_lin);
+        icu_amount_lin=findViewById(R.id.icu_amount_lin);
+        health_checkup_amount_lin=findViewById(R.id.health_checkup_amount_lin);
+        icu_rel_amount_lin=findViewById(R.id.icu_rel_amount_lin);
+        nurse_amount_lin=findViewById(R.id.nurse_amount_lin);
+        dom_charge_lin=findViewById(R.id.dom_charge_lin);
+        reported_amount_lin=findViewById(R.id.reported_amount_lin);
+        claim_aprove_amount_lin=findViewById(R.id.claim_aprove_amount_lin);
+        copayment_amount_lin=findViewById(R.id.copayment_amount_lin);
+        service_tax_lin=findViewById(R.id.service_tax_lin);
+        tds_amount_lin=findViewById(R.id.tds_amount_lin);
+        ci_amount_lin=findViewById(R.id.ci_amount_lin);
+        pa_amount_lin=findViewById(R.id.pa_amount_lin);
+        patient_amount_lin=findViewById(R.id.patient_amount_lin);
+        dental_amount_lin=findViewById(R.id.dental_amount_lin);
+        ancilary_service_amount_lin=findViewById(R.id.ancilary_service_amount_lin);
+        ancilary_service_amount_lin=findViewById(R.id.ancilary_service_amount_lin);
+        organ_don_amount_lin=findViewById(R.id.organ_don_amount_lin);
+        daycare_amount_lin=findViewById(R.id.daycare_amount_lin);
+        daycare_amount_lin=findViewById(R.id.daycare_amount_lin);
+        maternity_amount_lin=findViewById(R.id.maternity_amount_lin);
+        dom_charge_lin=findViewById(R.id.dom_charge_lin);
+        deduct_amount_lin=findViewById(R.id.deduct_amount_lin);
         med_charge=findViewById(R.id.med_charge);
         consultation_charges=findViewById(R.id.consultation_charges);
         room_rent_charges=findViewById(R.id.room_rent_charges);
@@ -129,7 +175,7 @@ ImageView info_text;
         ancilary_service_amount=findViewById(R.id.ancilary_service_amount);
         organ_don_amount=findViewById(R.id.organ_don_amount);
         daycare_amount=findViewById(R.id.daycare_amount);
-
+        upload_hide=findViewById(R.id.upload_hide);
         claim_id=findViewById(R.id.claim_id);
         claim_status=findViewById(R.id.claim_status);
         doc_upload=findViewById(R.id.doc_upload);
@@ -230,8 +276,29 @@ ImageView info_text;
 //                    for (int i = 0; i < jsonObj.length(); i++) {
 //                        JSONObject explrObject = jsonObj.getJSONObject(0);
 //
+                            JSONArray tpa_claim_documents = explrObject.getJSONArray("tpa_claim_documents");
 
 
+                            if(tpa_claim_documents.length()==0){
+                               upload_hide.setVisibility(View.GONE);
+
+
+                            }else {
+                                upload_hide.setVisibility(View.VISIBLE);
+
+                            }
+
+
+                            String deficiency_upload = explrObject.getString("deficiency_upload");
+
+                            if(deficiency_upload.equalsIgnoreCase("0")){
+                                uploaddochide.setVisibility(View.GONE);
+
+
+                            }else {
+                                uploaddochide.setVisibility(View.VISIBLE);
+
+                            }
 
                             String tpa_claim_id = explrObject.getString("tpa_claim_id");
                             claim_id.setText(tpa_claim_id);
@@ -303,7 +370,7 @@ ImageView info_text;
 
 
                        // String balance_sum_insured = explrObject.getString("balance_sum_insured");
-                        String room_category = explrObject.getString("room_category");
+                        String room_categorys = explrObject.getString("room_category");
                         String claim_registered_tpa = explrObject.getString("claim_registered_tpa");
                         String provider_types = explrObject.getString("provider_type");
                         String rohini_code = explrObject.getString("rohini_code");
@@ -336,7 +403,7 @@ ImageView info_text;
 
                             String claim_type_ipd_opd =
                                     explrObject.getString("claim_type_ipd_opd");
-                            if (deficiency_expected_closure_date == "null" || deficiency_expected_closure_date.isEmpty()) {
+                            if (claim_type_ipd_opd .equalsIgnoreCase("null") || claim_type_ipd_opd.isEmpty()) {
 
                                 claim_typeipd.setText("-");
 
@@ -346,14 +413,14 @@ ImageView info_text;
 
 
 
-                            if (deficiency_expected_closure_date == "null" || deficiency_expected_closure_date.isEmpty()) {
+                            if (deficiency_expected_closure_date .equalsIgnoreCase("null") || deficiency_expected_closure_date.isEmpty()) {
 
                                 exp_clos_date.setText("-");
 
                             }else {
                                 exp_clos_date.setText(deficiency_expected_closure_date);
                             }
-                            if (deficiency_second_reminder == "null" || deficiency_second_reminder.isEmpty()) {
+                            if (deficiency_second_reminder .equalsIgnoreCase("null") || deficiency_second_reminder.isEmpty()) {
 
                                 def_second_remind.setText("-");
 
@@ -361,7 +428,7 @@ ImageView info_text;
                                 def_second_remind.setText(deficiency_second_reminder);
                             }
 
-                            if (balance_suminsured == "null" || balance_suminsured.isEmpty()) {
+                            if (balance_suminsured .equalsIgnoreCase("null") || balance_suminsured.isEmpty()) {
 
                                 balance_sum.setText("-");
 
@@ -370,7 +437,7 @@ ImageView info_text;
                             }
 
 
-                            if (sub == "null" || report_amount.isEmpty()||
+                            if (sub .equalsIgnoreCase("null") || report_amount.isEmpty()||
                                     sub.equalsIgnoreCase("null")
                                     ||sub.equalsIgnoreCase("0")) {
 
@@ -380,7 +447,7 @@ ImageView info_text;
                                 source.setText("Offline");
                             }
 
-                            if (sub == "null" || report_amount.isEmpty()||
+                            if (sub .equalsIgnoreCase("null") || report_amount.isEmpty()||
                                     sub.equalsIgnoreCase("null")
                                     ||sub.equalsIgnoreCase("0")) {
 
@@ -390,18 +457,19 @@ ImageView info_text;
                                 claim_sub_status.setText(sub);
                             }
 
-                            if (report_amount == "null" || report_amount.isEmpty()||
+                            if (report_amount .equalsIgnoreCase("null") || report_amount.isEmpty()||
                                     report_amount.equalsIgnoreCase("null")
                         ||report_amount.equalsIgnoreCase("0")) {
 
 
 
                             }else {
+                                reported_amount_lin.setVisibility(View.VISIBLE);
                                 reported_amount.setText(report_amount);
                             }
 
 
-                            if (deduction_reason == "null" || deduction_reason.isEmpty()||
+                            if (deduction_reason .equalsIgnoreCase("null") || deduction_reason.isEmpty()||
                                     deduction_reason.equalsIgnoreCase("null")
                                     ||deduction_reason.equalsIgnoreCase("0")) {
 
@@ -413,17 +481,18 @@ ImageView info_text;
 
 
 
-                            if (dudecutamount == "null" || dudecutamount.isEmpty()||
+                            if (dudecutamount .equalsIgnoreCase("null") || dudecutamount.isEmpty()||
                                     dudecutamount.equalsIgnoreCase("null")
                                     ||dudecutamount.equalsIgnoreCase("0")) {
 
 
 
                             }else {
+                                deduct_amount_lin.setVisibility(View.VISIBLE);
                                 deduct_amount.setText(dudecutamount);
                             }
 
-//                        if (tpa_claim_id == "null" || tpa_claim_id.isEmpty()) {
+//                        if (tpa_claim_id .equalsIgnoreCase("null") || tpa_claim_id.isEmpty()) {
 //
 //
 //
@@ -432,21 +501,21 @@ ImageView info_text;
 //                        }
 
 
-                        if (employee_name == "null" || employee_name.isEmpty()) {
+                        if (employee_name .equalsIgnoreCase("null") || employee_name.isEmpty()) {
 
 
 
                         }else {
                             employe_name.setText(employee_name);
                         }
-                        if (employee_mail == "null" || employee_mail.isEmpty()) {
+                        if (employee_mail .equalsIgnoreCase("null") || employee_mail.isEmpty()) {
 
 
 
                         }else {
                             emp_email_id.setText(employee_mail);
                         }
-                        if (employee_mobile_number == "null" || employee_mobile_number.isEmpty()) {
+                        if (employee_mobile_number .equalsIgnoreCase("null") || employee_mobile_number.isEmpty()) {
 
 
 
@@ -454,7 +523,7 @@ ImageView info_text;
                             emp_mob_no.setText(employee_mobile_number);
                         }
 
-                            if (claim_settled_amount == "null" || claim_settled_amount.isEmpty()) {
+                            if (claim_settled_amount .equalsIgnoreCase("null") || claim_settled_amount.isEmpty()) {
 
 
 
@@ -464,7 +533,7 @@ ImageView info_text;
 
 
 
-                        if (member_name == "null" || member_name.isEmpty()) {
+                        if (member_name .equalsIgnoreCase("null") || member_name.isEmpty()) {
 
 
 
@@ -473,21 +542,21 @@ ImageView info_text;
                         }
 
 
-                        if (member_relation == "null" || member_relation.isEmpty()) {
+                        if (member_relation .equalsIgnoreCase("null") || member_relation.isEmpty()) {
 
 
 
                         }else {
                             relation_emp.setText(member_relation);
                         }
-                        if (ailment == "null" || ailment.isEmpty()) {
+                        if (ailment .equalsIgnoreCase("null") || ailment.isEmpty()) {
 
 
 
                         }else {
                             claim_aliment.setText(ailment);
                         }
-                        if (policy_number == "null" || policy_number.isEmpty()) {
+                        if (policy_number .equalsIgnoreCase("null") || policy_number.isEmpty()) {
 
 
 
@@ -496,7 +565,7 @@ ImageView info_text;
                         }
 
 
-                        if (policy_types == "null" || policy_types.isEmpty()) {
+                        if (policy_types .equalsIgnoreCase("null") || policy_types.isEmpty()) {
 
 
 
@@ -505,7 +574,7 @@ ImageView info_text;
                         }
 
 
-                        if (policy_start_dates == "null" || policy_start_dates.isEmpty()) {
+                        if (policy_start_dates .equalsIgnoreCase("null") || policy_start_dates.isEmpty()) {
 
 
 
@@ -513,7 +582,7 @@ ImageView info_text;
                             policy_date.setText(policy_start_dates);
                         }
 
-                        if (policy_end_dates== "null" || policy_end_dates.isEmpty()) {
+                        if (policy_end_dates.equalsIgnoreCase("null") || policy_end_dates.isEmpty()) {
 
 
 
@@ -521,23 +590,24 @@ ImageView info_text;
                             policy_end_date.setText(policy_end_dates);
                         }
 
-                        if (claim_amnt== "null" || claim_amnt.isEmpty()) {
+                        if (claim_amnt.equalsIgnoreCase("null") || claim_amnt.isEmpty()) {
 
 
 
                         }else {
+
                             claim_exe_amount.setText(claim_amnt);
                         }
 
 
-//                        if (member_start_date == "null" || member_start_date.isEmpty()) {
+//                        if (member_start_date .equalsIgnoreCase("null") || member_start_date.isEmpty()) {
 //
 //                            star.setText(member_start_date);
 //
 //                        }
 
 
-                        if (company_name == "null" || company_name.isEmpty()) {
+                        if (company_name .equalsIgnoreCase("null") || company_name.isEmpty()) {
 
 
 
@@ -546,13 +616,13 @@ ImageView info_text;
                         }
 
 
-//                        if (sum_insured == "null" || sum_insured.isEmpty()) {
+//                        if (sum_insured .equalsIgnoreCase("null") || sum_insured.isEmpty()) {
 //
 //                            emp_mob_no.setText(sum_insured);
 //
 //                        }
 
-                        if (claim_received_data_tpa == "null" || claim_received_data_tpa.isEmpty()) {
+                        if (claim_received_data_tpa .equalsIgnoreCase("null") || claim_received_data_tpa.isEmpty()) {
 
 
 
@@ -560,7 +630,16 @@ ImageView info_text;
                             claim_reg_date.setText(claim_received_data_tpa);
                         }
 
-                        if (hospitalization_date == "null" || hospitalization_date.isEmpty()) {
+
+                            if (room_categorys .equalsIgnoreCase("null") || room_categorys.isEmpty()) {
+
+
+
+                            }else {
+                                room_category.setText(room_categorys);
+                            }
+
+                        if (hospitalization_date .equalsIgnoreCase("null") || hospitalization_date.isEmpty()) {
 
 
 
@@ -568,7 +647,7 @@ ImageView info_text;
                             hos_date.setText(hospitalization_date);
                         }
 
-                        if (discharge_date == "null" || discharge_date.isEmpty()) {
+                        if (discharge_date .equalsIgnoreCase("null") || discharge_date.isEmpty()) {
 
 
 
@@ -577,7 +656,7 @@ ImageView info_text;
                         }
 
 
-                        if (claim_types == "null" || claim_types.isEmpty()) {
+                        if (claim_types .equalsIgnoreCase("null") || claim_types.isEmpty()) {
 
 
 
@@ -586,7 +665,7 @@ ImageView info_text;
                         }
 
 
-                        if (hospital_name == "null" || hospital_name.isEmpty()) {
+                        if (hospital_name .equalsIgnoreCase("null") || hospital_name.isEmpty()) {
 
 
 
@@ -595,35 +674,35 @@ ImageView info_text;
                         }
 
 
-                        if (hospital_add == "null" || hospital_add.isEmpty()) {
+                        if (hospital_add .equalsIgnoreCase("null") || hospital_add.isEmpty()) {
 
 
 
                         }else {
                             hos_add.setText(hospital_add);
                         }
-                        if (hospital_city == "null" || hospital_city.isEmpty()) {
+                        if (hospital_city .equalsIgnoreCase("null") || hospital_city.isEmpty()) {
 
 
                         }else {
                             hos_city.setText(hospital_city);
 
                         }
-                        if (hospital_state == "null" || hospital_state.isEmpty()) {
+                        if (hospital_state .equalsIgnoreCase("null") || hospital_state.isEmpty()) {
 
 
 
                         }else {
                             hos_state.setText(hospital_state);
                         }
-                        if (hospital_pincode == "null" || hospital_pincode.isEmpty()) {
+                        if (hospital_pincode .equalsIgnoreCase("null") || hospital_pincode.isEmpty()) {
 
 
                         }else {
                             hos_pincode.setText(hospital_pincode);
 
                         }
-                        if (claimed_amount == "null" || claimed_amount.isEmpty()) {
+                        if (claimed_amount .equalsIgnoreCase("null") || claimed_amount.isEmpty()) {
 
 
 
@@ -632,7 +711,7 @@ ImageView info_text;
                         }
 
 
-                        if (billed_amount == "null" || billed_amount.isEmpty()) {
+                        if (billed_amount .equalsIgnoreCase("null") || billed_amount.isEmpty()) {
 
 
 
@@ -641,229 +720,252 @@ ImageView info_text;
                         }
 
 
-//                        if (claimed_amount == "null" || claimed_amount.isEmpty()) {
+//                        if (claimed_amount .equalsIgnoreCase("null") || claimed_amount.isEmpty()) {
 //
 //                            emp_mob_no.setText(claimed_amount);
 //
 //                        }
 
-                        if (claim_approved_amount == "null" || claim_approved_amount.isEmpty()) {
+                        if (claim_approved_amount .equalsIgnoreCase("0") || claim_approved_amount.isEmpty()) {
 
 
 
                         }else {
+                            claim_aprove_amount_lin.setVisibility(View.VISIBLE);
                             claim_aprove_amount.setText(claim_approved_amount);
                         }
-                        if (claim_settled_amount == "null" || claim_settled_amount.isEmpty()) {
+                        if (claim_settled_amount .equalsIgnoreCase("0") || claim_settled_amount.isEmpty()) {
 
 
 
                         }else {
+                            settle_amount_lin.setVisibility(View.VISIBLE);
                             settle_amount.setText(claim_settled_amount);
                         }
-                        if (claim_incurred_amount == "null" || claim_incurred_amount.isEmpty()) {
+                        if (claim_incurred_amount .equalsIgnoreCase("null") || claim_incurred_amount.isEmpty()) {
 
 
 
                         }else {
+                            claim_increed_amount_lin.setVisibility(View.VISIBLE);
                             claim_increed_amount.setText(claim_incurred_amount);
                         }
-                        if (claim_statuss == "null" || claim_statuss.isEmpty()) {
+                        if (claim_statuss .equalsIgnoreCase("null") || claim_statuss.isEmpty()) {
 
 
                         }else {
                             claim_status.setText(claim_statuss);
 
                         }
-                        if (claim_approval_date == "null" || claim_approval_date.isEmpty()) {
+                        if (claim_approval_date.equalsIgnoreCase("null") || claim_approval_date.isEmpty()) {
 
 
 
                         }else {
                             claim_aprove_date.setText(claim_approval_date);
                         }
-                        if (claim_settled_date == "null" || claim_settled_date.isEmpty()) {
+                        if (claim_settled_date .equalsIgnoreCase("null") || claim_settled_date.isEmpty()) {
 
 
 
                         }else {
                             claim_settle_date.setText(claim_settled_date);
                         }
-                        if (pre_hospital_amount == "null" || pre_hospital_amount.isEmpty()) {
+                        if (pre_hospital_amount .equalsIgnoreCase("0") || pre_hospital_amount.isEmpty()) {
 
 
 
                         }else {
+                            pre_hos_amount_lin.setVisibility(View.VISIBLE);
                             pre_hos_amount.setText(pre_hospital_amount);
                         }
-                        if (post_hospital_amounts == "null" || post_hospital_amounts.isEmpty()) {
+                        if (post_hospital_amounts .equalsIgnoreCase("0") || post_hospital_amounts.isEmpty()) {
 
 
 
                         }else {
+                            post_hospital_amount_lin.setVisibility(View.VISIBLE);
                             post_hospital_amount.setText(post_hospital_amounts);
                         }
-                        if (deficiency_reason == "null" || deficiency_reason.isEmpty()) {
+                        if (deficiency_reason .equalsIgnoreCase("null") || deficiency_reason.isEmpty()) {
 
 
                         }else {
                             def_reason.setText(deficiency_reason);
 
                         }
-                        if (reject_season == "null" || reject_season.isEmpty()) {
+                        if (reject_season .equalsIgnoreCase("null") || reject_season.isEmpty()) {
 
 
 
                         }else {
                             reject_reason.setText(reject_season);
                         }
-                        if (tpa_names == "null" || tpa_names.isEmpty()) {
+                        if (tpa_names .equalsIgnoreCase("null") || tpa_names.isEmpty()) {
 
 
                         }else {
                             tpa_name.setText(tpa_names);
 
                         }
-//                        if (tpa_licence_no == "null" || tpa_licence_no.isEmpty()) {
+//                        if (tpa_licence_no .equalsIgnoreCase("null") || tpa_licence_no.isEmpty()) {
 //
 //                            emp_mob_no.setText(tpa_licence_no);
 //
 //                        }
-                        if (room_rent_amounts == "null" || room_rent_amounts.isEmpty()) {
+                        if (room_rent_amounts .equalsIgnoreCase("0") || room_rent_amounts.isEmpty()) {
 
 
                         }else {
+                            room_rent_charges_lin.setVisibility(View.VISIBLE);
                             room_rent_charges.setText(room_rent_amounts);
 
                         }
-                        if (consultation_chargess == "null" || consultation_chargess.isEmpty()) {
+                        if (consultation_chargess .equalsIgnoreCase("0") || consultation_chargess.isEmpty()) {
 
 
 
                         }else {
+                            consultation_charges_lin.setVisibility(View.VISIBLE);
                             consultation_charges.setText(consultation_chargess);
                         }
-                        if (medicine_charges == "null" || medicine_charges.isEmpty()) {
+                        if (medicine_charges .equalsIgnoreCase("0") || medicine_charges.isEmpty()) {
 
 
 
                         }else {
+                            med_charge_lin.setVisibility(View.VISIBLE);
                             med_charge.setText(medicine_charges);
                         }
-                        if (investigation_charges == "null" || investigation_charges.isEmpty()) {
+                        if (investigation_charges .equalsIgnoreCase("0") || investigation_charges.isEmpty()) {
 
 
 
                         }else {
+                            invest_charge_lin.setVisibility(View.VISIBLE);
                             invest_charge.setText(investigation_charges);
                         }
-                        if (domiciliary_hospital_amount == "null" || domiciliary_hospital_amount.isEmpty()) {
+                        if (domiciliary_hospital_amount .equalsIgnoreCase("0") || domiciliary_hospital_amount.isEmpty()) {
 
 
 
                         }else {
+                            dom_charge_lin.setVisibility(View.VISIBLE);
                             dom_charge.setText(domiciliary_hospital_amount);
                         }
-                        if (maternity_amounts == "null" || maternity_amounts.isEmpty()) {
+                        if (maternity_amounts .equalsIgnoreCase("0") || maternity_amounts.isEmpty()) {
 
 
 
                         }else {
+                            maternity_amount_lin.setVisibility(View.VISIBLE);
                             maternity_amount.setText(maternity_amounts);
                         }
-//                        if (maternity == "null" || maternity.isEmpty()) {
+//                        if (maternity .equalsIgnoreCase("null") || maternity.isEmpty()) {
 //
 //                            emp_mob_no.setText(maternity);
 //
 //                        }
-                        if (daycare_amounts == "null" || daycare_amounts.isEmpty()) {
+                        if (daycare_amounts .equalsIgnoreCase("0") || daycare_amounts.isEmpty()) {
 
 
 
                         }else {
+                            daycare_amount_lin.setVisibility(View.VISIBLE);
                             daycare_amount.setText(daycare_amounts);
                         }
-                        if (organ_donor_amount == "null" || organ_donor_amount.isEmpty()) {
+                        if (organ_donor_amount .equalsIgnoreCase("0") || organ_donor_amount.isEmpty()) {
 
 
 
                         }else {
+                            organ_don_amount_lin.setVisibility(View.VISIBLE);
                             organ_don_amount.setText(organ_donor_amount);
                         }
-                        if (ancillary_service_amount == "null" || ancillary_service_amount.isEmpty()) {
+                        if (ancillary_service_amount .equalsIgnoreCase("0") || ancillary_service_amount.isEmpty()) {
 
 
 
                         }else {
+                            ancilary_service_amount_lin.setVisibility(View.VISIBLE);
                             ancilary_service_amount.setText(ancillary_service_amount);
                         }
-                        if (dental_amounts == "null" || dental_amounts.isEmpty()) {
+                        if (dental_amounts .equalsIgnoreCase("0") || dental_amounts.isEmpty()) {
 
 
 
                         }else {
+                            dental_amount_lin.setVisibility(View.VISIBLE);
                             dental_amount.setText(dental_amounts);
                         }
-                        if (out_patient_amounts == "null" || out_patient_amounts.isEmpty()) {
+                        if (out_patient_amounts .equalsIgnoreCase("0") || out_patient_amounts.isEmpty()) {
 
 
 
                         }else {
+                            patient_amount_lin.setVisibility(View.VISIBLE);
                             patient_amount.setText(out_patient_amounts);
                         }
-                        if (pa_amounts == "null" || pa_amounts.isEmpty()) {
+                        if (pa_amounts .equalsIgnoreCase("null") || pa_amounts.isEmpty()) {
 
 
 
                         }else {
+                            pa_amount_lin.setVisibility(View.VISIBLE);
                             pa_amount.setText(pa_amounts);
                         }
-                        if (ci_amounts == "null" || ci_amounts.isEmpty()) {
+                        if (ci_amounts .equalsIgnoreCase("NA") || ci_amounts.isEmpty()) {
 
 
 
                         }else {
+                            ci_amount_lin.setVisibility(View.VISIBLE);
                             ci_amount.setText(ci_amounts);
                         }
-                        if (health_checkup_amounts == "null" || health_checkup_amounts.isEmpty()) {
+                        if (health_checkup_amounts .equalsIgnoreCase("NA") || health_checkup_amounts.isEmpty()) {
 
 
 
                         }else {
+                            health_checkup_amount_lin.setVisibility(View.VISIBLE);
                             health_checkup_amount.setText(health_checkup_amounts);
                         }
 
-                        if (ci_buffer_amounts == "null" || ci_buffer_amounts.isEmpty()) {
+                        if (ci_buffer_amounts .equalsIgnoreCase("NA") || ci_buffer_amounts.isEmpty()) {
 
 
 
                         }else {
+                            tds_amount_lin.setVisibility(View.VISIBLE);
                             tds_amount.setText(ci_buffer_amounts);
                         }
 
-                        if (disallowed_amount == "null" || disallowed_amount.isEmpty()) {
+                        if (disallowed_amount .equalsIgnoreCase("0") || disallowed_amount.isEmpty()) {
 
 
 
                         }else {
+
                             disallow_amount.setText(disallowed_amount);
                         }
-                        if (deficiency_raised_date == "null" || deficiency_raised_date.isEmpty()) {
+                        if (deficiency_raised_date .equalsIgnoreCase("null") || deficiency_raised_date.isEmpty()) {
 
 
 
                         }else {
+
                             def_raised_date.setText(deficiency_raised_date);
                         }
-                        if (deficiency_first_reminder == "null" || deficiency_first_reminder.isEmpty()) {
+                        if (deficiency_first_reminder .equalsIgnoreCase("null") || deficiency_first_reminder.isEmpty()) {
 
 
 
                         }else {
+
                             def_first_remind.setText(deficiency_first_reminder);
                         }
 
-                        if (deficiency_closure_date == "null" || deficiency_closure_date.isEmpty()) {
+                        if (deficiency_closure_date .equalsIgnoreCase("null") || deficiency_closure_date.isEmpty()) {
 
 
                         }else {
@@ -871,70 +973,74 @@ ImageView info_text;
                             def_clo_date.setText(deficiency_closure_date);
                         }
 
-                        if (insurance_company_names == "null" || insurance_company_names.isEmpty()) {
+                        if (insurance_company_names .equalsIgnoreCase("null") || insurance_company_names.isEmpty()) {
 
 
                         }else {
 
                             ins_company_name.setText(insurance_company_names);
                         }
-//                        if (balance_sum_insured == "null" || balance_sum_insured.isEmpty()) {
+//                        if (balance_sum_insured .equalsIgnoreCase("null") || balance_sum_insured.isEmpty()) {
 //
 //                            sum.setText(balance_sum_insured);
 //
 //                        }
 
-                        if (room_rent_chargess == "null" || room_rent_chargess.isEmpty()) {
+                        if (room_rent_chargess .equalsIgnoreCase("0") || room_rent_chargess.isEmpty()) {
 
 
 
                         }else {
+                            room_rent_charges_lin.setVisibility(View.VISIBLE);
                             room_rent_charges.setText(room_rent_chargess);
                         }
 
-                        if (claim_registered_tpa == "null" || claim_registered_tpa.isEmpty()) {
+                        if (claim_registered_tpa .equalsIgnoreCase("null") || claim_registered_tpa.isEmpty()) {
 
 
 
                         }else {
                             claim_reg_date.setText(claim_registered_tpa);
                         }
-//                        if (provider_types == "null" || provider_types.isEmpty()) {
+//                        if (provider_types .equalsIgnoreCase("null") || provider_types.isEmpty()) {
 //
 //                            provider_type.setText(provider_types);
 //
 //                        }
 
-//                        if (rohini_code == "null" || rohini_code.isEmpty()) {
+//                        if (rohini_code .equalsIgnoreCase("null") || rohini_code.isEmpty()) {
 //
 //                            emp_mob_no.setText(rohini_code);
 //
 //                        }
 
-                        if (tds_amounts == "null" || tds_amounts.isEmpty()) {
+                        if (tds_amounts .equalsIgnoreCase("0") || tds_amounts.isEmpty()) {
 
 
                         }else {
+                            tds_amount_lin.setVisibility(View.VISIBLE);
                             tds_amount.setText(tds_amounts);
 
                         }
 
-                        if (service_tax == "null" || service_tax.isEmpty()) {
+                        if (service_tax .equalsIgnoreCase("0") || service_tax.isEmpty()) {
 
 
 
                         }else {
+                            ancilary_service_amount_lin.setVisibility(View.VISIBLE);
                             ancilary_service_amount.setText(service_tax);
                         }
 
-                        if (copayment_amounts == "null" || copayment_amounts.isEmpty()) {
+                        if (copayment_amounts .equalsIgnoreCase("0") || copayment_amounts.isEmpty()) {
 
 
 
                         }else {
+                            copayment_amount_lin.setVisibility(View.VISIBLE);
                             copayment_amount.setText(copayment_amounts);
                         }
-                      /*  if (insurance_claim_ids == "null" || insurance_claim_ids.isEmpty()) {
+                      /*  if (insurance_claim_ids .equalsIgnoreCase("null") || insurance_claim_ids.isEmpty()) {
 
 
 
@@ -942,33 +1048,37 @@ ImageView info_text;
                             claim_id.setText(insurance_claim_ids);
                         }
 */
-                        if (room_rent_chargess == "null" || room_rent_chargess.isEmpty()) {
+                        if (room_rent_chargess .equalsIgnoreCase("0") || room_rent_chargess.isEmpty()) {
 
 
 
                         }else {
+                            room_rent_charges_lin.setVisibility(View.VISIBLE);
                             room_rent_charges.setText(room_rent_chargess);
                         }
 
-                        if (icu_related_amount == "null" || icu_related_amount.isEmpty()) {
+                        if (icu_related_amount .equalsIgnoreCase("0") || icu_related_amount.isEmpty()) {
 
 
 
                         }else {
+                            icu_rel_amount_lin.setVisibility(View.VISIBLE);
                             icu_rel_amount.setText(icu_related_amount);
                         }
-                        if (nursing_amount == "null" || nursing_amount.isEmpty()) {
+                        if (nursing_amount .equalsIgnoreCase("0") || nursing_amount.isEmpty()) {
 
 
 
                         }else {
+                            nurse_amount_lin.setVisibility(View.VISIBLE);
                             nurse_amount.setText(nursing_amount);
                         }
-                        if (disallowance_reason_1 == "null" || disallowance_reason_1.isEmpty()) {
+                        if (disallowance_reason_1 .equalsIgnoreCase("null") || disallowance_reason_1.isEmpty()) {
 
 
 
                         }else {
+
                             disallow_amount.setText(disallowance_reason_1);
                         }
 

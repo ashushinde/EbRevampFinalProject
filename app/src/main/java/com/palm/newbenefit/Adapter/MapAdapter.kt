@@ -1,5 +1,6 @@
 package com.palm.newbenefit.Adapter
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
@@ -19,7 +20,7 @@ import com.android.volley.toolbox.Volley
 import com.palm.newbenefit.Activity.MapsActivity
 import com.palm.newbenefit.ApiConfig.Constants
 import com.palm.newbenefit.Module.MapAddress
-import com.palm.newbenefit.R
+import com.kmd.newbenefit.R
 import com.palm.tatarewamp.SslData.NullHostNameVerifier
 import org.json.JSONObject
 import java.io.FileNotFoundException
@@ -63,7 +64,7 @@ class MapAdapter(
     // Involves populating data into the item through holder
     override fun onBindViewHolder(
         viewHolder: ViewHolder,
-        position: Int
+        @SuppressLint("RecyclerView") position: Int
     ) {
         // Get the data model based on position
         val train = mTrain[position]

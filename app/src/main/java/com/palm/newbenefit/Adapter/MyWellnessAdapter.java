@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.android.volley.misc.AsyncTask;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.Wellness;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.io.InputStream;
 import java.util.List;

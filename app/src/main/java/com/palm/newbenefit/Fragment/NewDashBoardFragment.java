@@ -31,7 +31,7 @@ import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.Activity.MainActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -117,17 +117,17 @@ LinearLayout my_health,my_wellness,my_family,my_benifit,opd_care,surgery,my_doct
         ((MainActivity) getActivity()).setTitle("");
 
 
-        if(my_wellnesss.equalsIgnoreCase("yes")){
-            my_wellness.setVisibility(View.VISIBLE);
-        }else {
-            my_wellness.setVisibility(View.GONE);
-        }
-
-        if(enrollments.equalsIgnoreCase("yes")){
-            my_family.setVisibility(View.VISIBLE);
-        }else {
-            my_family.setVisibility(View.GONE);
-        }
+//        if(my_wellnesss.equalsIgnoreCase("yes")){
+//            my_wellness.setVisibility(View.VISIBLE);
+//        }else {
+//            my_wellness.setVisibility(View.GONE);
+//        }
+//
+//        if(enrollments.equalsIgnoreCase("yes")){
+//            my_family.setVisibility(View.VISIBLE);
+//        }else {
+//            my_family.setVisibility(View.GONE);
+//        }
 
 //        if(claims.equalsIgnoreCase("yes")){
 //            my_health.setVisibility(View.VISIBLE);

@@ -29,7 +29,7 @@ import com.palm.newbenefit.ApiConfig.Constants
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener.ClickListener
 import com.palm.newbenefit.Module.FamilyData
-import com.palm.newbenefit.R
+import com.kmd.newbenefit.R
 import com.palm.tatarewamp.SslData.NullHostNameVerifier
 import org.json.JSONObject
 import java.io.FileNotFoundException

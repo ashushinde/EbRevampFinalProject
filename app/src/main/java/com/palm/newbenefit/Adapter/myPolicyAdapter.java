@@ -27,7 +27,7 @@ import com.squareup.picasso.Picasso;
 import com.palm.newbenefit.Activity.PdfActivityjava;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.Policy;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.io.InputStream;
 import java.util.Date;

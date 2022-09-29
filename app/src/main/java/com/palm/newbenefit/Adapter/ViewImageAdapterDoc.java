@@ -23,7 +23,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.DatabaseHelper.DBHelper;
 import com.palm.newbenefit.Module.ImageData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -70,7 +71,17 @@ public class ViewImageAdapterDoc extends
 
 
              viewHolder.pdf_name.setVisibility(View.VISIBLE);
-             viewHolder.pdf_name.setText("Document-"+position+1);
+             viewHolder.pdf_name.setText(train.getImagedata());
+
+             if((train.getImage().contains(".png"))||
+                     (train.getImage().contains(".jpg"))||
+                     (train.getImage().contains(".jpeg"))
+             ){
+                 Picasso.get().load(train.getImage()).into(viewHolder.img);
+
+             }else {
+
+             }
 
 
 
@@ -84,7 +95,7 @@ public class ViewImageAdapterDoc extends
                      Context context = view.getContext();
 
                      Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                             Uri.parse("https://"+train.getImage()));
+                             Uri.parse(train.getImage()));
                      context. startActivity(browserIntent);
 
                  }catch (Exception e){
@@ -127,7 +138,7 @@ public class ViewImageAdapterDoc extends
         // for any view that will be set as you render a row
 
 
-
+ImageView  img;
         TextView pdf_name;
 
         // We also create a constructor that accepts the entire item row
@@ -138,7 +149,7 @@ public class ViewImageAdapterDoc extends
             super(itemView);
 
 
-
+            img=  itemView.findViewById(R.id.img);
             pdf_name= (TextView) itemView.findViewById(R.id.pdf_name);
         }
     }

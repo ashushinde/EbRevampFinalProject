@@ -2,7 +2,7 @@ package com.palm.newbenefit.ApiConfig;
 
 import android.content.Context;
 
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 

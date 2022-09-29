@@ -1,5 +1,6 @@
 package com.palm.newbenefit.Adapter;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.palm.newbenefit.Activity.ViewOverAllClaimActivity;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.Module.OverAllClaim;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.Date;
 import java.util.List;
@@ -48,6 +49,7 @@ Constants con;
     }
 
     // Involves populating data into the item through holder
+    @SuppressLint("RecyclerView")
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
@@ -139,7 +141,11 @@ Constants con;
         }
 
 
-
+viewHolder.policy_no.setText(train.getPolicy_number());
+        viewHolder.claimtype.setText(train.getClaimtypes());
+        viewHolder.empcode.setText(train.getEmpcode());
+        viewHolder.empname.setText(train.getEmployee_name());
+        viewHolder.claim_substatus.setText(train.getClaim_sub_status());
 
 
 
@@ -218,7 +224,8 @@ Constants con;
         // Your holder should contain a member variable
         // for any view that will be set as you render a row
         public TextView mem_name,claim_id,client_name,patient_name,member_relation,claim_amountt,settled_amount,
-                deduction_amount,claim_type,tpa,register_on,claim_status,tat,type,email;
+                deduction_amount,claim_type,tpa,register_on,claim_status,tat,type,email,
+                policy_no,claim_substatus,empname,empcode,claimtype;
 
 
 
@@ -242,11 +249,14 @@ Constants con;
             register_on= (TextView) itemView.findViewById(R.id.register_on);
             claim_status= (TextView) itemView.findViewById(R.id.claim_status);
             tat= (TextView) itemView.findViewById(R.id.tat);
-
+            policy_no= (TextView) itemView.findViewById(R.id.policy_no);
             type=  itemView.findViewById(R.id.type);
             email=  itemView.findViewById(R.id.email);
             view_detail=itemView.findViewById(R.id.view_detail);
-
+            claim_substatus=itemView.findViewById(R.id.claim_substatus);
+            empname=itemView.findViewById(R.id.empname);
+            empcode=itemView.findViewById(R.id.empcode);
+            claimtype=itemView.findViewById(R.id.claimtype);
         }
     }
 }

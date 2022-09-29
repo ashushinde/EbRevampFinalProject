@@ -20,12 +20,17 @@ public class OverAllClaim {
     String type;
     String email;
 
-    public OverAllClaim() {
-    }
+    String policy_number;
+
+    String empcode;
+    String claimtypes;
+    String claim_sub_status;
 
     public OverAllClaim(String claim_id, String employer_name, String employee_name, String member_relation, String member_name, String claim_amount, String settled_amount, String claim_type, String tpa,
                         String claim_registration_date, String claim_status, String claim_tat, String color_code,
-                        String deduction_amount,String type,String email) {
+                        String deduction_amount,String type,String email,
+                        String policy_number,String empcode,String claimtypes,
+                        String claim_sub_status) {
         this.claim_id = claim_id;
         this.employer_name = employer_name;
         this.employee_name = employee_name;
@@ -42,6 +47,71 @@ public class OverAllClaim {
         this.deduction_amount = deduction_amount;
         this.type = type;
         this.email = email;
+        this.policy_number = policy_number;
+        this.empcode = empcode;
+        this.claimtypes = claimtypes;
+        this.claim_sub_status = claim_sub_status;
+    }
+
+    @Override
+    public String toString() {
+        return "OverAllClaim{" +
+                "claim_id='" + claim_id + '\'' +
+                ", employer_name='" + employer_name + '\'' +
+                ", employee_name='" + employee_name + '\'' +
+                ", member_relation='" + member_relation + '\'' +
+                ", member_name='" + member_name + '\'' +
+                ", claim_amount='" + claim_amount + '\'' +
+                ", settled_amount='" + settled_amount + '\'' +
+                ", claim_type='" + claim_type + '\'' +
+                ", tpa='" + tpa + '\'' +
+                ", claim_registration_date='" + claim_registration_date + '\'' +
+                ", claim_status='" + claim_status + '\'' +
+                ", claim_tat='" + claim_tat + '\'' +
+                ", color_code='" + color_code + '\'' +
+                ", deduction_amount='" + deduction_amount + '\'' +
+                ", type='" + type + '\'' +
+                ", email='" + email + '\'' +
+                ", policy_number='" + policy_number + '\'' +
+                ", empcode='" + empcode + '\'' +
+                ", claimtypes='" + claimtypes + '\'' +
+                ", claim_sub_status='" + claim_sub_status + '\'' +
+                '}';
+    }
+
+    public String getClaim_sub_status() {
+        return claim_sub_status;
+    }
+
+    public void setClaim_sub_status(String claim_sub_status) {
+        this.claim_sub_status = claim_sub_status;
+    }
+
+    public String getPolicy_number() {
+        return policy_number;
+    }
+
+    public void setPolicy_number(String policy_number) {
+        this.policy_number = policy_number;
+    }
+
+    public String getEmpcode() {
+        return empcode;
+    }
+
+    public void setEmpcode(String empcode) {
+        this.empcode = empcode;
+    }
+
+    public String getClaimtypes() {
+        return claimtypes;
+    }
+
+    public OverAllClaim() {
+    }
+
+    public void setClaimtypes(String claimtypes) {
+        this.claimtypes = claimtypes;
     }
 
     public String getDeduction_amount() {
@@ -172,25 +242,4 @@ public class OverAllClaim {
         this.color_code = color_code;
     }
 
-    @Override
-    public String toString() {
-        return "OverAllClaim{" +
-                "claim_id='" + claim_id + '\'' +
-                ", employer_name='" + employer_name + '\'' +
-                ", employee_name='" + employee_name + '\'' +
-                ", member_relation='" + member_relation + '\'' +
-                ", member_name='" + member_name + '\'' +
-                ", claim_amount='" + claim_amount + '\'' +
-                ", settled_amount='" + settled_amount + '\'' +
-                ", claim_type='" + claim_type + '\'' +
-                ", tpa='" + tpa + '\'' +
-                ", claim_registration_date='" + claim_registration_date + '\'' +
-                ", claim_status='" + claim_status + '\'' +
-                ", claim_tat='" + claim_tat + '\'' +
-                ", color_code='" + color_code + '\'' +
-                ", deduction_amount='" + deduction_amount + '\'' +
-                ", type='" + type + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
 }

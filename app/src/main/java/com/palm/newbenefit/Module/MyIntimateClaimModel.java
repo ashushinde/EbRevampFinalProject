@@ -90,6 +90,8 @@ public class MyIntimateClaimModel {
         this.claim_hospitalization_type=claim_hospitalization_type;
     }
 
+
+
     public String getPolicy_type() {
         return policy_type;
     }

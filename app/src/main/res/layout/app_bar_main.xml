@@ -31,7 +31,7 @@
                 android:id="@+id/logoclick"
                 android:layout_width="50sp"
                 android:layout_height="50sp"
-                android:src="@mipmap/kmd_launch" />
+                android:src="@mipmap/howden_launch" />
             <View
                 android:layout_width="1sp"
                 android:layout_height="50sp"

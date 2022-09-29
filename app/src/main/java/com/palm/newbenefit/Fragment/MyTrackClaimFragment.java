@@ -54,7 +54,7 @@ import com.palm.newbenefit.Module.MyHosClaimModel;
 import com.palm.newbenefit.Module.MyIntimateClaimModel;
 import com.palm.newbenefit.Module.SpinnerModal;
 import com.palm.newbenefit.Module.SpinnerModalFamilyData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 
 import org.json.JSONArray;
@@ -191,7 +191,7 @@ public class MyTrackClaimFragment extends Fragment {
             public void onClick(View v) {
                 try{
                     SpinnerModal policy = (SpinnerModal) policy_type_spin_no.getSelectedItem();
-                    SpinnerModalFamilyData member = (SpinnerModalFamilyData) bank_citySpin.getSelectedItem();
+                    SpinnerModal member = (SpinnerModal) bank_citySpin.getSelectedItem();
                     SpinnerModal claim = (SpinnerModal) bank_branchSpin.getSelectedItem();
 
                     int count = 0;
@@ -208,7 +208,7 @@ public class MyTrackClaimFragment extends Fragment {
                     }
 
 
-                    if (member.getFamily_gender().equalsIgnoreCase(" ")) {
+                    if (member.getSelKey().equalsIgnoreCase(" ")) {
                         ++count;
                         new AlertDialog.Builder(getActivity())
                                 .setTitle("Error")
@@ -220,15 +220,7 @@ public class MyTrackClaimFragment extends Fragment {
 
 
                     try{
-                        if (claim.getSelKey().trim().length() == 0) {
-                            ++count;
-                            new AlertDialog.Builder(getActivity())
-                                    .setTitle("Error")
-                                    .setMessage("Please Select Claim Id")
-                                    .setIcon(android.R.drawable.btn_dialog)
-                                    .setNegativeButton(android.R.string.ok, null).show();
-                            return;
-                        }
+
 
                         if(claimidd.equalsIgnoreCase("no")){
                             ++count;
@@ -245,12 +237,10 @@ public class MyTrackClaimFragment extends Fragment {
 
 
                     if(count==0){
-
-
                         Intent intent = new Intent(getActivity(), TrackActivity.class);
-                        intent.putExtra("policy",member.getFamily_dob());
-                        intent.putExtra("member",member.getSelValue());
-                        intent.putExtra("claim",claim.getSelValue());
+                        intent.putExtra("policy",member.getBank_id());
+                        intent.putExtra("member",member.getSelKey());
+                        intent.putExtra("claim",claim.getSelKey());
                         getActivity(). startActivity(intent);
 
 
@@ -520,7 +510,9 @@ public class MyTrackClaimFragment extends Fragment {
                                 if(jsonObj.getString("claim_no").equalsIgnoreCase("null")){
 
                                 }else {
-                                    bank_branchList.add(new SpinnerModal(jsonObj.getString("claim_no"), jsonObj.getString("claim_no")));
+                                    bank_branchList.add(new SpinnerModal(jsonObj.getString("claim_no"),
+                                            jsonObj.getString("claim_no")+"-"+
+                                                    jsonObj.getString("admit_date")));
                                     bank_branch.add(jsonObj.getString("claim_no"));
                                 }
 
@@ -533,7 +525,7 @@ public class MyTrackClaimFragment extends Fragment {
                             bank_branchAdapter.setDropDownViewResource(R.layout.spinner_item);
                             bank_branchSpin.setAdapter(bank_branchAdapter);
 
-
+                            claimidd="yes";
 
                         } catch (Exception e) {
 
@@ -562,6 +554,7 @@ public class MyTrackClaimFragment extends Fragment {
         HashMap<String, String> params = new HashMap<>();
         params.put("member_id", bank_city);
         Log.d("member_id", bank_city);
+        params.put("type", "1");
 
         smr.setParams(params);
         rq.add(smr);
@@ -1603,7 +1596,7 @@ public class MyTrackClaimFragment extends Fragment {
 
                                     bank_cityList.add(new SpinnerModal(jsonObj.getString("tpa_member_id"),
                                             String.valueOf(jsonObj.getString("name")),
-                                            String.valueOf(jsonObj.getInt("member_id")),
+                                            String.valueOf(jsonObj.getString("member_id")),
                                             jsonObj.getString("email"),
                                             jsonObj.getString("relation_name"),
                                             "",

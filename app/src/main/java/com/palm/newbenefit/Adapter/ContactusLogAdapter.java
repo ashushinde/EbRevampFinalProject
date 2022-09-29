@@ -20,7 +20,7 @@ import com.android.volley.request.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.palm.newbenefit.ApiConfig.Constants;
 import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.newbenefit.models.ContactUsMain;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 

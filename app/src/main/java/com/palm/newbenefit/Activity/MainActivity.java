@@ -83,7 +83,7 @@ import com.palm.newbenefit.Fragment.TrackClaimFragment;
 import com.palm.newbenefit.Fragment.WellnessFragmentSecond;
 import com.palm.newbenefit.Module.MenuModel;
 import com.palm.newbenefit.Module.Notification;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 import com.squareup.picasso.Picasso;
 

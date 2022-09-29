@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.palm.newbenefit.Activity.FamilyDataActivity;
 import com.palm.newbenefit.Module.FamilyData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import java.util.List;
 

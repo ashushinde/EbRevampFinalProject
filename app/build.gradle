@@ -13,11 +13,11 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.palm.newbenefit"
+        applicationId "com.kmd.newbenefit"
         minSdkVersion 20
         targetSdkVersion 31
-        versionCode 2
-        versionName "1.1"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

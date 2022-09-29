@@ -46,7 +46,7 @@ import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.Ecard;
 import com.palm.newbenefit.Module.MemberData;
 import com.palm.newbenefit.Module.SpinnerModal;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 import com.palm.tatarewamp.SslData.NullHostNameVerifier;
 import com.squareup.picasso.Picasso;
 

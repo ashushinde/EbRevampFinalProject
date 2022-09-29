@@ -62,7 +62,7 @@ import com.palm.newbenefit.ApiConfig.RecyclerTouchListener;
 import com.palm.newbenefit.Module.DiscData;
 import com.palm.newbenefit.Module.SpinnerModal;
 import com.palm.newbenefit.Module.SpinnerModalFamilyData;
-import com.palm.newbenefit.R;
+import com.kmd.newbenefit.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

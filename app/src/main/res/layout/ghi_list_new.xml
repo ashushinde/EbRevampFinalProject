@@ -252,6 +252,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/enhance_head"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/pop_reg"
@@ -281,10 +282,47 @@
                                     android:text="1500"
                                     android:textStyle="bold"
                                     android:textSize="11sp" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/enhance_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+
+                                        android:layout_width="20sp"
+                                        android:layout_height="10sp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="5sp"
+                                        android:src="@drawable/plus_add"/>
+                                <ImageView
+
+                                    android:layout_width="20sp"
+                                    android:layout_height="10sp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5sp"
+                                    android:src="@drawable/rupee"/>
+                                <TextView
+                                    android:id="@+id/enhance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:fontFamily="@font/pop_reg"
+                                    android:text="1500"
+                                    android:textColor="#ff5d55"
+                                    android:textSize="11sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
                             </LinearLayout>
 
 
+
+
                         </LinearLayout>
+
+
 
                     </LinearLayout>
 

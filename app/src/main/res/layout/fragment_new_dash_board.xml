@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F3FD"
-    tools:context=".Fragment.NewDashBoardFragment">
+    tools:context="com.palm.newbenefit.Fragment.NewDashBoardFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
